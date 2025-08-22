@@ -23,7 +23,7 @@ export default function Home() {
       >
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-300/40 blur-3xl" />
         <div className="absolute top-40 -right-24 h-96 w-96 rounded-full bg-fuchsia-200/40 blur-3xl" />
-        <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl" />
+        <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl opacity-60" />
       </div>
 
       {/* Header (simple, single layout for desktop and mobile) */}
