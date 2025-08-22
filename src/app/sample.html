@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BVM Holy Cross College — Inter-College Events | Premium POC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.tailwind = {};
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: {
+                50: "#FCFBF9",
+                100: "#F8F5F1",
+                200: "#F0ECE6",
+              },
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(15, 23, 42, 0.08)",
+            },
+            dropShadow: {
+              glow: "0 10px 30px rgba(79, 70, 229, 0.35)",
+            },
+            fontFamily: {
+              inter: ["Inter", "system-ui", "Arial", "sans-serif"],
+              display: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html,
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      .glass {
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-cream-100 text-slate-800 antialiased">
+    <!-- Decorative Blobs -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+    >
+      <div
+        class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-300/40 blur-3xl"
+      ></div>
+      <div
+        class="absolute top-40 -right-24 h-96 w-96 rounded-full bg-fuchsia-200/40 blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40">
+      <div class="mx-auto max-w-7xl px-6">
+        <div
+          class="mt-4 mb-4 glass rounded-2xl shadow-soft border border-white/60"
+        >
+          <div class="flex items-center justify-between px-5 py-3">
+            <div class="flex items-center gap-3">
+              <div
+                class="h-10 w-10 rounded-xl bg-indigo-600 text-white grid place-content-center font-bold"
+              >
+                B
+              </div>
+              <div>
+                <p class="text-sm tracking-wide text-slate-500">
+                  BVM Holy Cross College
+                </p>
+                <h1 class="font-semibold">Inter-College Fest — Cherpunkal</h1>
+              </div>
+            </div>
+            <nav
+              class="hidden md:flex items-center gap-6 text-sm text-slate-600"
+            >
+              <a href="#events" class="hover:text-indigo-700">Events</a>
+              <a href="#how" class="hover:text-indigo-700">How it works</a>
+              <a href="#faq" class="hover:text-indigo-700">FAQ</a>
+              <a href="#contact" class="hover:text-indigo-700">Contact</a>
+            </nav>
+            <button
+              onclick="scrollToEl('#events')"
+              class="hidden md:inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white shadow-soft hover:bg-indigo-700"
+            >
+              <span>Get Tickets</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="relative overflow-hidden rounded-3xl shadow-soft">
+          <img
+            src="https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?q=80&w=1800&auto=format&fit=crop"
+            alt="Auditorium crowd"
+            class="h-[520px] w-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-slate-900/70 via-slate-900/30 to-transparent"
+          ></div>
+          <div class="absolute inset-0 p-8 md:p-16 flex flex-col justify-end">
+            <div class="max-w-3xl text-white">
+              <p
+                class="uppercase tracking-[0.35em] text-xs md:text-sm text-white/80"
+              >
+                Presents
+              </p>
+              <h2 class="font-display text-4xl md:text-6xl leading-tight">
+                The Ultimate Inter‑College Showdown
+              </h2>
+              <p class="mt-4 text-white/90 md:text-lg">
+                Register for one of our signature events —
+                <strong>E‑Football</strong>, <strong>Coding Challenge</strong>,
+                or <strong>PC Building Competition</strong>. One participant.
+                One ticket. One epic day.
+              </p>
+              <div class="mt-8 flex flex-wrap items-center gap-3">
+                <button
+                  onclick="scrollToEl('#events')"
+                  class="rounded-xl bg-white text-slate-900 px-5 py-3 font-medium shadow-soft hover:drop-shadow-glow"
+                >
+                  Explore Events
+                </button>
+                <a
+                  href="#how"
+                  class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-white/20"
+                >
+                  How it works
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="mx-auto max-w-7xl px-6 pt-20">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <h3 class="font-display text-3xl md:text-4xl">Choose your event</h3>
+          <p class="mt-2 text-slate-600">
+            One event per participant • Limited seats • First‑come, first‑served
+          </p>
+        </div>
+        <div class="hidden md:flex items-center gap-2 text-xs text-slate-500">
+          <div class="h-2 w-2 rounded-full bg-emerald-500"></div>
+          <span>Live registration</span>
+        </div>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card: E-Football -->
+        <article
+          class="group relative overflow-hidden rounded-3xl bg-white shadow-soft border border-white/60"
+        >
+          <figure class="relative h-52 overflow-hidden">
+            <img
+              src="https://4kwallpapers.com/images/walls/thumbs_3t/16540.jpg"
+              alt="Gaming setup"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              class="absolute top-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white"
+            >
+              Solo • PS/PC
+            </div>
+          </figure>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">E‑Football</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Climb the bracket in our high‑intensity FIFA/FC face‑off. Pro
+              controllers provided.
+            </p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-sm text-slate-500">
+                Slots: <span class="font-medium text-slate-800">64</span>
+              </div>
+              <button
+                class="rounded-xl bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+                onclick="openModal('E‑Football')"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Coding Challenge -->
+        <article
+          class="group relative overflow-hidden rounded-3xl bg-white shadow-soft border border-white/60"
+        >
+          <figure class="relative h-52 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=2340&auto=format&fit=crop"
+              alt="Coding"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              class="absolute top-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white"
+            >
+              Solo • Algorithms
+            </div>
+          </figure>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Coding Challenge</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Solve timed problems across data structures, algorithms, and
+              debugging. BYO laptop.
+            </p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-sm text-slate-500">
+                Slots: <span class="font-medium text-slate-800">120</span>
+              </div>
+              <button
+                class="rounded-xl bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+                onclick="openModal('Coding Challenge')"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: PC Building -->
+        <article
+          class="group relative overflow-hidden rounded-3xl bg-white shadow-soft border border-white/60"
+        >
+          <figure class="relative h-52 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1600&auto=format&fit=crop"
+              alt="PC Building"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              class="absolute top-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white"
+            >
+              Team • Hardware
+            </div>
+          </figure>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">PC Building Competition</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Speed‑build, cable‑manage, and optimize thermals under pressure.
+              Tools & parts provided.
+            </p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-sm text-slate-500">
+                Slots: <span class="font-medium text-slate-800">20 teams</span>
+              </div>
+              <button
+                class="rounded-xl bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+                onclick="openModal('PC Building Competition')"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mx-auto max-w-7xl px-6 pt-24">
+      <div
+        class="rounded-3xl bg-white shadow-soft border border-white/60 p-8 md:p-12"
+      >
+        <h3 class="font-display text-2xl md:text-3xl">
+          How registration works
+        </h3>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex items-start gap-4">
+            <div
+              class="h-10 w-10 shrink-0 rounded-xl bg-indigo-600 text-white grid place-content-center"
+            >
+              1
+            </div>
+            <div>
+              <h4 class="font-semibold">Pick one event</h4>
+              <p class="text-sm text-slate-600">
+                Each participant can register for exactly one event.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="h-10 w-10 shrink-0 rounded-xl bg-indigo-600 text-white grid place-content-center"
+            >
+              2
+            </div>
+            <div>
+              <h4 class="font-semibold">Fill your details</h4>
+              <p class="text-sm text-slate-600">
+                Basic info + college name. Confirmation is instant.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="h-10 w-10 shrink-0 rounded-xl bg-indigo-600 text-white grid place-content-center"
+            >
+              3
+            </div>
+            <div>
+              <h4 class="font-semibold">Get your ticket</h4>
+              <p class="text-sm text-slate-600">
+                A digital ticket with QR is generated for entry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsors / Partners (placeholder logos) -->
+    <section class="mx-auto max-w-7xl px-6 pt-20">
+      <div
+        class="rounded-3xl glass border border-white/60 p-6 md:p-8 shadow-soft"
+      >
+        <p
+          class="text-center text-xs uppercase tracking-[0.3em] text-slate-500"
+        >
+          Powered by
+        </p>
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-5 gap-6 opacity-80">
+          <img
+            class="mx-auto h-8"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+            alt="Amazon"
+          />
+          <img
+            class="mx-auto h-8"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+            alt="Microsoft"
+          />
+          <img
+            class="mx-auto h-8"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/24/Lenovo_logo_2015.svg"
+            alt="Lenovo"
+          />
+          <img
+            class="mx-auto h-8"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Intel-logo-2020.svg"
+            alt="Intel"
+          />
+          <img
+            class="mx-auto h-8"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/HP_logo_2012.svg"
+            alt="HP"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-7xl px-6 pt-24 pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="font-display text-3xl md:text-4xl">Frequently asked</h3>
+          <p class="mt-3 text-slate-600">
+            Everything you need to know about the registration process.
+          </p>
+          <img
+            class="mt-8 rounded-2xl shadow-soft"
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop"
+            alt="Campus"
+          />
+        </div>
+        <div class="space-y-4">
+          <details
+            class="group rounded-2xl bg-white p-5 shadow-soft border border-white/60"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between font-medium"
+            >
+              Can I register for more than one event?
+              <svg
+                class="h-5 w-5 transition-transform group-open:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">
+              No. One event per participant to keep things fair and focused.
+            </p>
+          </details>
+          <details
+            class="group rounded-2xl bg-white p-5 shadow-soft border border-white/60"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between font-medium"
+            >
+              What should I bring for the Coding Challenge?
+              <svg
+                class="h-5 w-5 transition-transform group-open:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">
+              Bring your laptop, charger, and a valid student ID. Internet and
+              power will be provided.
+            </p>
+          </details>
+          <details
+            class="group rounded-2xl bg-white p-5 shadow-soft border border-white/60"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between font-medium"
+            >
+              Is there a fee?
+              <svg
+                class="h-5 w-5 transition-transform group-open:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">
+              For this POC, we simulate free tickets. In production, integrate
+              your payment gateway of choice.
+            </p>
+          </details>
+          <details
+            class="group rounded-2xl bg-white p-5 shadow-soft border border-white/60"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between font-medium"
+            >
+              Where is the venue?
+              <svg
+                class="h-5 w-5 transition-transform group-open:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">
+              BVM Holy Cross College, Cherpunkal, Kerala. Report to the main
+              auditorium 30 minutes before your event.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      id="contact"
+      class="border-t border-white/70 bg-white/70 backdrop-blur"
+    >
+      <div class="mx-auto max-w-7xl px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div>
+            <h4 class="font-semibold">BVM Holy Cross College</h4>
+            <p class="text-sm text-slate-600">Cherpunkal, Kottayam, Kerala</p>
+          </div>
+          <div class="text-sm text-slate-600">
+            <p>
+              <span class="font-medium">Email:</span> events@bvmholycross.edu
+            </p>
+            <p><span class="font-medium">Phone:</span> +91 98765 43210</p>
+          </div>
+          <div class="md:text-right">
+            <button
+              onclick="scrollToEl('#events')"
+              class="rounded-xl bg-indigo-600 px-5 py-3 text-white shadow-soft hover:bg-indigo-700"
+            >
+              Register Now
+            </button>
+          </div>
+        </div>
+        <p class="mt-6 text-center text-xs text-slate-500">
+          © 2025 BVM Holy Cross College. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal: Registration -->
+    <div id="modal" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-slate-900/60"></div>
+      <div class="relative mx-auto mt-16 max-w-2xl px-6">
+        <div class="glass rounded-3xl border border-white/60 shadow-soft">
+          <div
+            class="flex justify-between items-center px-6 py-5 border-b border-white/60"
+          >
+            <h4 id="modalTitle" class="text-lg font-semibold">Register</h4>
+            <button
+              onclick="closeModal()"
+              class="rounded-xl bg-white px-3 py-1 shadow-soft"
+            >
+              ✕
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div
+              class="hidden md:block overflow-hidden rounded-bl-3xl rounded-tl-3xl"
+            >
+              <img
+                id="modalImage"
+                src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop"
+                alt="event"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <form
+                id="regForm"
+                class="space-y-4"
+                onsubmit="generateTicket(event)"
+              >
+                <div>
+                  <label class="text-sm text-slate-600">Selected Event</label>
+                  <input
+                    id="eventField"
+                    class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2"
+                    readonly
+                  />
+                </div>
+                <div>
+                  <label class="text-sm text-slate-600">Full Name</label>
+                  <input
+                    required
+                    id="nameField"
+                    class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="text-sm text-slate-600">Email</label>
+                    <input
+                      required
+                      type="email"
+                      id="emailField"
+                      class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2"
+                      placeholder="you@college.edu"
+                    />
+                  </div>
+                  <div>
+                    <label class="text-sm text-slate-600">College</label>
+                    <input
+                      required
+                      id="collegeField"
+                      class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2"
+                      placeholder="College name"
+                    />
+                  </div>
+                </div>
+                <p class="text-xs text-slate-500">
+                  Note: One event per participant. Duplicate registrations will
+                  be void.
+                </p>
+                <div class="pt-2 flex items-center justify-between">
+                  <button
+                    type="button"
+                    onclick="closeModal()"
+                    class="rounded-xl bg-white px-4 py-2 shadow-soft"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="rounded-xl bg-indigo-600 px-5 py-2 text-white shadow-soft hover:bg-indigo-700"
+                  >
+                    Generate Ticket
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticket Drawer -->
+    <div
+      id="ticketDrawer"
+      class="fixed right-0 top-0 z-[70] h-full w-full max-w-md translate-x-full bg-white shadow-2xl transition-transform duration-500"
+    >
+      <div class="flex items-center justify-between border-b px-6 py-4">
+        <h4 class="font-semibold">Your Ticket</h4>
+        <button
+          onclick="closeTicket()"
+          class="rounded-xl bg-white px-3 py-1 shadow-soft"
+        >
+          ✕
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto h-[calc(100%-64px)] no-scrollbar">
+        <div
+          id="ticketCard"
+          class="rounded-3xl border border-slate-200 p-5 shadow-soft"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="h-9 w-9 rounded-xl bg-indigo-600 text-white grid place-content-center font-bold"
+            >
+              B
+            </div>
+            <div>
+              <p class="text-xs text-slate-500">BVM Holy Cross College</p>
+              <h5 class="font-semibold">Inter‑College Fest Ticket</h5>
+            </div>
+          </div>
+          <div class="mt-4 rounded-2xl overflow-hidden">
+            <img
+              id="ticketImage"
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop"
+              class="h-40 w-full object-cover"
+              alt="ticket banner"
+            />
+          </div>
+          <div class="mt-5 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-slate-500">Participant</p>
+              <p id="tName" class="font-medium">—</p>
+            </div>
+            <div>
+              <p class="text-slate-500">Event</p>
+              <p id="tEvent" class="font-medium">—</p>
+            </div>
+            <div>
+              <p class="text-slate-500">College</p>
+              <p id="tCollege" class="font-medium">—</p>
+            </div>
+            <div>
+              <p class="text-slate-500">Ticket ID</p>
+              <p id="tId" class="font-mono">—</p>
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 gap-4 items-center">
+            <img
+              id="qrImg"
+              class="h-36 w-36 rounded-xl border border-slate-200 p-2"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=sample"
+              alt="QR"
+            />
+            <div class="text-xs text-slate-600">
+              <p>
+                Show this QR at entry. Reporting:
+                <span class="font-medium">Main Auditorium</span>.
+              </p>
+              <p class="mt-2">
+                Contact:
+                <span class="font-medium">events@bvmholycross.edu</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 flex items-center justify-between">
+          <button
+            onclick="downloadTicket()"
+            class="rounded-xl bg-indigo-600 px-5 py-2 text-white shadow-soft hover:bg-indigo-700"
+          >
+            Download PNG
+          </button>
+          <button
+            onclick="closeTicket()"
+            class="rounded-xl bg-white px-4 py-2 shadow-soft"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNa5kN8Yk3yQ3Xf1C7w8vO8q1G8QWf/3nVb0a8bM2tqVYf6m2c1Xqv6vB1jQwYzvG4yG7Fh3CqZ3hT/IMa9V8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const eventImages = {
+        "E‑Football":
+          "https://4kwallpapers.com/images/walls/thumbs_3t/16540.jpg",
+        "Coding Challenge":
+          "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
+        "PC Building Competition":
+          "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1600&auto=format&fit=crop",
+      };
+
+      function scrollToEl(sel) {
+        document.querySelector(sel)?.scrollIntoView({ behavior: "smooth" });
+      }
+
+      function openModal(eventName) {
+        document.getElementById("modal").classList.remove("hidden");
+        document.getElementById("eventField").value = eventName;
+        document.getElementById(
+          "modalTitle"
+        ).textContent = `Register — ${eventName}`;
+        document.getElementById("modalImage").src =
+          eventImages[eventName] || eventImages["Coding Challenge"];
+      }
+      function closeModal() {
+        document.getElementById("modal").classList.add("hidden");
+      }
+
+      function generateId() {
+        const part = () => Math.random().toString(36).slice(2, 6).toUpperCase();
+        return `BVM-${part()}-${part()}`;
+      }
+
+      function generateTicket(e) {
+        e.preventDefault();
+        const name = document.getElementById("nameField").value.trim();
+        const email = document.getElementById("emailField").value.trim();
+        const college = document.getElementById("collegeField").value.trim();
+        const eventName = document.getElementById("eventField").value;
+        if (!name || !email || !college) return;
+        const id = generateId();
+        document.getElementById("tName").textContent = name;
+        document.getElementById("tEvent").textContent = eventName;
+        document.getElementById("tCollege").textContent = college;
+        document.getElementById("tId").textContent = id;
+        document.getElementById("ticketImage").src = eventImages[eventName];
+        const qrData = encodeURIComponent(
+          `${id}|${name}|${eventName}|${college}`
+        );
+        document.getElementById(
+          "qrImg"
+        ).src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrData}`;
+        closeModal();
+        openTicket();
+        // Disable all register buttons to simulate one-event-per-person
+        document.querySelectorAll("button").forEach((btn) => {
+          if (btn.textContent.trim() === "Register") {
+            btn.disabled = true;
+            btn.classList.add("opacity-50", "cursor-not-allowed");
+            btn.textContent = "Registered";
+          }
+        });
+      }
+
+      function openTicket() {
+        const dr = document.getElementById("ticketDrawer");
+        dr.classList.remove("translate-x-full");
+      }
+      function closeTicket() {
+        const dr = document.getElementById("ticketDrawer");
+        dr.classList.add("translate-x-full");
+      }
+
+      async function downloadTicket() {
+        const node = document.getElementById("ticketCard");
+        const canvas = await html2canvas(node, {
+          backgroundColor: null,
+          scale: window.devicePixelRatio,
+        });
+        const link = document.createElement("a");
+        link.download = "bvm-ticket.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      }
+    </script>
+  </body>
+</html>

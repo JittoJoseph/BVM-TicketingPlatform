@@ -1,4 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BVM Inter‑College Events Ticketing System
+
+Next.js 15 + Tailwind CSS 4, modular implementation of the POC page with registration, ticket generation, and Firebase-ready persistence.
+
+## Features
+
+- Public landing with events and FAQ
+- Registration modal and a ticket drawer with QR code and PNG download
+- Server action + API route ready to persist to Firestore (optional)
+- Admin dashboard scaffold
+
+## Getting started
+
+1. Install dependencies
+
+```powershell
+npm install
+```
+
+2. Run the dev server
+
+```powershell
+npm run dev
+```
+
+3. Optional: Configure Firebase by setting the following env vars (e.g., in `.env.local`):
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=...
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=...
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
+NEXT_PUBLIC_FIREBASE_APP_ID=...
+```
+
+With env configured, server action/API will persist registrations in `registrations` collection.
+
+## Notes
+
+- No participant accounts required. Consider securing `/admin` via Firebase Auth + middleware.
+- The ticket is stored in localStorage for quick access; persistence is through Firestore when configured.
+  This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 

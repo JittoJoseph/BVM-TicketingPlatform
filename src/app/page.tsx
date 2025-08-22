@@ -1,103 +1,226 @@
+"use client";
+
+import Link from "next/link";
+import { EventCards } from "../components/event-cards";
+import { RegistrationModal } from "../components/registration-modal";
+import { TicketDrawer } from "../components/ticket-drawer";
+import { Footer } from "../components/footer";
 import Image from "next/image";
+import { useState } from "react";
+import Logo from "../../public/logo.png";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [activeEvent, setActiveEvent] = useState<string | null>(null);
+  const [isModalOpen, setModalOpen] = useState(false);
+  // Simplified header—no mobile menu or nav links needed
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  return (
+    <div className="bg-[var(--color-cream-100)] text-slate-800 pt-4">
+      {/* Decorative blobs */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+      >
+        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-300/40 blur-3xl" />
+        <div className="absolute top-40 -right-24 h-96 w-96 rounded-full bg-fuchsia-200/40 blur-3xl" />
+        <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl" />
+      </div>
+
+      {/* Header (simple, single layout for desktop and mobile) */}
+      <section aria-label="Site header" className="mb-6">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex items-center gap-3 rounded-2xl glass border border-white/60 shadow-soft px-5 py-3">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={Logo}
+              alt="BVM Holy Cross College logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-contain bg-white"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div>
+              <p className="text-xs md:text-sm tracking-wide text-slate-500">
+                BVM Holy Cross College
+              </p>
+              <p className="font-semibold">Ticketing Platform</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Hero */}
+      <section className="relative">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="relative overflow-hidden rounded-3xl shadow-soft border border-white/60">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?q=80&w=1800&auto=format&fit=crop"
+              alt="Auditorium crowd"
+              className="h-[520px] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/70 via-slate-900/30 to-transparent" />
+            <div className="absolute inset-0 p-8 md:p-16 flex flex-col justify-end">
+              <div className="max-w-3xl text-white">
+                <p className="uppercase tracking-[0.35em] text-xs md:text-sm text-white/80">
+                  Presents
+                </p>
+                <h1 className="font-display font-bold text-4xl md:text-6xl leading-tight">
+                  The Ultimate Inter‑College Showdown
+                </h1>
+                <p className="mt-4 text-white/90 md:text-lg">
+                  Register for one of our signature events —{" "}
+                  <strong>E‑Football</strong>, <strong>Coding Challenge</strong>
+                  , or <strong>PC Building Competition</strong>. One
+                  participant. One ticket. One epic day.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-3">
+                  <button
+                    className="rounded-xl bg-white text-slate-900 px-5 py-3 font-medium shadow-soft hover:drop-shadow-[0_10px_30px_rgba(79,70,229,0.35)]"
+                    onClick={() => setModalOpen(true)}
+                  >
+                    Explore Events
+                  </button>
+                  <Link
+                    href="#how"
+                    className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-white/20"
+                  >
+                    How it works
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events */}
+      <section id="events" className="mx-auto max-w-7xl px-6 pt-20">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <h3 className="font-display text-3xl md:text-4xl">
+              Choose your event
+            </h3>
+            <p className="mt-2 text-slate-600">
+              One event per participant • Limited seats • First‑come,
+              first‑served
+            </p>
+          </div>
+          <div className="hidden md:flex items-center gap-2 text-xs text-slate-500">
+            <div className="h-2 w-2 rounded-full bg-emerald-500" />
+            <span>Live registration</span>
+          </div>
+        </div>
+
+        <EventCards
+          onRegister={(eventName: string) => {
+            setActiveEvent(eventName);
+            setModalOpen(true);
+          }}
+        />
+      </section>
+
+      {/* How it works */}
+      <section id="how" className="mx-auto max-w-7xl px-6 pt-24">
+        <div className="rounded-3xl bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-white/60 p-8 md:p-12">
+          <h3 className="font-display text-2xl md:text-3xl">
+            How registration works
+          </h3>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((n) => (
+              <div key={n} className="flex items-start gap-4">
+                <div className="h-10 w-10 shrink-0 rounded-xl bg-indigo-600 text-white grid place-content-center">
+                  {n}
+                </div>
+                <div>
+                  <p className="font-medium">
+                    {n === 1
+                      ? "Pick an event"
+                      : n === 2
+                      ? "Fill your details"
+                      : "Get your ticket"}
+                  </p>
+                  <p className="text-sm text-slate-600 mt-1">
+                    {n === 1 &&
+                      "Choose from E‑Football, Coding Challenge, or PC Building."}
+                    {n === 2 &&
+                      "We use your info only to generate a unique QR ticket."}
+                    {n === 3 &&
+                      "Save a PNG ticket and receive a confirmation email (optional)."}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="mx-auto max-w-7xl px-6 pt-24 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 className="font-display text-3xl md:text-4xl">
+              Frequently asked
+            </h3>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="mt-8 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.08)]"
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop"
+              alt="Campus"
+            />
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: "Do I need an account?",
+                a: "No, participants can register without an account. Admins have a secured dashboard.",
+              },
+              {
+                q: "Can I join multiple events?",
+                a: "No, one event per participant.",
+              },
+              {
+                q: "How do I get my ticket?",
+                a: "We show a downloadable ticket with a QR code on completion.",
+              },
+              {
+                q: "Can I edit my registration?",
+                a: "Contact organizers via the phone in the footer.",
+              },
+            ].map((f) => (
+              <details
+                key={f.q}
+                className="group rounded-2xl bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-white/60"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                  {f.q}
+                  <span className="text-slate-500">+</span>
+                </summary>
+                <p className="mt-3 text-sm text-slate-600">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer onRegister={() => setModalOpen(true)} />
+
+      <RegistrationModal
+        open={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        defaultEvent={activeEvent}
+      />
+      <TicketDrawer />
     </div>
   );
 }
