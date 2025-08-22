@@ -79,7 +79,7 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?q=80&w=1800&auto=format&fit=crop"
-              alt="Auditorium crowd"
+              alt=""
               className="h-[520px] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/70 via-slate-900/30 to-transparent" />
