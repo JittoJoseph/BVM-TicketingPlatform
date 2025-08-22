@@ -12,6 +12,10 @@ import Logo from "../../public/logo.png";
 export default function Home() {
   const [activeEvent, setActiveEvent] = useState<string | null>(null);
   const [isModalOpen, setModalOpen] = useState(false);
+  const scrollTo = (sel: string) => {
+    if (typeof document === "undefined") return;
+    document.querySelector(sel)?.scrollIntoView({ behavior: "smooth" });
+  };
   // Simplified header—no mobile menu or nav links needed
 
   return (
@@ -29,21 +33,41 @@ export default function Home() {
       {/* Header (simple, single layout for desktop and mobile) */}
       <section aria-label="Site header" className="mb-6">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex items-center gap-3 rounded-2xl glass border border-white/60 shadow-soft px-5 py-3">
-            <Image
-              src={Logo}
-              alt="BVM Holy Cross College logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain bg-white"
-              priority
-            />
-            <div>
-              <p className="text-xs md:text-sm tracking-wide text-slate-500">
-                BVM Holy Cross College
-              </p>
-              <p className="font-semibold">Ticketing Platform</p>
+          <div className="flex items-center justify-between gap-3 rounded-2xl glass border border-white/60 shadow-soft px-5 py-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src={Logo}
+                alt="BVM Holy Cross College logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-full object-contain bg-white"
+                priority
+              />
+              <div>
+                <p className="text-xs md:text-sm tracking-wide text-slate-500">
+                  BVM Holy Cross College
+                </p>
+                <p className="font-semibold">Ticketing Platform</p>
+              </div>
             </div>
+
+            <button
+              onClick={() => scrollTo("#events")}
+              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white shadow-soft hover:bg-indigo-700 cursor-pointer"
+            >
+              <span>Get Tickets</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -75,14 +99,14 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <button
-                    className="rounded-xl bg-white text-slate-900 px-5 py-3 font-medium shadow-soft hover:drop-shadow-[0_10px_30px_rgba(79,70,229,0.35)]"
-                    onClick={() => setModalOpen(true)}
+                    className="rounded-xl bg-white text-slate-900 px-5 py-3 font-medium shadow-soft hover:drop-shadow-[0_10px_30px_rgba(79,70,229,0.35)] cursor-pointer"
+                    onClick={() => scrollTo("#events")}
                   >
                     Explore Events
                   </button>
-                  <Link
-                    href="#how"
-                    className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-white/20"
+                  <button
+                    className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-white/20 cursor-pointer"
+                    onClick={() => scrollTo("#how")}
                   >
                     How it works
                     <svg
@@ -91,12 +115,12 @@ export default function Home() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth={2}
                     >
                       <path d="M5 12h14" />
                       <path d="m12 5 7 7-7 7" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
