@@ -15,11 +15,11 @@ export default function Home() {
   // Simplified header—no mobile menu or nav links needed
 
   return (
-    <div className="bg-[var(--color-cream-100)] text-slate-800 pt-4">
+    <div className="bg-[var(--color-cream-100)] text-slate-800 pt-4 relative z-10">
       {/* Decorative blobs */}
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+        className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
       >
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-300/40 blur-3xl" />
         <div className="absolute top-40 -right-24 h-96 w-96 rounded-full bg-fuchsia-200/40 blur-3xl" />
