@@ -60,12 +60,17 @@ export default function AdminPage() {
 
   useEffect(() => {
     (async () => {
-      if (!db) return;
-      const coll = collection(db, "registrations");
-      const snap = await getCountFromServer(coll);
-      setRegCount(snap.data().count);
+      if (!db || role !== "admin") return;
+      try {
+        const coll = collection(db, "registrations");
+        const snap = await getCountFromServer(coll);
+        setRegCount(snap.data().count);
+      } catch (err) {
+        console.warn("Skipping registrations count:", err);
+        setRegCount(null);
+      }
     })();
-  }, []);
+  }, [role]);
 
   const canManage = role === "admin";
 
@@ -167,20 +172,22 @@ export default function AdminPage() {
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-3xl bg-white p-5 shadow border border-white/60">
-            <div className="text-sm text-slate-500">Total Registrations</div>
-            <div className="text-3xl font-bold">{regCount ?? "—"}</div>
+        {canManage && (
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-3xl bg-white p-5 shadow border border-white/60">
+              <div className="text-sm text-slate-500">Total Registrations</div>
+              <div className="text-3xl font-bold">{regCount ?? "—"}</div>
+            </div>
+            <div className="rounded-3xl bg-white p-5 shadow border border-white/60">
+              <div className="text-sm text-slate-500">Venue</div>
+              <div className="text-3xl font-bold">Main Auditorium</div>
+            </div>
+            <div className="rounded-3xl bg-white p-5 shadow border border-white/60">
+              <div className="text-sm text-slate-500">Time</div>
+              <div className="text-3xl font-bold">10:00 AM</div>
+            </div>
           </div>
-          <div className="rounded-3xl bg-white p-5 shadow border border-white/60">
-            <div className="text-sm text-slate-500">Venue</div>
-            <div className="text-3xl font-bold">Main Auditorium</div>
-          </div>
-          <div className="rounded-3xl bg-white p-5 shadow border border-white/60">
-            <div className="text-sm text-slate-500">Time</div>
-            <div className="text-3xl font-bold">10:00 AM</div>
-          </div>
-        </div>
+        )}
 
         {/* Check-in */}
         <section className="mt-8">
