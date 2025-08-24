@@ -7,6 +7,7 @@ type CreateRegistrationInput = {
   id: string;
   name: string;
   email: string;
+  phone: string;
   college: string;
   event: string;
 };

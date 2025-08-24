@@ -9,6 +9,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Logo from "../../public/logo.png";
 
+// Event names now come from Firestore; use string type
+
 export default function Home() {
   const [activeEvent, setActiveEvent] = useState<string | null>(null);
   const [isModalOpen, setModalOpen] = useState(false);
@@ -242,7 +244,7 @@ export default function Home() {
       <RegistrationModal
         open={isModalOpen}
         onClose={() => setModalOpen(false)}
-        defaultEvent={activeEvent}
+        eventName={activeEvent}
       />
       <TicketDrawer />
     </div>

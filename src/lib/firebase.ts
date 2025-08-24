@@ -18,16 +18,28 @@ export function getFirebaseApp() {
 
 export const db = (() => {
   try {
-    return getFirestore(getFirebaseApp());
-  } catch {
-    return undefined as unknown as ReturnType<typeof getFirestore>;
+    const app = getFirebaseApp();
+    if (!firebaseConfig.projectId) {
+      console.warn("Firebase project ID not configured");
+      return null;
+    }
+    return getFirestore(app);
+  } catch (error) {
+    console.warn("Firebase Firestore initialization failed:", error);
+    return null;
   }
 })();
 
 export const auth = (() => {
   try {
-    return getAuth(getFirebaseApp());
-  } catch {
-    return undefined as unknown as ReturnType<typeof getAuth>;
+    const app = getFirebaseApp();
+    if (!firebaseConfig.projectId) {
+      console.warn("Firebase project ID not configured");
+      return null;
+    }
+    return getAuth(app);
+  } catch (error) {
+    console.warn("Firebase Auth initialization failed:", error);
+    return null;
   }
 })();
