@@ -305,7 +305,7 @@ function RegistrationsManager() {
   if (!rows.length) {
     return (
       <div className="rounded-3xl bg-white p-5 shadow border border-white/60 text-slate-500">
-        No registrations yet.
+        No registrations yet
       </div>
     );
   }
