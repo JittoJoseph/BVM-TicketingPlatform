@@ -54,7 +54,6 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
         {/* Header with event image */}
         <div className="relative h-32 bg-gradient-to-r from-indigo-500 to-purple-600">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
             alt={eventName || "Event"}

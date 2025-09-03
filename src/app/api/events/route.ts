@@ -16,7 +16,7 @@ export async function GET() {
   if (!db) return NextResponse.json({ items: [] });
   const q = query(collection(db, "events"), orderBy("sortOrder", "asc"));
   const snap = await getDocs(q);
-  const items = snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) }));
+  const items = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
   return NextResponse.json({ items });
 }
 
