@@ -11,7 +11,7 @@ export function Footer({ onRegister }: Props) {
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div>
-            <h4 className="font-semibold">BVM Holy Cross College</h4>
+            <h3 className="font-semibold">BVM Holy Cross College</h3>
             <p className="text-sm text-slate-600">
               Cherpunkal, Kottayam, Kerala
             </p>
