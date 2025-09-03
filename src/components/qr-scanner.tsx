@@ -2,7 +2,10 @@
 
 import { useEffect, useRef } from "react";
 
-type Html5QrcodeScannerType = any;
+type Html5QrcodeScannerType = {
+  render: (onSuccess: (text: string) => void, onError: () => void) => void;
+  clear: () => Promise<void>;
+};
 
 export function QrScanner({ onResult }: { onResult: (text: string) => void }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,20 +22,25 @@ export function QrScanner({ onResult }: { onResult: (text: string) => void }) {
 
   useEffect(() => {
     if (!ref.current || scannerRef.current) return;
+    const container = ref.current;
     (async () => {
       const mod = await import("html5-qrcode");
-      const Ctor = (mod as any).Html5QrcodeScanner;
-      const ScanType = (mod as any).Html5QrcodeScanType;
+      const Ctor = mod.Html5QrcodeScanner;
+      const ScanType = mod.Html5QrcodeScanType;
       // ensure the container has our unique id
-      ref.current!.id = readerIdRef.current;
-      const scanner = new Ctor(ref.current!.id, {
-        fps: 12,
-        qrbox: { width: 220, height: 220 },
-        aspectRatio: 1.0,
-        rememberLastUsedCamera: true,
-        showTorchButtonIfSupported: true,
-        supportedScanTypes: [ScanType.SCAN_TYPE_CAMERA], // camera only, no file upload
-      });
+      container.id = readerIdRef.current;
+      const scanner = new Ctor(
+        container.id,
+        {
+          fps: 12,
+          qrbox: { width: 220, height: 220 },
+          aspectRatio: 1.0,
+          rememberLastUsedCamera: true,
+          showTorchButtonIfSupported: true,
+          supportedScanTypes: [ScanType.SCAN_TYPE_CAMERA], // camera only, no file upload
+        },
+        false
+      );
       scannerRef.current = scanner;
       scanner.render(
         (decodedText: string) => {
@@ -45,10 +53,12 @@ export function QrScanner({ onResult }: { onResult: (text: string) => void }) {
       try {
         const s = scannerRef.current;
         scannerRef.current = null;
-        s?.clear();
-      } catch {}
+        if (s) s.clear().catch(console.warn);
+      } catch (error) {
+        console.warn("Scanner cleanup error:", error);
+      }
       // remove any leftover UI to avoid doubled frames in strict mode
-      if (ref.current) ref.current.innerHTML = "";
+      if (container) container.innerHTML = "";
     };
   }, []);
 

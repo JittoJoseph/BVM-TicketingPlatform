@@ -123,7 +123,7 @@ export default function AdminPage() {
           <div>
             <h1 className="text-2xl font-semibold">Restricted</h1>
             <p className="text-slate-600 mt-1">
-              You don't have access to admin tools.
+              You don&apos;t have access to admin tools.
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -260,7 +260,8 @@ async function checkInByScan(ticketId: string) {
       }),
     });
     return "Checked in ✅";
-  } catch (e) {
+  } catch (error) {
+    console.error("Check-in error:", error);
     return "Error";
   }
 }
@@ -276,9 +277,27 @@ async function safeJson(res: Response) {
 }
 
 function RegistrationsManager() {
-  const [rows, setRows] = useState<any[]>([]);
-  const [editing, setEditing] = useState<any | null>(null);
-  const [form, setForm] = useState<any>({
+  const [rows, setRows] = useState<
+    {
+      id: string;
+      name: string;
+      email: string;
+      phone: string;
+      college: string;
+      event: string;
+      checkedIn?: boolean;
+      ticketId?: string;
+    }[]
+  >([]);
+  const [editing, setEditing] = useState<{
+    id: string;
+    name: string;
+    email: string;
+    phone: string;
+    college: string;
+    event: string;
+  } | null>(null);
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
@@ -297,7 +316,8 @@ function RegistrationsManager() {
       const res = await fetch("/api/registrations");
       const data = await safeJson(res);
       setRows(Array.isArray(data?.items) ? data.items : []);
-    } catch {
+    } catch (error) {
+      console.error("Failed to refresh registrations:", error);
       setRows([]);
     }
   }

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { EventCards } from "../components/event-cards";
 import { RegistrationModal } from "../components/registration-modal";
 import { TicketDrawer } from "../components/ticket-drawer";

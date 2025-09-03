@@ -39,7 +39,11 @@ export default function CheckinPage() {
               setUser({ uid: u.uid, email: u.email });
               if (db) {
                 const roleDoc = await getDoc(doc(db, "roles", u.uid));
-                setRole(roleDoc.exists() ? (roleDoc.data().role as any) : null);
+                setRole(
+                  roleDoc.exists()
+                    ? (roleDoc.data().role as "admin" | "coordinator")
+                    : null
+                );
               } else {
                 setRole(null);
               }
@@ -124,7 +128,7 @@ export default function CheckinPage() {
           <div>
             <h1 className="text-2xl font-semibold">Restricted</h1>
             <p className="text-slate-600 mt-1">
-              You don't have access to check-in tools.
+              You don&apos;t have access to check-in tools.
             </p>
           </div>
           <div className="flex items-center gap-3">
