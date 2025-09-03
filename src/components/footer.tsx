@@ -21,9 +21,6 @@ export function Footer({ onRegister }: Props) {
               <span className="font-medium">Email:</span>{" "}
               events@bvmholycross.edu.in
             </p>
-            <p>
-              <span className="font-medium">Phone:</span> +91 98765 43210
-            </p>
           </div>
           <div className="md:text-right">
             <button
