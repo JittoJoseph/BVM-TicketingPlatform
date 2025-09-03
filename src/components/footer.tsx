@@ -19,7 +19,7 @@ export function Footer({ onRegister }: Props) {
           <div className="text-sm text-slate-600">
             <p>
               <span className="font-medium">Email:</span>{" "}
-              events@bvmholycross.edu.in
+              events@bvmholycross.com
             </p>
           </div>
           <div className="md:text-right">
