@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
-// eventImages removed; events are dynamic from Firestore
 import { generateId, saveTicket } from "@/lib/ticket";
+import { getEventByName } from "@/lib/events";
 
 type Props = {
   open: boolean;
@@ -32,14 +32,13 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
 
   if (!open || !eventName) return null;
 
-  // banner image mapping to match EventCards
-  const bannerSrc = (() => {
-    const name = eventName.toLowerCase();
-    if (name.includes("football")) return "/1.jpg";
-    if (name.includes("coding")) return "/2.jpg";
-    if (name.includes("pc")) return "/3.jpg";
-    return "/event-bg.jpg";
-  })();
+  // Get the event data and use its banner path
+  const eventData = getEventByName(eventName);
+  const bannerSrc = eventData?.bannerPath
+    ? eventData.bannerPath.startsWith("/")
+      ? eventData.bannerPath
+      : `/${eventData.bannerPath}`
+    : "/globe.svg";
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">

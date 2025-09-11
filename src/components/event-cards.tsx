@@ -1,46 +1,15 @@
 "use client";
 
-import { useMemo } from "react";
+import { EVENTS } from "@/lib/events";
 
 export function EventCards({
   onRegister,
 }: {
   onRegister: (eventName: string) => void;
 }) {
-  // Hardcoded events for instant display
-  const events = useMemo(
-    () => [
-      {
-        name: "E‑Football",
-        description:
-          "Compete in high‑intensity matches on the big screen. Solo entry.",
-        bannerPath: "1.jpg",
-        venue: "Main Auditorium",
-        time: "10:00 AM",
-      },
-      {
-        name: "Coding Challenge",
-        description:
-          "Solve timed problems and climb the leaderboard. One participant per team.",
-        bannerPath: "2.jpg",
-        venue: "Main Auditorium",
-        time: "10:00 AM",
-      },
-      {
-        name: "PC Building Competition",
-        description:
-          "Assemble and optimize a PC for performance and aesthetics.",
-        bannerPath: "3.jpg",
-        venue: "Main Auditorium",
-        time: "10:00 AM",
-      },
-    ],
-    []
-  );
-
   return (
     <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-      {events.map((ev) => (
+      {EVENTS.map((ev) => (
         <article
           key={ev.name}
           className="group relative overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-white/60"

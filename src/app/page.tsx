@@ -4,15 +4,16 @@ import { EventCards } from "../components/event-cards";
 import { RegistrationModal } from "../components/registration-modal";
 import { TicketDrawer } from "../components/ticket-drawer";
 import { Footer } from "../components/footer";
+import { getEventNamesForDisplay } from "@/lib/events";
 import Image from "next/image";
 import { useState } from "react";
 import Logo from "../../public/logo.png";
 
-// Event names now come from Firestore; use string type
-
 export default function Home() {
   const [activeEvent, setActiveEvent] = useState<string | null>(null);
   const [isModalOpen, setModalOpen] = useState(false);
+  const eventNames = getEventNamesForDisplay();
+
   const scrollTo = (sel: string) => {
     if (typeof document === "undefined") return;
     document.querySelector(sel)?.scrollIntoView({ behavior: "smooth" });
@@ -93,9 +94,7 @@ export default function Home() {
                   The Ultimate Inter‑College Showdown
                 </h1>
                 <p className="mt-4 text-white/90 md:text-lg">
-                  Register for one of our signature events —{" "}
-                  <strong>E‑Football</strong>, <strong>Coding Challenge</strong>
-                  , or <strong>PC Building Competition</strong>. One
+                  Register for one of our signature events — {eventNames}. One
                   participant. One ticket. One epic day.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -176,8 +175,7 @@ export default function Home() {
                       : "Get your ticket"}
                   </p>
                   <p className="text-sm text-slate-600 mt-1">
-                    {n === 1 &&
-                      "Choose from E‑Football, Coding Challenge, or PC Building."}
+                    {n === 1 && `Choose from ${eventNames}.`}
                     {n === 2 &&
                       "We use your info only to generate a unique QR ticket."}
                     {n === 3 &&
