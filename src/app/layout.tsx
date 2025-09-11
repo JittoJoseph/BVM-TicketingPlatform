@@ -18,16 +18,53 @@ export const metadata: Metadata = {
   title: "BVM Holy Cross — Inter-College Events",
   description:
     "Register for exciting inter-college events at BVM Holy Cross College, Cherpunkal. Join E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz competitions. One participant. One ticket. One epic day.",
+  keywords: [
+    "BVM Holy Cross",
+    "inter-college events",
+    "coding challenge",
+    "e-football",
+    "PC building",
+    "speed typing",
+    "tech quiz",
+    "college competition",
+    "Cherpunkal",
+    "student events",
+  ],
+  authors: [{ name: "BVM Holy Cross College" }],
+  creator: "BVM Holy Cross College",
+  publisher: "BVM Holy Cross College",
   metadataBase: new URL("https://bvm-fest-ticketing.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "BVM Holy Cross — Inter-College Events",
     description:
       "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz. Join the competition at BVM Holy Cross College!",
+    type: "website",
+    locale: "en_US",
+    url: "https://bvm-fest-ticketing.vercel.app",
+    siteName: "BVM Holy Cross Events",
     images: ["https://bvm-fest-ticketing.vercel.app/banner.jpg"],
   },
   twitter: {
     card: "summary_large_image",
+    title: "BVM Holy Cross — Inter-College Events",
+    description:
+      "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz.",
     images: ["https://bvm-fest-ticketing.vercel.app/banner.jpg"],
+    creator: "@bvmholycross",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/favicon.ico",
