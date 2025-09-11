@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bvm-fest-ticketing.vercel.app/sitemap.xml
+
+# Block crawling of API routes and admin pages
+Disallow: /api/
+Disallow: /admin/
