@@ -3,12 +3,28 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --card-bg: #1e2939;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --header-bg: #020203;
+  --muted: #6b7280;
+  --accent: #8b5cf6;
+}
+
+[data-theme="light"] {
+  --background: #fef7ed;
+  --foreground: #1e293b;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --header-bg: #ffffff;
+  --muted: #64748b;
+  --accent: #7c3aed;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), ui-sans-serif, system-ui;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Utility for hiding scrollbars */

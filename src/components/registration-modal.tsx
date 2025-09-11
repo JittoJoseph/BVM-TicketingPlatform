@@ -44,14 +44,14 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/80 [data-theme=light]_&:bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-lg bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-white/20">
+      <div className="relative w-full max-w-lg bg-[var(--card-bg)] rounded-2xl shadow-2xl overflow-hidden border border-[var(--card-border)]">
         {/* Header with event image */}
-        <div className="relative h-32 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="relative h-32 bg-gradient-to-r from-[var(--accent)] to-indigo-600 [data-theme=light]_&:from-violet-600 [data-theme=light]_&:to-purple-600">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
@@ -127,19 +127,19 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
           }}
         >
           <div className="text-center mb-6">
-            <p className="text-gray-300">
+            <p className="text-[var(--muted)]">
               Fill in your details to secure your spot
             </p>
           </div>
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">
+              <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
                 Full Name
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 border border-gray-600 rounded-xl bg-gray-800 text-white focus:bg-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all outline-none"
+                className="w-full px-4 py-3 border border-[var(--card-border)] rounded-xl bg-[var(--card-bg)] text-[var(--foreground)] focus:bg-[var(--background)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all outline-none"
                 placeholder="Enter your full name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -148,12 +148,12 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">
+              <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
                 Email Address
               </label>
               <input
                 type="email"
-                className="w-full px-4 py-3 border border-gray-600 rounded-xl bg-gray-800 text-white focus:bg-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all outline-none"
+                className="w-full px-4 py-3 border border-[var(--card-border)] rounded-xl bg-[var(--card-bg)] text-[var(--foreground)] focus:bg-[var(--background)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all outline-none"
                 placeholder="your.email@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -162,12 +162,12 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">
+              <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
                 Phone Number
               </label>
               <input
                 type="tel"
-                className="w-full px-4 py-3 border border-gray-600 rounded-xl bg-gray-800 text-white focus:bg-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all outline-none"
+                className="w-full px-4 py-3 border border-[var(--card-border)] rounded-xl bg-[var(--card-bg)] text-[var(--foreground)] focus:bg-[var(--background)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all outline-none"
                 placeholder="+91 98765 43210"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -176,12 +176,12 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">
+              <label className="block text-sm font-medium text-[var(--foreground)] mb-2">
                 College/Institution
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 border border-gray-600 rounded-xl bg-gray-800 text-white focus:bg-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all outline-none"
+                className="w-full px-4 py-3 border border-[var(--card-border)] rounded-xl bg-[var(--card-bg)] text-[var(--foreground)] focus:bg-[var(--background)] focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 transition-all outline-none"
                 placeholder="Your college name"
                 value={college}
                 onChange={(e) => setCollege(e.target.value)}
@@ -199,14 +199,14 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
           <div className="flex gap-3 pt-2">
             <button
               type="button"
-              className="flex-1 px-4 py-3 border border-gray-600 text-gray-300 rounded-xl hover:bg-gray-800 transition-colors font-medium cursor-pointer"
+              className="flex-1 px-4 py-3 border border-[var(--card-border)] text-[var(--muted)] rounded-xl hover:bg-[var(--card-bg)] transition-colors font-medium cursor-pointer"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
               disabled={disabled}
-              className="flex-1 px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium cursor-pointer"
+              className="flex-1 px-4 py-3 bg-gradient-to-r from-[var(--accent)] to-indigo-600 [data-theme=light]_&:from-violet-600 [data-theme=light]_&:to-purple-600 text-white rounded-xl hover:from-purple-700 hover:to-indigo-700 [data-theme=light]_&:hover:from-violet-700 [data-theme=light]_&:hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium cursor-pointer"
               type="submit"
             >
               {pending ? (

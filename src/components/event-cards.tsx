@@ -14,7 +14,7 @@ export function EventCards({
         {EVENTS.map((ev) => (
           <article
             key={ev.name}
-            className="group relative overflow-hidden rounded-3xl bg-gray-800 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
+            className="group relative overflow-hidden rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_10px_30px_rgba(0,0,0,0.1)] [data-theme=dark]_&:shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] [data-theme=dark]_&:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
           >
             {/* Event Image */}
             <figure className="relative h-48 sm:h-56 overflow-hidden">
@@ -50,19 +50,19 @@ export function EventCards({
 
             {/* Event Content */}
             <div className="p-6">
-              <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+              <h4 className="text-xl font-bold text-[var(--foreground)] mb-3 group-hover:text-[var(--accent)] transition-colors">
                 {ev.name}
               </h4>
 
               {ev.description && (
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 line-clamp-2">
                   {ev.description}
                 </p>
               )}
 
               {/* Action button */}
               <button
-                className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                className="w-full rounded-2xl bg-gradient-to-r from-[var(--accent)] to-indigo-600 [data-theme=light]_&:from-violet-600 [data-theme=light]_&:to-purple-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] [data-theme=dark]_&:shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] [data-theme=dark]_&:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-indigo-700 [data-theme=light]_&:hover:from-violet-700 [data-theme=light]_&:hover:to-purple-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                 onClick={() => onRegister(ev.name)}
               >
                 Register Now
@@ -79,7 +79,7 @@ export function EventCards({
           {EVENTS.slice(0, 3).map((ev) => (
             <article
               key={ev.name}
-              className="group relative overflow-hidden rounded-3xl bg-gray-800 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_10px_30px_rgba(0,0,0,0.1)] [data-theme=dark]_&:shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] [data-theme=dark]_&:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
             >
               {/* Event Image */}
               <figure className="relative h-56 overflow-hidden">
@@ -115,19 +115,19 @@ export function EventCards({
 
               {/* Event Content */}
               <div className="p-6">
-                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                <h4 className="text-xl font-bold text-[var(--foreground)] mb-3 group-hover:text-[var(--accent)] transition-colors">
                   {ev.name}
                 </h4>
 
                 {ev.description && (
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                  <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 line-clamp-2">
                     {ev.description}
                   </p>
                 )}
 
                 {/* Action button */}
                 <button
-                  className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                  className="w-full rounded-2xl bg-gradient-to-r from-[var(--accent)] to-indigo-600 [data-theme=light]_&:from-violet-600 [data-theme=light]_&:to-purple-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] [data-theme=dark]_&:shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] [data-theme=dark]_&:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-indigo-700 [data-theme=light]_&:hover:from-violet-700 [data-theme=light]_&:hover:to-purple-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                   onClick={() => onRegister(ev.name)}
                 >
                   Register Now
@@ -144,7 +144,7 @@ export function EventCards({
               {EVENTS.slice(3).map((ev) => (
                 <article
                   key={ev.name}
-                  className="group relative overflow-hidden rounded-3xl bg-gray-800 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
+                  className="group relative overflow-hidden rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_10px_30px_rgba(0,0,0,0.1)] [data-theme=dark]_&:shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] [data-theme=dark]_&:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
                 >
                   {/* Event Image */}
                   <figure className="relative h-56 overflow-hidden">
@@ -180,19 +180,19 @@ export function EventCards({
 
                   {/* Event Content */}
                   <div className="p-6">
-                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    <h4 className="text-xl font-bold text-[var(--foreground)] mb-3 group-hover:text-[var(--accent)] transition-colors">
                       {ev.name}
                     </h4>
 
                     {ev.description && (
-                      <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                      <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 line-clamp-2">
                         {ev.description}
                       </p>
                     )}
 
                     {/* Action button */}
                     <button
-                      className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                      className="w-full rounded-2xl bg-gradient-to-r from-[var(--accent)] to-indigo-600 [data-theme=light]_&:from-violet-600 [data-theme=light]_&:to-purple-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] [data-theme=dark]_&:shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] [data-theme=dark]_&:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-indigo-700 [data-theme=light]_&:hover:from-violet-700 [data-theme=light]_&:hover:to-purple-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                       onClick={() => onRegister(ev.name)}
                     >
                       Register Now
@@ -207,8 +207,8 @@ export function EventCards({
 
       {/* Visual indicator for event count */}
       <div className="mt-12 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full bg-black/40 backdrop-blur-sm px-4 py-2 text-sm text-white border border-white/20">
-          <div className="h-2 w-2 rounded-full bg-purple-400"></div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-[var(--card-bg)]/80 backdrop-blur-sm px-4 py-2 text-sm text-[var(--foreground)] border border-[var(--card-border)]">
+          <div className="h-2 w-2 rounded-full bg-[var(--accent)]"></div>
           <span>{EVENTS.length} exciting events to choose from</span>
         </div>
       </div>
