@@ -18,65 +18,20 @@ export const metadata: Metadata = {
   title: "BVM Holy Cross — Inter-College Events",
   description:
     "Register for exciting inter-college events at BVM Holy Cross College, Cherpunkal. Join E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz competitions. One participant. One ticket. One epic day.",
-  keywords: [
-    "BVM Holy Cross",
-    "inter-college events",
-    "coding challenge",
-    "e-football",
-    "PC building",
-    "speed typing",
-    "tech quiz",
-    "college competition",
-    "Cherpunkal",
-    "student events",
-  ],
-  authors: [{ name: "BVM Holy Cross College" }],
-  creator: "BVM Holy Cross College",
-  publisher: "BVM Holy Cross College",
-  metadataBase: new URL("https://bvm-fest-ticketing.vercel.app"), // Update this with your actual domain
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL("https://bvm-fest-ticketing.vercel.app"),
   openGraph: {
     title: "BVM Holy Cross — Inter-College Events",
     description:
       "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz. Join the competition at BVM Holy Cross College!",
-    type: "website",
-    locale: "en_US",
-    url: "https://bvm-fest-ticketing.vercel.app", // Update this with your actual domain
-    siteName: "BVM Holy Cross Events",
-    images: [
-      {
-        url: "https://bvm-fest-ticketing.vercel.app/banner.png", // Full absolute URL
-        width: 1200,
-        height: 630,
-        alt: "BVM Holy Cross College Inter-College Events - E-Football, PC Building, Coding Challenge, Speed Typing, Tech Quiz",
-        type: "image/png",
-      },
-    ],
+    images: ["https://bvm-fest-ticketing.vercel.app/banner.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BVM Holy Cross — Inter-College Events",
-    description:
-      "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz.",
-    images: ["https://bvm-fest-ticketing.vercel.app/banner.png"], // Full absolute URL
-    creator: "@bvmholycross", // Update with actual Twitter handle if available
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    images: ["https://bvm-fest-ticketing.vercel.app/banner.png"],
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.ico", 
     apple: "/logo.png",
   },
 };
@@ -117,6 +72,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Minimal WhatsApp-specific meta tags */}
+        <meta property="og:image" content="https://bvm-fest-ticketing.vercel.app/banner.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
