@@ -117,54 +117,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* WhatsApp and Facebook specific meta tags */}
-        <meta property="fb:app_id" content="your_facebook_app_id" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://bvm-fest-ticketing.vercel.app"
-        />
-        <meta
-          property="og:title"
-          content="BVM Holy Cross — Inter-College Events"
-        />
-        <meta
-          property="og:description"
-          content="Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz. Join the competition at BVM Holy Cross College!"
-        />
-        <meta
-          property="og:image"
-          content="https://bvm-fest-ticketing.vercel.app/banner.png"
-        />
-        <meta
-          property="og:image:secure_url"
-          content="https://bvm-fest-ticketing.vercel.app/banner.png"
-        />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="og:image:alt"
-          content="BVM Holy Cross College Inter-College Events"
-        />
-        <meta property="og:site_name" content="BVM Holy Cross Events" />
-        <meta property="og:locale" content="en_US" />
-
-        {/* Twitter Card meta tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="BVM Holy Cross — Inter-College Events"
-        />
-        <meta
-          name="twitter:description"
-          content="Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz."
-        />
-        <meta
-          name="twitter:image"
-          content="https://bvm-fest-ticketing.vercel.app/banner.png"
-        />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
