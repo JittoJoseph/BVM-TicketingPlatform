@@ -10,7 +10,7 @@ export type Event = {
 // Hardcoded events list - matches what's in EventCards component
 export const EVENTS: Event[] = [
   {
-    name: "E‑Football",
+    name: "E-Football",
     description: "Compete in high‑intensity matches on the big screen. Solo entry.",
     bannerPath: "1.jpg",
     venue: "Main Auditorium",
@@ -19,7 +19,7 @@ export const EVENTS: Event[] = [
   {
     name: "PC Building",
     description: "Assemble and optimize a PC for performance and aesthetics.",
-    bannerPath: "2.jpg",
+    bannerPath: "2.png",
     venue: "Main Auditorium",
     time: "10:00 AM",
   },
@@ -33,14 +33,14 @@ export const EVENTS: Event[] = [
   {
     name: "Speed Typing",
     description: "Test your typing speed and accuracy in this fast-paced competition.",
-    bannerPath: "1.jpg",
+    bannerPath: "4.png",
     venue: "Main Auditorium",
     time: "10:00 AM",
   },
   {
     name: "Tech Quiz",
     description: "Challenge your technical knowledge across various domains.",
-    bannerPath: "2.jpg",
+    bannerPath: "5.jpg",
     venue: "Main Auditorium",
     time: "10:00 AM",
   },
