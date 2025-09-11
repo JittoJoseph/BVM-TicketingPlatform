@@ -14,7 +14,7 @@ export function EventCards({
         {EVENTS.map((ev) => (
           <article
             key={ev.name}
-            className="group relative overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-white/60 hover:shadow-[0_20px_50px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2"
+            className="group relative overflow-hidden rounded-3xl bg-gray-800 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
           >
             {/* Event Image */}
             <figure className="relative h-48 sm:h-56 overflow-hidden">
@@ -32,16 +32,16 @@ export function EventCards({
               />
 
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
               {/* Event badge */}
-              <div className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-lg">
+              <div className="absolute top-4 left-4 rounded-full bg-black/80 backdrop-blur-sm px-3 py-1.5 text-sm font-semibold text-white shadow-lg border border-white/20">
                 {ev.name}
               </div>
 
               {/* Venue and time info overlay */}
               <div className="absolute bottom-4 right-4 text-right">
-                <div className="rounded-lg bg-black/40 backdrop-blur-sm px-2.5 py-1.5 text-white">
+                <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                   <div className="text-xs font-medium">{ev.venue}</div>
                   <div className="text-xs opacity-90">{ev.time}</div>
                 </div>
@@ -50,19 +50,19 @@ export function EventCards({
 
             {/* Event Content */}
             <div className="p-6">
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+              <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                 {ev.name}
               </h4>
 
               {ev.description && (
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-2">
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
                   {ev.description}
                 </p>
               )}
 
               {/* Action button */}
               <button
-                className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:from-indigo-700 hover:to-purple-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                 onClick={() => onRegister(ev.name)}
               >
                 Register Now
@@ -79,7 +79,7 @@ export function EventCards({
           {EVENTS.slice(0, 3).map((ev) => (
             <article
               key={ev.name}
-              className="group relative overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-white/60 hover:shadow-[0_20px_50px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-3xl bg-gray-800 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
             >
               {/* Event Image */}
               <figure className="relative h-56 overflow-hidden">
@@ -97,16 +97,16 @@ export function EventCards({
                 />
 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                 {/* Event badge */}
-                <div className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-lg">
+                <div className="absolute top-4 left-4 rounded-full bg-black/80 backdrop-blur-sm px-3 py-1.5 text-sm font-semibold text-white shadow-lg border border-white/20">
                   {ev.name}
                 </div>
 
                 {/* Venue and time info overlay */}
                 <div className="absolute bottom-4 right-4 text-right">
-                  <div className="rounded-lg bg-black/40 backdrop-blur-sm px-2.5 py-1.5 text-white">
+                  <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                     <div className="text-xs font-medium">{ev.venue}</div>
                     <div className="text-xs opacity-90">{ev.time}</div>
                   </div>
@@ -115,19 +115,19 @@ export function EventCards({
 
               {/* Event Content */}
               <div className="p-6">
-                <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {ev.name}
                 </h4>
 
                 {ev.description && (
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-2">
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
                     {ev.description}
                   </p>
                 )}
 
                 {/* Action button */}
                 <button
-                  className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:from-indigo-700 hover:to-purple-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                  className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                   onClick={() => onRegister(ev.name)}
                 >
                   Register Now
@@ -144,7 +144,7 @@ export function EventCards({
               {EVENTS.slice(3).map((ev) => (
                 <article
                   key={ev.name}
-                  className="group relative overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-white/60 hover:shadow-[0_20px_50px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2"
+                  className="group relative overflow-hidden rounded-3xl bg-gray-800 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-2"
                 >
                   {/* Event Image */}
                   <figure className="relative h-56 overflow-hidden">
@@ -162,16 +162,16 @@ export function EventCards({
                     />
 
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                     {/* Event badge */}
-                    <div className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-lg">
+                    <div className="absolute top-4 left-4 rounded-full bg-black/80 backdrop-blur-sm px-3 py-1.5 text-sm font-semibold text-white shadow-lg border border-white/20">
                       {ev.name}
                     </div>
 
                     {/* Venue and time info overlay */}
                     <div className="absolute bottom-4 right-4 text-right">
-                      <div className="rounded-lg bg-black/40 backdrop-blur-sm px-2.5 py-1.5 text-white">
+                      <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                         <div className="text-xs font-medium">{ev.venue}</div>
                         <div className="text-xs opacity-90">{ev.time}</div>
                       </div>
@@ -180,19 +180,19 @@ export function EventCards({
 
                   {/* Event Content */}
                   <div className="p-6">
-                    <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                       {ev.name}
                     </h4>
 
                     {ev.description && (
-                      <p className="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-2">
+                      <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
                         {ev.description}
                       </p>
                     )}
 
                     {/* Action button */}
                     <button
-                      className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:from-indigo-700 hover:to-purple-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                      className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                       onClick={() => onRegister(ev.name)}
                     >
                       Register Now
@@ -207,8 +207,8 @@ export function EventCards({
 
       {/* Visual indicator for event count */}
       <div className="mt-12 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm text-indigo-600">
-          <div className="h-2 w-2 rounded-full bg-indigo-400"></div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-black/40 backdrop-blur-sm px-4 py-2 text-sm text-white border border-white/20">
+          <div className="h-2 w-2 rounded-full bg-purple-400"></div>
           <span>{EVENTS.length} exciting events to choose from</span>
         </div>
       </div>

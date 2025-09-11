@@ -1,24 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-/* Tailwind v4 uses CSS variables; define tokens consumed by utility classes */
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-playfair);
-  --color-cream-100: #faf6ef;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
@@ -27,19 +11,11 @@ body {
   font-family: var(--font-inter), ui-sans-serif, system-ui;
 }
 
-/* Utilities */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-/* Design tokens as utility classes to mirror the POC */
-.glass {
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.7);
+/* Utility for hiding scrollbars */
+.no-scrollbar::-webkit-scrollbar { 
+  display: none; 
 }
-.shadow-soft {
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-.font-display {
-  font-family: var(--font-playfair), ui-serif, Georgia, serif;
+.no-scrollbar { 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
