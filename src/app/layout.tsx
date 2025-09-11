@@ -52,12 +52,6 @@ export const metadata: Metadata = {
         height: 630,
         alt: "BVM Holy Cross College Inter-College Events - E-Football, PC Building, Coding Challenge, Speed Typing, Tech Quiz",
       },
-      {
-        url: "/logo.png", 
-        width: 800,
-        height: 600,
-        alt: "BVM Holy Cross College Events",
-      },
     ],
   },
   twitter: {
@@ -95,28 +89,29 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "BVM Holy Cross Inter-College Events",
-    "description": "Exciting inter-college competition featuring E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz events.",
-    "organizer": {
+    name: "BVM Holy Cross Inter-College Events",
+    description:
+      "Exciting inter-college competition featuring E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz events.",
+    organizer: {
       "@type": "Organization",
-      "name": "BVM Holy Cross College",
-      "url": "https://bvm-fest-ticketing.vercel.app"
+      name: "BVM Holy Cross College",
+      url: "https://bvm-fest-ticketing.vercel.app",
     },
-    "location": {
+    location: {
       "@type": "Place",
-      "name": "BVM Holy Cross College",
-      "address": {
+      name: "BVM Holy Cross College",
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "Cherpunkal",
-        "addressCountry": "IN"
-      }
+        addressLocality: "Cherpunkal",
+        addressCountry: "IN",
+      },
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
-    }
+      price: "0",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+    },
   };
 
   return (
