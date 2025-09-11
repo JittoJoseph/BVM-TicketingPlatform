@@ -51,6 +51,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "BVM Holy Cross College Inter-College Events - E-Football, PC Building, Coding Challenge, Speed Typing, Tech Quiz",
+        type: "image/png",
       },
     ],
   },
@@ -117,6 +118,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Additional meta tags for WhatsApp compatibility */}
+        <meta
+          property="og:image:secure_url"
+          content="https://bvm-fest-ticketing.vercel.app/banner.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
