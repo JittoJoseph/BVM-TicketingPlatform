@@ -23,15 +23,15 @@ export const metadata: Metadata = {
     title: "BVM Holy Cross — Inter-College Events",
     description:
       "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz. Join the competition at BVM Holy Cross College!",
-    images: ["https://bvm-fest-ticketing.vercel.app/banner.png"],
+    images: ["https://bvm-fest-ticketing.vercel.app/banner.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://bvm-fest-ticketing.vercel.app/banner.png"],
+    images: ["https://bvm-fest-ticketing.vercel.app/banner.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon.ico", 
+    shortcut: "/favicon.ico",
     apple: "/logo.png",
   },
 };
@@ -73,7 +73,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Minimal WhatsApp-specific meta tags */}
-        <meta property="og:image" content="https://bvm-fest-ticketing.vercel.app/banner.png" />
+        <meta
+          property="og:image"
+          content="https://bvm-fest-ticketing.vercel.app/banner.jpg"
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <script

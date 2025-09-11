@@ -2,11 +2,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "WhatsApp Test - BVM Events",
-  description: "Testing WhatsApp sharing with minimal metadata",
+  description: "Testing WhatsApp sharing with JPG image",
   openGraph: {
     title: "WhatsApp Test - BVM Events",
-    description: "Testing WhatsApp sharing with minimal metadata",
-    images: ["https://bvm-fest-ticketing.vercel.app/banner.png"],
+    description: "Testing WhatsApp sharing with JPG image",
+    images: ["https://bvm-fest-ticketing.vercel.app/banner.jpg"],
   },
 };
 
@@ -18,7 +18,7 @@ export default function TestPage() {
       <code>https://bvm-fest-ticketing.vercel.app/test</code>
       <br />
       <br />
-      <img src="/banner.png" alt="Banner" className="max-w-md" />
+      <img src="/banner.jpg" alt="Banner" className="max-w-md" />
     </div>
   );
 }
