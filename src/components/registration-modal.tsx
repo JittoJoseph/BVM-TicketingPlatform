@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
-import { generateId, saveTicket } from "@/lib/ticket";
+import { useEffect, useState } from "react";
 import { getEventByName } from "@/lib/events";
 
 type Props = {
@@ -11,13 +10,12 @@ type Props = {
 };
 
 export function RegistrationModal({ open, onClose, eventName }: Props) {
-  const [pending, startTransition] = useTransition();
+  // Registration is currently disabled - this modal is preserved for future use
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [college, setCollege] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const disabled = pending || !name || !email || !phone || !college;
+  const disabled = true; // Always disabled
 
   // Reset form when modal closes
   useEffect(() => {
@@ -26,7 +24,6 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
       setEmail("");
       setPhone("");
       setCollege("");
-      setError(null);
     }
   }, [open]);
 
@@ -89,46 +86,17 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
           </div>
         </div>
 
-        {/* Form */}
+        {/* Form - Registration disabled */}
         <form
           className="p-6 space-y-5"
           onSubmit={(e) => {
             e.preventDefault();
-            startTransition(async () => {
-              setError(null);
-              const id = generateId();
-              const ticket = {
-                id,
-                name: name.trim(),
-                email: email.trim(),
-                phone: phone.trim(),
-                college: college.trim(),
-                event: eventName,
-                createdAt: Date.now(),
-              };
-              saveTicket(ticket);
-              try {
-                const response = await fetch("/api/registrations", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify(ticket),
-                });
-                if (!response.ok) {
-                  const errorData = await response.json();
-                  throw new Error(errorData.error || "Registration failed");
-                }
-              } catch (err) {
-                console.error(err);
-                setError("Saved locally. Sync will retry later.");
-              }
-              onClose();
-              document.dispatchEvent(new CustomEvent("ticket:updated"));
-            });
+            // Registration is currently disabled
           }}
         >
           <div className="text-center mb-6">
             <p className="text-gray-300">
-              Fill in your details to secure your spot
+              Registration is currently disabled
             </p>
           </div>
 
@@ -190,12 +158,6 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
             </div>
           </div>
 
-          {error && (
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-3">
-              <p className="text-sm text-amber-700">{error}</p>
-            </div>
-          )}
-
           <div className="flex gap-3 pt-2">
             <button
               type="button"
@@ -209,14 +171,7 @@ export function RegistrationModal({ open, onClose, eventName }: Props) {
               className="flex-1 px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium cursor-pointer"
               type="submit"
             >
-              {pending ? (
-                <span className="flex items-center justify-center gap-2">
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  Registering...
-                </span>
-              ) : (
-                "Register Now"
-              )}
+              Registration Disabled
             </button>
           </div>
         </form>

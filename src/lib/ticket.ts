@@ -1,3 +1,6 @@
+// NOTE: This file is preserved for future use when ticket generation is re-enabled.
+// Currently, the ticket generation functionality is disabled as part of the static platform conversion.
+
 export type Ticket = {
   id: string;
   name: string;

@@ -1,45 +1,37 @@
-# BVM Inter‑College Events Ticketing System
+# BVM Inter‑College Events Platform
 
-Next.js 15 + Tailwind CSS 4, modular implementation of the POC page with registration, ticket generation, and Firebase-ready persistence.
+A static event display platform showcasing inter-college events at BVM Holy Cross College. Built with Next.js 15 + Tailwind CSS 4.
 
 ## Features
 
-- Public landing with events and FAQ
-- Registration modal and a ticket drawer with QR code and PNG download
-- Server action + API route ready to persist to Firestore (optional)
-- Admin dashboard scaffold
+- Public landing page with static event listings
+- Event showcase for 5 competitions: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz
+- Clean, modern UI with FAQ section
+- Static events data (no database required)
 
 ## Getting started
 
 1. Install dependencies
 
-```powershell
+```bash
 npm install
 ```
 
 2. Run the dev server
 
-```powershell
+```bash
 npm run dev
 ```
 
-3. Optional: Configure Firebase by setting the following env vars (e.g., in `.env.local`):
+3. Open [http://localhost:3000](http://localhost:3000) to view the event platform
 
-```
-NEXT_PUBLIC_FIREBASE_API_KEY=...
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=...
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
-NEXT_PUBLIC_FIREBASE_APP_ID=...
-```
+## Current Status
 
-With env configured, server action/API will persist registrations in `registrations` collection.
-
-## Notes
-
-- No participant accounts required. Consider securing `/admin` via Firebase Auth + middleware.
-- The ticket is stored in localStorage for quick access; persistence is through Firestore when configured.
+- **Registration**: Currently disabled. The registration UI is visible but non-functional.
+- **Ticket Generation**: Code preserved in `src/lib/ticket.ts` for future use but not actively called.
+- **Database**: All Firebase/database functionality has been removed.
+- **Admin Access**: Admin functionality has been removed.
+- **Events**: All event data is statically defined in `src/lib/events.ts` and includes 5 hardcoded events.
   This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

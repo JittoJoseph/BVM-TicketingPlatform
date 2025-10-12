@@ -11,7 +11,8 @@ import Logo from "../../public/logo.png";
 
 export default function Home() {
   const [activeEvent, setActiveEvent] = useState<string | null>(null);
-  const [isModalOpen, setModalOpen] = useState(false);
+  // Registration is currently disabled - modal will not open
+  const [isModalOpen] = useState(false);
   const eventNames = getEventNamesForDisplay();
 
   const scrollTo = (sel: string) => {
@@ -148,8 +149,8 @@ export default function Home() {
 
         <EventCards
           onRegister={(eventName: string) => {
+            // Registration is currently disabled
             setActiveEvent(eventName);
-            setModalOpen(true);
           }}
         />
       </section>
@@ -236,11 +237,15 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer onRegister={() => setModalOpen(true)} />
+      <Footer onRegister={() => {
+        // Registration is currently disabled
+      }} />
 
       <RegistrationModal
         open={isModalOpen}
-        onClose={() => setModalOpen(false)}
+        onClose={() => {
+          // Registration is currently disabled - modal never opens
+        }}
         eventName={activeEvent}
       />
       <TicketDrawer />
