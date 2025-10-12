@@ -243,7 +243,9 @@ export default function Home() {
 
       <RegistrationModal
         open={isModalOpen}
-        onClose={() => setModalOpen(false)}
+        onClose={() => {
+          // Registration is currently disabled - modal never opens
+        }}
         eventName={activeEvent}
       />
       <TicketDrawer />
