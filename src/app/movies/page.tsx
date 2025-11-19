@@ -52,11 +52,11 @@ export default async function MoviesPage() {
   return (
     <main className="min-h-screen bg-[#05050c] text-white">
       {/* Hero Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-900/30 via-[#05050c] to-blue-900/20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900/30 via-[#05050c] to-blue-900/20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20" />
         <div className="relative mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
           <div className="flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-purple-300 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-cyan-300 mb-4">
               <Film className="h-4 w-4" />
               Now Showing
             </div>
@@ -66,6 +66,20 @@ export default async function MoviesPage() {
             <p className="text-lg text-gray-300 max-w-2xl mb-6">
               Book your movie tickets for screenings at our college theatre.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <Star className="h-4 w-4 text-yellow-400" />
+                Easy Booking
+              </div>
+              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <Ticket className="h-4 w-4 text-cyan-400" />
+                Secure Payments
+              </div>
+              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <Clock className="h-4 w-4 text-blue-400" />
+                Instant Email Tickets
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -119,7 +133,7 @@ export default async function MoviesPage() {
                 <div
                   className={`group relative rounded-2xl border border-white/10 bg-white/[0.04] overflow-hidden transition-all duration-300 ${
                     hasShowtime
-                      ? "hover:border-purple-500/60 hover:shadow-[0_20px_40px_rgba(79,70,229,0.25)] hover:-translate-y-1"
+                      ? "hover:border-cyan-500/60 hover:shadow-[0_20px_40px_rgba(6,182,212,0.25)] hover:-translate-y-1"
                       : "opacity-60 cursor-not-allowed"
                   }`}
                 >

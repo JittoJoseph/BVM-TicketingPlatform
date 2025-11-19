@@ -111,7 +111,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <button
-                    className="rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white px-5 py-3 font-medium shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:from-purple-700 hover:to-blue-700 transition-all duration-300 cursor-pointer"
+                    className="rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-5 py-3 font-medium shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 cursor-pointer"
                     onClick={() => scrollTo("#events")}
                   >
                     Explore Events
@@ -144,18 +144,18 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 pt-12">
         <Link
           href="/movies"
-          className="group block rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-6 md:p-8 transition-all duration-300 hover:border-purple-500/30 hover:shadow-[0_20px_40px_rgba(124,58,237,0.15)]"
+          className="group block rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-6 md:p-8 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-[0_20px_40px_rgba(6,182,212,0.15)]"
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex-1">
-              <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/20 px-3 py-1 text-xs font-medium text-purple-300 mb-3">
+              <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-300 mb-3">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
                 Now Showing
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                 Movies at BVM Theatre
               </h2>
               <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
@@ -166,7 +166,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-3">
               <div className="hidden sm:flex flex-col gap-2 text-xs text-gray-400"></div>
-              <div className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-sm shadow-lg group-hover:shadow-xl group-hover:from-purple-700 group-hover:to-blue-700 transition-all">
+              <div className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm shadow-lg group-hover:shadow-xl group-hover:from-cyan-700 group-hover:to-blue-700 transition-all">
                 <span>Browse Movies</span>
                 <svg
                   className="w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -217,7 +217,7 @@ export default function Home() {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((n) => (
               <div key={n} className="flex items-start gap-4">
-                <div className="h-10 w-10 shrink-0 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white grid place-content-center">
+                <div className="h-10 w-10 shrink-0 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white grid place-content-center">
                   {n}
                 </div>
                 <div>
