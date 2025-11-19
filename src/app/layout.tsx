@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "BVM Holy Cross — Inter-College Events",
+  title: "BVM Holy Cross Inter College Events",
   description:
     "Register for exciting inter-college events at BVM Holy Cross College, Cherpunkal. Join E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz competitions. One participant. One ticket. One epic day.",
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "BVM Holy Cross — Inter-College Events",
+    title: "BVM Holy Cross - Inter-College Events",
     description:
       "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz. Join the competition at BVM Holy Cross College!",
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BVM Holy Cross — Inter-College Events",
+    title: "BVM Holy Cross - Inter-College Events",
     description:
       "Register for exciting inter-college events: E-Football, PC Building, Coding Challenge, Speed Typing, and Tech Quiz.",
     images: ["https://bvm-fest-ticketing.vercel.app/banner.jpg"],

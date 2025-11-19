@@ -1,18 +1,13 @@
 "use client";
 
 import { EventCards } from "../components/event-cards";
-import { RegistrationModal } from "../components/registration-modal";
-import { TicketDrawer } from "../components/ticket-drawer";
 import { Footer } from "../components/footer";
 import { getEventNamesForDisplay } from "@/lib/events";
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
 import Logo from "../../public/logo.png";
 
 export default function Home() {
-  const [activeEvent, setActiveEvent] = useState<string | null>(null);
-  // Registration is currently disabled - modal will not open
-  const [isModalOpen] = useState(false);
   const eventNames = getEventNamesForDisplay();
 
   const scrollTo = (sel: string) => {
@@ -71,6 +66,13 @@ export default function Home() {
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </button>
+
+            <Link
+              href="/movies"
+              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-white hover:bg-white/20 transition-all cursor-pointer"
+            >
+              <span>Movie Nights</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -105,6 +107,15 @@ export default function Home() {
                   >
                     Explore Events
                   </button>
+                  <Link
+                    href="/movies"
+                    className="rounded-xl bg-white/10 text-white px-5 py-3 font-medium hover:bg-white/20 transition-all duration-300 cursor-pointer flex items-center gap-2"
+                  >
+                    <span>Book Movies</span>
+                    <span className="bg-purple-500 text-[10px] px-1.5 py-0.5 rounded-full">
+                      NEW
+                    </span>
+                  </Link>
                   <button
                     className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-white/20 transition-all duration-300 cursor-pointer"
                     onClick={() => scrollTo("#how")}
@@ -148,9 +159,8 @@ export default function Home() {
         </div>
 
         <EventCards
-          onRegister={(eventName: string) => {
-            // Registration is currently disabled
-            setActiveEvent(eventName);
+          onRegister={() => {
+            /* Registration disabled */
           }}
         />
       </section>
@@ -237,18 +247,11 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer onRegister={() => {
-        // Registration is currently disabled
-      }} />
-
-      <RegistrationModal
-        open={isModalOpen}
-        onClose={() => {
-          // Registration is currently disabled - modal never opens
+      <Footer
+        onRegister={() => {
+          // Registration is currently disabled
         }}
-        eventName={activeEvent}
       />
-      <TicketDrawer />
     </div>
   );
 }
