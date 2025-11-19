@@ -45,7 +45,7 @@ export function SeatMap({
             ? "bg-red-600 border-red-500 text-white cursor-not-allowed"
             : isSelected
             ? "bg-green-500 border-green-400 text-white shadow-[0_0_10px_rgba(34,197,94,0.5)] transform scale-110"
-            : "bg-white/10 border-white/30 text-gray-300 hover:bg-white/20 hover:border-white/50"
+            : "bg-white/10 border-white/30 text-gray-300 hover:bg-white/20 hover:border-white/50 cursor-pointer"
         )}
         title={`${rowLabel}${colNumber}${
           isDamaged ? " (Unavailable)" : isBooked ? " (Booked)" : ""
