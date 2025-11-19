@@ -29,50 +29,72 @@ export default function Home() {
       </div>
 
       {/* Header (simple, single layout for desktop and mobile) */}
-      <section aria-label="Site header" className="mb-6">
+      <section aria-label="Site header" className="mb-8">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex items-center justify-between gap-3 rounded-2xl backdrop-blur-[14px] bg-black/80 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.3)] px-5 py-3">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between gap-4 rounded-2xl backdrop-blur-[14px] bg-black/80 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.3)] px-6 py-4">
+            <div className="flex items-center gap-4">
               <Image
                 src={Logo}
                 alt="BVM Holy Cross College logo"
-                width={40}
-                height={40}
-                className="h-10 w-10 rounded-full object-contain bg-white/10 p-1"
+                width={44}
+                height={44}
+                className="h-11 w-11 rounded-full object-contain bg-white/10 p-1.5"
                 priority
               />
               <div>
                 <p className="text-xs md:text-sm tracking-wide text-gray-400">
                   BVM Holy Cross College
                 </p>
-                <p className="font-semibold text-white">Ticketing Platform</p>
+                <p className="font-semibold text-white text-sm md:text-base">
+                  Ticketing Platform
+                </p>
               </div>
             </div>
 
-            <button
-              onClick={() => scrollTo("#events")}
-              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:from-purple-700 hover:to-blue-700 transition-all cursor-pointer"
-            >
-              <span>Get Tickets</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
+            <nav className="hidden md:flex items-center gap-3">
+              <button
+                onClick={() => scrollTo("#events")}
+                className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
               >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </button>
+                Events
+              </button>
+              <Link
+                href="/movies"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-xl shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <span>🎬 Movies</span>
+              </Link>
+            </nav>
 
-            <Link
-              href="/movies"
-              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-white hover:bg-white/20 transition-all cursor-pointer"
-            >
-              <span>Movie Nights</span>
-            </Link>
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center gap-2">
+              <Link
+                href="/movies"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl text-sm shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <span className="text-lg">🎬</span>
+                <span>Movies</span>
+              </Link>
+              <button
+                onClick={() => scrollTo("#events")}
+                className="p-2.5 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                aria-label="View events"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -107,15 +129,15 @@ export default function Home() {
                   >
                     Explore Events
                   </button>
-                  <Link
-                    href="/movies"
+                  <button
                     className="rounded-xl bg-white/10 text-white px-5 py-3 font-medium hover:bg-white/20 transition-all duration-300 cursor-pointer flex items-center gap-2"
+                    onClick={() => scrollTo("#movies")}
                   >
-                    <span>Book Movies</span>
+                    <span>🎬 Movie Night</span>
                     <span className="bg-purple-500 text-[10px] px-1.5 py-0.5 rounded-full">
                       NEW
                     </span>
-                  </Link>
+                  </button>
                   <button
                     className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-white/20 transition-all duration-300 cursor-pointer"
                     onClick={() => scrollTo("#how")}
@@ -133,6 +155,109 @@ export default function Home() {
                       <path d="m12 5 7 7-7 7" />
                     </svg>
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Movies Feature Section */}
+      <section id="movies" className="mx-auto max-w-7xl px-6 pt-16">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20 border border-purple-500/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+          {/* Background decoration */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-purple-500/30 blur-3xl" />
+            <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-blue-500/30 blur-3xl" />
+          </div>
+
+          <div className="relative p-8 md:p-12 lg:p-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Content */}
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">
+                  <span className="text-lg">🎬</span>
+                  <span>NEW FEATURE</span>
+                </div>
+
+                <h2 className="font-[var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                  Movie Night Experience
+                </h2>
+
+                <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed">
+                  Book tickets for the latest blockbuster movies. Choose your
+                  seats, pay securely, and get instant digital tickets delivered
+                  to your email.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link
+                    href="/movies"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <span className="text-xl">🎬</span>
+                    <span>Book Movies Now</span>
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+
+                  <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span>Easy Booking</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                      <span>Secure Payment</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                      <span>Instant Tickets</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Visual */}
+              <div className="relative">
+                <div className="relative mx-auto max-w-md">
+                  {/* Movie poster mockup */}
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <img
+                      src="https://images.unsplash.com/photo-1489599735734-79b4d4c4b3a8?q=80&w=600&auto=format&fit=crop"
+                      alt="Movie Experience"
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-2 text-white">
+                        <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-xs font-bold">
+                          HD
+                        </div>
+                        <span className="text-sm font-medium">Now Showing</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating elements */}
+                  <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center shadow-lg animate-pulse">
+                    <span className="text-white text-xl">⭐</span>
+                  </div>
+
+                  <div className="absolute -bottom-4 -left-4 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+                    4.8 ★
+                  </div>
                 </div>
               </div>
             </div>
@@ -158,11 +283,7 @@ export default function Home() {
           </div>
         </div>
 
-        <EventCards
-          onRegister={() => {
-            /* Registration disabled */
-          }}
-        />
+        <EventCards />
       </section>
 
       {/* How it works */}

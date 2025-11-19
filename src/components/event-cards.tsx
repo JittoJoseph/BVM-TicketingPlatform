@@ -2,11 +2,7 @@
 
 import { EVENTS } from "@/lib/events";
 
-export function EventCards({
-  onRegister,
-}: {
-  onRegister: (eventName: string) => void;
-}) {
+export function EventCards() {
   return (
     <div className="mt-16">
       {/* Mobile and tablet: responsive grid */}
@@ -61,12 +57,11 @@ export function EventCards({
               )}
 
               {/* Action button */}
-              <button
-                className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                onClick={() => onRegister(ev.name)}
-              >
-                Register Now
-              </button>
+              <div className="w-full rounded-2xl bg-gray-700/50 px-4 py-3 text-center border border-gray-600/50">
+                <span className="text-sm font-medium text-gray-300">
+                  Coming Soon
+                </span>
+              </div>
             </div>
           </article>
         ))}
@@ -126,12 +121,11 @@ export function EventCards({
                 )}
 
                 {/* Action button */}
-                <button
-                  className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                  onClick={() => onRegister(ev.name)}
-                >
-                  Register Now
-                </button>
+                <div className="w-full rounded-2xl bg-gray-700/50 px-4 py-3 text-center border border-gray-600/50">
+                  <span className="text-sm font-medium text-gray-300">
+                    Coming Soon
+                  </span>
+                </div>
               </div>
             </article>
           ))}
@@ -191,12 +185,11 @@ export function EventCards({
                     )}
 
                     {/* Action button */}
-                    <button
-                      className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700 transform transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                      onClick={() => onRegister(ev.name)}
-                    >
-                      Register Now
-                    </button>
+                    <div className="w-full rounded-2xl bg-gray-700/50 px-4 py-3 text-center border border-gray-600/50">
+                      <span className="text-sm font-medium text-gray-300">
+                        Coming Soon
+                      </span>
+                    </div>
                   </div>
                 </article>
               ))}
