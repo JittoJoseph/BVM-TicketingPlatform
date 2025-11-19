@@ -66,20 +66,6 @@ export default async function MoviesPage() {
             <p className="text-lg text-gray-300 max-w-2xl mb-6">
               Book your movie tickets for screenings at our college theatre.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                <Star className="h-4 w-4 text-yellow-400" />
-                Easy Booking
-              </div>
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                <Ticket className="h-4 w-4 text-purple-400" />
-                Secure Payments
-              </div>
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                <Clock className="h-4 w-4 text-blue-400" />
-                Instant Email Tickets
-              </div>
-            </div>
           </div>
         </div>
       </section>
