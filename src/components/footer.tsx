@@ -24,7 +24,7 @@ export function Footer({ onRegister }: Props) {
           </div>
           <div className="md:text-right">
             <button
-              className="rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-purple-700 hover:to-blue-700"
+              className="rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 px-5 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:from-cyan-700 hover:to-blue-700"
               onClick={onRegister}
             >
               Register now
