@@ -4,7 +4,6 @@ import { EventCards } from "../components/event-cards";
 import { Footer } from "../components/footer";
 import { getEventNamesForDisplay } from "@/lib/events";
 import Image from "next/image";
-import Link from "next/link";
 import Logo from "../../public/logo.png";
 
 export default function Home() {
@@ -138,53 +137,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Movies Section */}
-      <section className="mx-auto max-w-7xl px-6 pt-12">
-        <Link
-          href="/movies"
-          className="group block rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-6 md:p-8 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-[0_20px_40px_rgba(6,182,212,0.15)]"
-        >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="flex-1">
-              <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-300 mb-3">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                </span>
-                Now Showing
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                Movies at BVM Theatre
-              </h2>
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
-                Book tickets for the latest screenings at our college theatre.
-                Choose your seats, pay securely, and get instant digital
-                tickets.
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="hidden sm:flex flex-col gap-2 text-xs text-gray-400"></div>
-              <div className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm shadow-lg group-hover:shadow-xl group-hover:from-cyan-700 group-hover:to-blue-700 transition-all">
-                <span>Browse Movies</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </Link>
       </section>
 
       {/* Events */}
