@@ -1,21 +1,83 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --neon-green: #39ff14;
+  --neon-blue: #00f3ff;
+  --neon-pink: #ff00ff;
+  --bg-dark: #050505;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), ui-sans-serif, system-ui;
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--bg-dark);
+  color: #e5e5e5;
+  overflow-x: hidden;
 }
 
-/* Utility for hiding scrollbars */
-.no-scrollbar::-webkit-scrollbar { 
-  display: none; 
+.font-tech {
+  font-family: 'Orbitron', sans-serif;
 }
-.no-scrollbar { 
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+/* Neon Glow Utilities */
+.neon-text-green {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+}
+.neon-box-green {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+  border: 1px solid rgba(57, 255, 20, 0.5);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Sim Racing Feature Background */
+.sim-bg {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url('https://simracingsetup.com/wp-content/uploads/2022/11/F1-Sim-Racing-Cockpit-F1-Drive-London.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }

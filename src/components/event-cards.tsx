@@ -1,6 +1,7 @@
 "use client";
 
 import { EVENTS } from "@/lib/events";
+import Image from "next/image";
 
 export function EventCards() {
   return (
@@ -14,17 +15,18 @@ export function EventCards() {
           >
             {/* Event Image */}
             <figure className="relative h-48 sm:h-56 overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={
-                  ev.bannerPath
-                    ? ev.bannerPath.startsWith("/")
-                      ? ev.bannerPath
-                      : `/${ev.bannerPath}`
+                  ev.image
+                    ? ev.image.startsWith("/")
+                      ? ev.image
+                      : `/${ev.image}`
                     : "/globe.svg"
                 }
                 alt={ev.name}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fill
+                style={{ objectFit: "cover" }}
+                className="transition-transform duration-700 group-hover:scale-110"
               />
 
               {/* Gradient overlay */}
@@ -39,7 +41,10 @@ export function EventCards() {
               <div className="absolute bottom-4 right-4 text-right">
                 <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                   <div className="text-xs font-medium">{ev.venue}</div>
-                  <div className="text-xs opacity-90">{ev.time}</div>
+                  <div className="text-xs opacity-90">
+                    {ev.startTime}
+                    {ev.endTime ? ` - ${ev.endTime}` : ""}
+                  </div>
                 </div>
               </div>
             </figure>
@@ -81,10 +86,10 @@ export function EventCards() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={
-                    ev.bannerPath
-                      ? ev.bannerPath.startsWith("/")
-                        ? ev.bannerPath
-                        : `/${ev.bannerPath}`
+                    ev.image
+                      ? ev.image.startsWith("/")
+                        ? ev.image
+                        : `/${ev.image}`
                       : "/globe.svg"
                   }
                   alt={ev.name}
@@ -103,7 +108,10 @@ export function EventCards() {
                 <div className="absolute bottom-4 right-4 text-right">
                   <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                     <div className="text-xs font-medium">{ev.venue}</div>
-                    <div className="text-xs opacity-90">{ev.time}</div>
+                    <div className="text-xs opacity-90">
+                      {ev.startTime}
+                      {ev.endTime ? ` - ${ev.endTime}` : ""}
+                    </div>
                   </div>
                 </div>
               </figure>
@@ -142,17 +150,18 @@ export function EventCards() {
                 >
                   {/* Event Image */}
                   <figure className="relative h-56 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={
-                        ev.bannerPath
-                          ? ev.bannerPath.startsWith("/")
-                            ? ev.bannerPath
-                            : `/${ev.bannerPath}`
+                        ev.image
+                          ? ev.image.startsWith("/")
+                            ? ev.image
+                            : `/${ev.image}`
                           : "/globe.svg"
                       }
                       alt={ev.name}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className="transition-transform duration-700 group-hover:scale-110"
                     />
 
                     {/* Gradient overlay */}
@@ -167,7 +176,10 @@ export function EventCards() {
                     <div className="absolute bottom-4 right-4 text-right">
                       <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                         <div className="text-xs font-medium">{ev.venue}</div>
-                        <div className="text-xs opacity-90">{ev.time}</div>
+                        <div className="text-xs opacity-90">
+                          {ev.startTime}
+                          {ev.endTime ? ` - ${ev.endTime}` : ""}
+                        </div>
                       </div>
                     </div>
                   </figure>
