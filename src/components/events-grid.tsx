@@ -1,4 +1,4 @@
-import { EVENTS, getEventsByCategory } from "@/lib/events";
+import { getEventsByCategory } from "@/lib/events";
 import EventCard from "./event-card";
 
 export default function EventsGrid() {

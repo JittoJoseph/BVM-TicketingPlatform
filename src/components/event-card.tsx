@@ -1,5 +1,6 @@
 import { Event } from "@/lib/events";
 import Link from "next/link";
+import Image from "next/image";
 
 interface EventCardProps {
   event: Event;
@@ -43,9 +44,11 @@ export default function EventCard({ event }: EventCardProps) {
       )}`}
     >
       <div className="h-48 overflow-hidden relative">
-        <img
+        <Image
           src={event.image}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          fill
+          style={{ objectFit: "cover" }}
+          className="group-hover:scale-110 transition-transform duration-500"
           alt={event.name}
         />
         {event.tag && (

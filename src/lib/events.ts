@@ -40,7 +40,7 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://play-lh.googleusercontent.com/K-0K2n7VqD0c7Xb0J1k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0",
+    image: "/minimiltia.jpg",
     description: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
     venue: "MAIN STAGE",
     tag: "MOBILE"
@@ -55,7 +55,7 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1624138784181-dc7f5b75e52e?q=80&w=1000&auto=format&fit=crop",
+    image: "/valo.jpg",
     description: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
     venue: "MAIN STAGE",
     tag: "PC LAN"
@@ -70,7 +70,7 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop",
+    image: "/freefire.jpg",
     description: "Solo/Squad Firefight Tournament. Survive till the end.",
     venue: "MAIN STAGE",
     tag: "MOBILE"
@@ -85,7 +85,7 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1593305841991-05c29736f87e?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.financialexpressdigital.com/2022/07/BGMI.jpg",
     description: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
     venue: "MAIN STAGE",
     tag: "MOBILE"
@@ -100,7 +100,7 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1000&auto=format&fit=crop",
+    image: "/5s.jpeg",
     description: "High intensity 5-a-side football tournament.",
     venue: "MAIN STAGE",
     tag: "TEAM"
@@ -145,7 +145,7 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=1000&auto=format&fit=crop",
+    image: "/pess.jpg",
     description: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
     venue: "MAIN STAGE",
     tag: "CONSOLE"
