@@ -17,10 +17,10 @@ export function EventCards() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={
-                  ev.bannerPath
-                    ? ev.bannerPath.startsWith("/")
-                      ? ev.bannerPath
-                      : `/${ev.bannerPath}`
+                  ev.image
+                    ? ev.image.startsWith("/")
+                      ? ev.image
+                      : `/${ev.image}`
                     : "/globe.svg"
                 }
                 alt={ev.name}
@@ -39,7 +39,10 @@ export function EventCards() {
               <div className="absolute bottom-4 right-4 text-right">
                 <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                   <div className="text-xs font-medium">{ev.venue}</div>
-                  <div className="text-xs opacity-90">{ev.time}</div>
+                  <div className="text-xs opacity-90">
+                    {ev.startTime}
+                    {ev.endTime ? ` - ${ev.endTime}` : ""}
+                  </div>
                 </div>
               </div>
             </figure>
@@ -81,10 +84,10 @@ export function EventCards() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={
-                    ev.bannerPath
-                      ? ev.bannerPath.startsWith("/")
-                        ? ev.bannerPath
-                        : `/${ev.bannerPath}`
+                    ev.image
+                      ? ev.image.startsWith("/")
+                        ? ev.image
+                        : `/${ev.image}`
                       : "/globe.svg"
                   }
                   alt={ev.name}
@@ -103,7 +106,10 @@ export function EventCards() {
                 <div className="absolute bottom-4 right-4 text-right">
                   <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                     <div className="text-xs font-medium">{ev.venue}</div>
-                    <div className="text-xs opacity-90">{ev.time}</div>
+                    <div className="text-xs opacity-90">
+                      {ev.startTime}
+                      {ev.endTime ? ` - ${ev.endTime}` : ""}
+                    </div>
                   </div>
                 </div>
               </figure>
@@ -145,10 +151,10 @@ export function EventCards() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={
-                        ev.bannerPath
-                          ? ev.bannerPath.startsWith("/")
-                            ? ev.bannerPath
-                            : `/${ev.bannerPath}`
+                        ev.image
+                          ? ev.image.startsWith("/")
+                            ? ev.image
+                            : `/${ev.image}`
                           : "/globe.svg"
                       }
                       alt={ev.name}
@@ -167,7 +173,10 @@ export function EventCards() {
                     <div className="absolute bottom-4 right-4 text-right">
                       <div className="rounded-lg bg-black/60 backdrop-blur-sm px-2.5 py-1.5 text-white border border-white/20">
                         <div className="text-xs font-medium">{ev.venue}</div>
-                        <div className="text-xs opacity-90">{ev.time}</div>
+                        <div className="text-xs opacity-90">
+                          {ev.startTime}
+                          {ev.endTime ? ` - ${ev.endTime}` : ""}
+                        </div>
                       </div>
                     </div>
                   </figure>

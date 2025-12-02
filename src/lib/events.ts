@@ -1,55 +1,174 @@
-// Simple event type for the hardcoded events in EventCards component
 export type Event = {
+  id: string;
   name: string;
+  category: "Esports" | "Technical" | "Physical Sports" | "Experience Zone" | "Workshop";
+  date: string;
+  startTime: string;
+  endTime: string | null;
+  pricing: string;
+  prizePool: string;
+  makemypassUrl: string;
+  image: string;
   description: string;
-  bannerPath: string;
   venue: string;
-  time: string;
+  tag?: string; // e.g., "PC LAN", "MOBILE", "TEAM"
 };
 
-// Hardcoded events list - matches what's in EventCards component
 export const EVENTS: Event[] = [
   {
-    name: "E-Football",
-    description: "Compete in high‑intensity matches on the big screen. Solo entry.",
-    bannerPath: "1.jpg",
-    venue: "Main Auditorium",
-    time: "10:00 AM",
-  },
-  {
-    name: "PC Building",
-    description: "Assemble and optimize a PC for performance and aesthetics.",
-    bannerPath: "2.png",
-    venue: "Main Auditorium",
-    time: "10:00 AM",
-  },
-  {
+    id: "coding-challenge",
     name: "Coding Challenge",
-    description: "Solve timed problems and climb the leaderboard. One participant per team.",
-    bannerPath: "3.jpg",
-    venue: "Main Auditorium",
-    time: "10:00 AM",
+    category: "Technical",
+    date: "2026-01-07",
+    startTime: "10:45",
+    endTime: "12:00",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000&auto=format&fit=crop",
+    description: "Solve complex algorithmic problems within the time limit.",
+    venue: "MAIN STAGE",
+    tag: "SOLO/TEAM"
   },
   {
+    id: "mini-militia",
+    name: "Mini Militia Classic",
+    category: "Esports",
+    date: "2026-01-07",
+    startTime: "11:30",
+    endTime: "13:00",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://play-lh.googleusercontent.com/K-0K2n7VqD0c7Xb0J1k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0j8k8q0",
+    description: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
+    venue: "MAIN STAGE",
+    tag: "MOBILE"
+  },
+  {
+    id: "valorant",
+    name: "Valorant Gaming",
+    category: "Esports",
+    date: "2026-01-07",
+    startTime: "14:00",
+    endTime: "15:00",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1624138784181-dc7f5b75e52e?q=80&w=1000&auto=format&fit=crop",
+    description: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
+    venue: "MAIN STAGE",
+    tag: "PC LAN"
+  },
+  {
+    id: "free-fire",
+    name: "Free Fire Tournament",
+    category: "Esports",
+    date: "2026-01-07",
+    startTime: "14:00",
+    endTime: "15:30",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop",
+    description: "Solo/Squad Firefight Tournament. Survive till the end.",
+    venue: "MAIN STAGE",
+    tag: "MOBILE"
+  },
+  {
+    id: "bgmi",
+    name: "BGMI",
+    category: "Esports",
+    date: "2026-01-07",
+    startTime: "14:00",
+    endTime: "15:30",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1593305841991-05c29736f87e?q=80&w=1000&auto=format&fit=crop",
+    description: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
+    venue: "MAIN STAGE",
+    tag: "MOBILE"
+  },
+  {
+    id: "5s-football",
+    name: "5's Football",
+    category: "Physical Sports",
+    date: "2026-01-08",
+    startTime: "10:00",
+    endTime: null,
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1000&auto=format&fit=crop",
+    description: "High intensity 5-a-side football tournament.",
+    venue: "MAIN STAGE",
+    tag: "TEAM"
+  },
+  {
+    id: "ui-ux",
+    name: "UI/UX Designing",
+    category: "Technical",
+    date: "2026-01-08",
+    startTime: "10:15",
+    endTime: "12:30",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=1000&auto=format&fit=crop",
+    description: "Design the future. Create intuitive and beautiful user interfaces.",
+    venue: "MAIN STAGE",
+    tag: "SOLO"
+  },
+  {
+    id: "speed-typing",
     name: "Speed Typing",
+    category: "Technical",
+    date: "2026-01-08",
+    startTime: "11:00",
+    endTime: "12:00",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b91a603?q=80&w=1000&auto=format&fit=crop",
     description: "Test your typing speed and accuracy in this fast-paced competition.",
-    bannerPath: "4.png",
-    venue: "Main Auditorium",
-    time: "10:00 AM",
+    venue: "MAIN STAGE",
+    tag: "SOLO"
   },
   {
-    name: "Tech Quiz",
-    description: "Challenge your technical knowledge across various domains.",
-    bannerPath: "5.jpg",
-    venue: "Main Auditorium",
-    time: "10:00 AM",
+    id: "efootball",
+    name: "eFootball Championship",
+    category: "Esports",
+    date: "2026-01-08",
+    startTime: "14:00",
+    endTime: "15:30",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=1000&auto=format&fit=crop",
+    description: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
+    venue: "MAIN STAGE",
+    tag: "CONSOLE"
   },
+  {
+    id: "music-concert",
+    name: "Music Concert",
+    category: "Experience Zone",
+    date: "2026-01-08",
+    startTime: "17:30",
+    endTime: "19:00",
+    pricing: "₹100",
+    prizePool: "N/A",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "https://images.unsplash.com/photo-1459749411177-0473ef71607b?q=80&w=1000&auto=format&fit=crop",
+    description: "Live music concert to end the fest with a bang.",
+    venue: "MAIN STAGE",
+    tag: "LIVE"
+  }
 ];
 
-// Helper function to get event by name
-export function getEventByName(name: string): Event | null {
-  const found = EVENTS.find((e) => e.name.toLowerCase() === name.toLowerCase());
-  return found || null;
+export function getEventsByCategory(category: string) {
+  return EVENTS.filter(event => event.category === category);
 }
 
 // Helper function to check if an event name is valid
@@ -64,3 +183,4 @@ export function getEventNamesForDisplay(): string {
   const lastEvent = names.pop();
   return names.join(", ") + ", and " + lastEvent;
 }
+
