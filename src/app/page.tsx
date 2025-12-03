@@ -10,9 +10,9 @@ export default function Home() {
     <main className="antialiased bg-black text-white overflow-x-hidden font-sans">
       <Navbar />
       <Hero />
-      <SimRacing />
       <EventsGrid />
       <GrandFinale />
+      <SimRacing />
       <Footer />
     </main>
   );
