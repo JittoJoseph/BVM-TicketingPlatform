@@ -66,8 +66,12 @@ export default function SimRacing() {
                 />
               </svg>
             </div>
-            <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">VR Reality</h3>
-            <p className="text-white/60 text-sm md:text-base">Virtual worlds & experiences</p>
+            <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">
+              VR Reality
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              Virtual worlds & experiences
+            </p>
           </div>
         </div>
 
