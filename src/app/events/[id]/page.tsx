@@ -47,14 +47,8 @@ export default async function EventPage({ params }: PageProps) {
                 {event.name}
               </h1>
               <div className="flex flex-wrap gap-6 text-lg text-gray-300 font-medium">
-                <div className="flex items-center gap-3">
-                  <i className="fas fa-calendar-alt text-white"></i>
-                  {event.date}
-                </div>
-                <div className="flex items-center gap-3">
-                  <i className="fas fa-map-marker-alt text-white"></i>
-                  {event.venue}
-                </div>
+                <div className="flex items-center gap-3">{event.date}</div>
+                <div className="flex items-center gap-3">{event.venue}</div>
               </div>
             </div>
 

@@ -41,6 +41,8 @@ export default function Hero() {
       id="home"
       className="hero-bg min-h-screen flex items-center justify-center relative"
     >
+      {/* College branding removed - now in footer */}
+
       <div className="text-center z-10 px-4 max-w-4xl mx-auto pt-20">
         {/* ADDED EVENT DATES */}
         <div className="mb-8">

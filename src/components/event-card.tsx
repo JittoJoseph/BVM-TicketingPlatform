@@ -32,13 +32,11 @@ export default function EventCard({ event }: EventCardProps) {
           </h3>
         </Link>
 
-        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+        <div className="flex flex-col gap-2 text-sm text-gray-500 mb-4">
           <div className="flex items-center gap-2">
-            <i className="fas fa-calendar text-white"></i>
             <span>{event.date}</span>
           </div>
           <div className="flex items-center gap-2">
-            <i className="fas fa-trophy text-white"></i>
             <span>{event.prizePool}</span>
           </div>
         </div>
