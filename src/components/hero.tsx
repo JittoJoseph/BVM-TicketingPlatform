@@ -85,7 +85,7 @@ export default function Hero() {
 
         <h1
           className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight leading-none"
-          style={{ fontFamily: "Audiowide, sans-serif" }}
+          style={{ fontFamily: "Orbitron, sans-serif" }}
         >
           COREX <span className="text-white">2026</span>
         </h1>
