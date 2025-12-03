@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="antialiased bg-[#050505] text-[#e5e5e5] overflow-x-hidden font-sans">
+    <main className="antialiased bg-black text-white overflow-x-hidden font-sans">
       <Navbar />
       <Hero />
       <SimRacing />
