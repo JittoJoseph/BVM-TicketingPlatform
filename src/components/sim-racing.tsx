@@ -53,7 +53,7 @@ export default function SimRacing() {
           </div>
 
           <div className="text-center group">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
+            <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
               <svg
                 className="w-8 h-8 text-blue-400"
                 fill="currentColor"
@@ -66,8 +66,8 @@ export default function SimRacing() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">VR Reality</h3>
-            <p className="text-white/60">Virtual worlds & experiences</p>
+            <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">VR Reality</h3>
+            <p className="text-white/60 text-sm md:text-base">Virtual worlds & experiences</p>
           </div>
         </div>
 
