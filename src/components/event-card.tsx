@@ -14,6 +14,8 @@ export default function EventCard({ event }: EventCardProps) {
       href={`/events/${event.id}`}
       className="group relative overflow-hidden rounded-xl bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-300 hover:shadow-lg hover:shadow-white/[0.05] md:hover:-translate-y-1 block focus:outline-none focus:ring-2 focus:ring-white/20"
     >
+      {/* Colored accent bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-cyan-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       {/* Mobile Layout: Horizontal */}
       <div className="block md:hidden">
         <div className="flex">

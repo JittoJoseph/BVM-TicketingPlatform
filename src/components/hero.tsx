@@ -39,8 +39,33 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="hero-bg min-h-screen flex items-center justify-center relative"
+      className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden"
     >
+      {/* Subtle colored accent lines */}
+      <div
+        className="absolute top-20 left-1/6 w-0.5 h-40 bg-gradient-to-b from-transparent to-blue-400/60 animate-slide-in"
+        style={{ animationDelay: "0s" }}
+      ></div>
+      <div
+        className="absolute top-32 right-1/5 w-0.5 h-32 bg-gradient-to-b from-transparent to-purple-400/60 animate-slide-in"
+        style={{ animationDelay: "1s" }}
+      ></div>
+      <div
+        className="absolute bottom-40 left-1/3 w-0.5 h-24 bg-gradient-to-b from-transparent to-pink-400/60 animate-slide-in"
+        style={{ animationDelay: "2s" }}
+      ></div>
+      <div
+        className="absolute bottom-32 right-1/4 w-0.5 h-36 bg-gradient-to-b from-transparent to-cyan-400/60 animate-slide-in"
+        style={{ animationDelay: "0.5s" }}
+      ></div>
+      <div
+        className="absolute top-40 left-1/4 w-0.5 h-28 bg-gradient-to-b from-transparent to-green-400/60 animate-slide-in"
+        style={{ animationDelay: "1.5s" }}
+      ></div>
+      <div
+        className="absolute bottom-20 right-1/3 w-0.5 h-32 bg-gradient-to-b from-transparent to-yellow-400/60 animate-slide-in"
+        style={{ animationDelay: "2.5s" }}
+      ></div>
       {/* College branding removed - now in footer */}
 
       <div className="text-center z-10 px-4 max-w-4xl mx-auto pt-16 md:pt-20">
@@ -71,35 +96,47 @@ export default function Hero() {
 
         {/* Countdown Timer */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
-          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
-            <span className="block text-4xl font-bold text-white font-tech">
+          <div className="text-center bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-6 rounded-lg w-24 md:w-28 hover:bg-white/[0.05] transition-colors">
+            <span
+              className="block text-4xl font-bold text-white"
+              style={{ fontFamily: "Audiowide, sans-serif" }}
+            >
               {timeLeft.days.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-500 uppercase tracking-wide">
+            <span className="text-xs text-white/60 uppercase tracking-wide">
               Days
             </span>
           </div>
-          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
-            <span className="block text-4xl font-bold text-white font-tech">
+          <div className="text-center bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-6 rounded-lg w-24 md:w-28 hover:bg-white/[0.05] transition-colors">
+            <span
+              className="block text-4xl font-bold text-white"
+              style={{ fontFamily: "Audiowide, sans-serif" }}
+            >
               {timeLeft.hours.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-500 uppercase tracking-wide">
+            <span className="text-xs text-white/60 uppercase tracking-wide">
               Hours
             </span>
           </div>
-          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
-            <span className="block text-4xl font-bold text-white font-tech">
+          <div className="text-center bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-6 rounded-lg w-24 md:w-28 hover:bg-white/[0.05] transition-colors">
+            <span
+              className="block text-4xl font-bold text-white"
+              style={{ fontFamily: "Audiowide, sans-serif" }}
+            >
               {timeLeft.minutes.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-500 uppercase tracking-wide">
+            <span className="text-xs text-white/60 uppercase tracking-wide">
               Mins
             </span>
           </div>
-          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
-            <span className="block text-4xl font-bold text-white font-tech">
+          <div className="text-center bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-6 rounded-lg w-24 md:w-28 hover:bg-white/[0.05] transition-colors">
+            <span
+              className="block text-4xl font-bold text-white"
+              style={{ fontFamily: "Audiowide, sans-serif" }}
+            >
               {timeLeft.seconds.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-500 uppercase tracking-wide">
+            <span className="text-xs text-white/60 uppercase tracking-wide">
               Secs
             </span>
           </div>
