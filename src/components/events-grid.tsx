@@ -6,26 +6,18 @@ export default function EventsGrid() {
     {
       id: "Esports",
       title: "Esports Arena",
-      icon: "fa-gamepad",
-      color: "text-white",
     },
     {
       id: "Physical Sports",
       title: "Physical Sports",
-      icon: "fa-futbol",
-      color: "text-white",
     },
     {
       id: "Technical",
       title: "Technical Competitions",
-      icon: "fa-code",
-      color: "text-white",
     },
     {
       id: "Experience Zone",
       title: "Experience Zone",
-      icon: "fa-magic",
-      color: "text-white",
     },
   ];
 
@@ -49,12 +41,9 @@ export default function EventsGrid() {
           return (
             <div key={category.id} className="mb-12">
               <h3 className="flex items-center gap-4 text-3xl font-bold text-white mb-8">
-                <i
-                  className={`fas ${category.icon} ${category.color} text-2xl`}
-                ></i>{" "}
                 {category.title}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 {events.map((event) => (
                   <EventCard key={event.id} event={event} />
                 ))}
@@ -62,13 +51,6 @@ export default function EventsGrid() {
             </div>
           );
         })}
-
-        <div className="mt-12 p-6 bg-gray-900/30 border border-gray-800 rounded-lg text-sm text-gray-500">
-          <i className="fas fa-info-circle mr-2 text-gray-600"></i>
-          **Disclaimer:** All prize money amounts are subject to change based on
-          final fund availability and sponsor confirmations. The final prize
-          pool will be announced at a later date.
-        </div>
       </div>
     </section>
   );
