@@ -43,24 +43,18 @@ export default function Hero() {
     >
       {/* College branding removed - now in footer */}
 
-      <div className="text-center z-10 px-4 max-w-4xl mx-auto pt-20">
-        {/* ADDED EVENT DATES */}
+      <div className="text-center z-10 px-4 max-w-4xl mx-auto pt-16 md:pt-20">
+        {/* College Name */}
+        <div className="mb-6">
+          <span className="text-gray-400 font-medium tracking-wide text-sm uppercase">
+            BVM Holy Cross College
+          </span>
+        </div>
+
+        {/* Event Dates */}
         <div className="mb-8">
           <span className="text-white font-medium px-6 py-2 border border-white/20 rounded-full text-lg tracking-wide">
             JANUARY 7 & 8
-          </span>
-        </div>
-
-        {/* COMBINED TITLE & CELEBRATION */}
-        <div className="mb-4">
-          <span className="text-gray-400 font-medium tracking-wide text-sm uppercase">
-            IT TECH FEST
-          </span>
-        </div>
-
-        <div className="mb-8">
-          <span className="text-gray-300 font-medium tracking-wide text-sm border border-gray-600 px-4 py-1 rounded-full">
-            Celebrating 30 Years of BCA Dept
           </span>
         </div>
 
