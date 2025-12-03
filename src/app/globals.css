@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&family=Audiowide:wght@400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
@@ -24,6 +24,10 @@ body {
 
 .font-tech {
   font-family: 'Orbitron', sans-serif;
+}
+
+.font-kalayaan {
+  font-family: 'Audiowide', sans-serif;
 }
 
 /* Custom Scrollbar */
