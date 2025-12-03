@@ -12,6 +12,7 @@ export type Event = {
   description: string;
   venue: string;
   tag?: string; // e.g., "PC LAN", "MOBILE", "TEAM"
+  markdownContent: string;
 };
 
 export const EVENTS: Event[] = [
@@ -25,10 +26,24 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000&auto=format&fit=crop",
+    image: "/coding.jpg",
     description: "Solve complex algorithmic problems within the time limit.",
     venue: "MAIN STAGE",
-    tag: "SOLO/TEAM"
+    tag: "SOLO/TEAM",
+    markdownContent: `
+# Coding Challenge
+
+## About
+Test your algorithmic thinking and coding skills in this intense competition.
+
+## Rules
+- Participants can compete solo or in teams of 2.
+- Languages allowed: C++, Java, Python.
+- No internet access allowed during the contest.
+
+## Requirements
+- Laptop with compiler installed.
+`
   },
   {
     id: "mini-militia",
@@ -43,7 +58,21 @@ export const EVENTS: Event[] = [
     image: "/minimiltia.jpg",
     description: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
     venue: "MAIN STAGE",
-    tag: "MOBILE"
+    tag: "MOBILE",
+    markdownContent: `
+# Mini Militia Classic
+
+## About
+Relive the nostalgia with the classic 2D multiplayer shooter.
+
+## Rules
+- Map: Outpost.
+- Time limit: 10 minutes.
+- No hacked versions allowed.
+
+## Requirements
+- Mobile phone with the game installed.
+`
   },
   {
     id: "valorant",
@@ -58,7 +87,20 @@ export const EVENTS: Event[] = [
     image: "/valo.jpg",
     description: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
     venue: "MAIN STAGE",
-    tag: "PC LAN"
+    tag: "PC LAN",
+    markdownContent: `
+# Valorant Gaming
+
+## About
+5v5 tactical shooter. Strategy meets skill.
+
+## Rules
+- Map pool: Ascent, Bind, Haven.
+- Standard competitive rules.
+
+## Requirements
+- Peripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.
+`
   },
   {
     id: "free-fire",
@@ -73,7 +115,20 @@ export const EVENTS: Event[] = [
     image: "/freefire.jpg",
     description: "Solo/Squad Firefight Tournament. Survive till the end.",
     venue: "MAIN STAGE",
-    tag: "MOBILE"
+    tag: "MOBILE",
+    markdownContent: `
+# Free Fire Tournament
+
+## About
+Battle Royale survival. Be the last one standing.
+
+## Rules
+- Map: Bermuda.
+- Points system based on kills and placement.
+
+## Requirements
+- Mobile phone with internet connection.
+`
   },
   {
     id: "bgmi",
@@ -85,10 +140,23 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.financialexpressdigital.com/2022/07/BGMI.jpg",
+    image: "/bgmi.jpg",
     description: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
     venue: "MAIN STAGE",
-    tag: "MOBILE"
+    tag: "MOBILE",
+    markdownContent: `
+# BGMI
+
+## About
+India's favorite Battle Royale. Squad up and dominate.
+
+## Rules
+- Map: Erangel.
+- Standard competitive settings.
+
+## Requirements
+- Mobile phone with internet connection.
+`
   },
   {
     id: "5s-football",
@@ -100,10 +168,24 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/5s.jpeg",
+    image: "/5s-football.jpg",
     description: "High intensity 5-a-side football tournament.",
     venue: "MAIN STAGE",
-    tag: "TEAM"
+    tag: "TEAM",
+    markdownContent: `
+# 5's Football
+
+## About
+Fast-paced 5-a-side football action.
+
+## Rules
+- 5 players + 2 subs.
+- 10 minutes per half.
+- Rolling substitutions.
+
+## Requirements
+- Sports attire and football boots/shoes.
+`
   },
   {
     id: "ui-ux",
@@ -115,10 +197,24 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=1000&auto=format&fit=crop",
+    image: "/ui-ux-design.jpg",
     description: "Design the future. Create intuitive and beautiful user interfaces.",
     venue: "MAIN STAGE",
-    tag: "SOLO"
+    tag: "SOLO",
+    markdownContent: `
+# UI/UX Designing
+
+## About
+Showcase your creativity and design skills.
+
+## Rules
+- Theme will be given on the spot.
+- Tools: Figma, Adobe XD.
+- Time limit: 2 hours.
+
+## Requirements
+- Laptop with design software installed.
+`
   },
   {
     id: "speed-typing",
@@ -130,10 +226,23 @@ export const EVENTS: Event[] = [
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1587829741301-dc798b91a603?q=80&w=1000&auto=format&fit=crop",
+    image: "/speed-typing.jpg",
     description: "Test your typing speed and accuracy in this fast-paced competition.",
     venue: "MAIN STAGE",
-    tag: "SOLO"
+    tag: "SOLO",
+    markdownContent: `
+# Speed Typing
+
+## About
+How fast can you type? Test your WPM.
+
+## Rules
+- Text will be provided.
+- Accuracy matters as much as speed.
+
+## Requirements
+- Keyboard provided.
+`
   },
   {
     id: "efootball",
@@ -148,7 +257,21 @@ export const EVENTS: Event[] = [
     image: "/pess.jpg",
     description: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
     venue: "MAIN STAGE",
-    tag: "CONSOLE"
+    tag: "CONSOLE",
+    markdownContent: `
+# eFootball Championship
+
+## About
+Virtual football on the big screen.
+
+## Rules
+- 1v1 matches.
+- 10 minutes match duration.
+- Controller settings: Standard.
+
+## Requirements
+- Controllers provided.
+`
   },
   {
     id: "music-concert",
@@ -157,13 +280,26 @@ export const EVENTS: Event[] = [
     date: "2026-01-08",
     startTime: "17:30",
     endTime: "19:00",
-    pricing: "₹100",
+    pricing: "₹60",
     prizePool: "N/A",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "https://images.unsplash.com/photo-1459749411177-0473ef71607b?q=80&w=1000&auto=format&fit=crop",
+    image: "/neon.jpg",
     description: "Live music concert to end the fest with a bang.",
     venue: "MAIN STAGE",
-    tag: "LIVE"
+    tag: "LIVE",
+    markdownContent: `
+# Music Concert
+
+## About
+Enjoy the grand finale with live music performances.
+
+## Rules
+- Entry with valid pass only.
+- No outside food or drinks.
+
+## Requirements
+- Just bring your vibe!
+`
   }
 ];
 

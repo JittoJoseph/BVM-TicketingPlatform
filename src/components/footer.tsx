@@ -10,40 +10,40 @@ export default function Footer() {
         </h2>
 
         <div className="flex flex-wrap justify-center gap-8 mb-12">
-          <div className="bg-gray-900 p-6 rounded-lg w-full md:w-80 border border-gray-800 hover:border-green-500 transition-colors">
-            <p className="text-gray-500 text-sm uppercase font-bold mb-2">
+          <div className="border border-gray-700 p-8 rounded-lg w-full md:w-80 bg-gray-900/50 hover:border-white transition-colors">
+            <p className="text-gray-500 text-sm uppercase font-medium mb-3 tracking-wide">
               Student Coordinator
             </p>
-            <p className="text-xl font-bold text-white">Devnarayan V</p>
+            <p className="text-xl font-medium text-white">Devnarayan V</p>
             <a
               href="tel:+919400039066"
-              className="text-green-400 block mt-2 hover:underline"
+              className="text-white block mt-3 hover:underline"
             >
               +91 94000 39066
             </a>
           </div>
 
-          <div className="bg-gray-900 p-6 rounded-lg w-full md:w-80 border border-gray-800 hover:border-blue-500 transition-colors">
-            <p className="text-gray-500 text-sm uppercase font-bold mb-2">
+          <div className="border border-gray-700 p-8 rounded-lg w-full md:w-80 bg-gray-900/50 hover:border-white transition-colors">
+            <p className="text-gray-500 text-sm uppercase font-medium mb-3 tracking-wide">
               Student Coordinator
             </p>
-            <p className="text-xl font-bold text-white">Vishnu AnilKumar</p>
+            <p className="text-xl font-medium text-white">Vishnu AnilKumar</p>
             <a
               href="tel:+918281870842"
-              className="text-blue-400 block mt-2 hover:underline"
+              className="text-white block mt-3 hover:underline"
             >
               +91 82818 70842
             </a>
           </div>
 
-          <div className="bg-gray-900 p-6 rounded-lg w-full md:w-80 border border-gray-800 hover:border-purple-500 transition-colors">
-            <p className="text-gray-500 text-sm uppercase font-bold mb-2">
+          <div className="border border-gray-700 p-8 rounded-lg w-full md:w-80 bg-gray-900/50 hover:border-white transition-colors">
+            <p className="text-gray-500 text-sm uppercase font-medium mb-3 tracking-wide">
               Student Coordinator
             </p>
-            <p className="text-xl font-bold text-white">Ali Hussain</p>
+            <p className="text-xl font-medium text-white">Ali Hussain</p>
             <a
               href="tel:+918590572041"
-              className="text-purple-400 block mt-2 hover:underline"
+              className="text-white block mt-3 hover:underline"
             >
               +91 85905 72041
             </a>

@@ -41,80 +41,86 @@ export default function Hero() {
       id="home"
       className="hero-bg min-h-screen flex items-center justify-center relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
-
-      <div className="text-center z-10 px-4 max-w-5xl mx-auto pt-20">
+      <div className="text-center z-10 px-4 max-w-4xl mx-auto pt-20">
         {/* ADDED EVENT DATES */}
-        <div className="mb-4">
-          <span className="bg-red-600 text-white font-bold px-4 py-1 rounded-full text-lg tracking-widest uppercase">
+        <div className="mb-8">
+          <span className="text-white font-medium px-6 py-2 border border-white/20 rounded-full text-lg tracking-wide">
             JANUARY 7 & 8
           </span>
         </div>
 
         {/* COMBINED TITLE & CELEBRATION */}
-        <div className="inline-block px-4 py-1 rounded-full mb-2">
-          <span className="text-gray-300 font-bold tracking-widest uppercase text-sm md:text-lg">
+        <div className="mb-4">
+          <span className="text-gray-400 font-medium tracking-wide text-sm uppercase">
             IT TECH FEST
           </span>
         </div>
 
-        <div className="inline-block border border-green-500/50 bg-green-500/10 px-4 py-1 rounded-full mb-6 backdrop-blur-sm animate-float">
-          <span className="text-green-400 font-bold tracking-widest uppercase text-sm">
+        <div className="mb-8">
+          <span className="text-gray-300 font-medium tracking-wide text-sm border border-gray-600 px-4 py-1 rounded-full">
             Celebrating 30 Years of BCA Dept
           </span>
         </div>
 
-        <h1 className="font-tech text-6xl md:text-9xl font-black text-white mb-2 tracking-tighter leading-none neon-text-green">
-          COREX{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-            2026
-          </span>
+        <h1
+          className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight leading-none"
+          style={{ fontFamily: "Audiowide, sans-serif" }}
+        >
+          COREX <span className="text-white">2026</span>
         </h1>
 
-        <p className="text-xl md:text-3xl text-gray-300 font-light tracking-[0.3em] mb-8 uppercase">
+        <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide mb-12 uppercase">
           Tech • Gaming • Music
         </p>
 
         {/* Countdown Timer */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
-          <div className="text-center bg-black/50 border border-gray-700 p-4 rounded-lg w-20 md:w-24 backdrop-blur-sm">
-            <span className="block text-3xl font-bold text-white font-tech">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
+          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
+            <span className="block text-4xl font-bold text-white font-tech">
               {timeLeft.days.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-400 uppercase">Days</span>
+            <span className="text-xs text-gray-500 uppercase tracking-wide">
+              Days
+            </span>
           </div>
-          <div className="text-center bg-black/50 border border-gray-700 p-4 rounded-lg w-20 md:w-24 backdrop-blur-sm">
-            <span className="block text-3xl font-bold text-white font-tech">
+          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
+            <span className="block text-4xl font-bold text-white font-tech">
               {timeLeft.hours.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-400 uppercase">Hours</span>
+            <span className="text-xs text-gray-500 uppercase tracking-wide">
+              Hours
+            </span>
           </div>
-          <div className="text-center bg-black/50 border border-gray-700 p-4 rounded-lg w-20 md:w-24 backdrop-blur-sm">
-            <span className="block text-3xl font-bold text-white font-tech">
+          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
+            <span className="block text-4xl font-bold text-white font-tech">
               {timeLeft.minutes.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-400 uppercase">Mins</span>
+            <span className="text-xs text-gray-500 uppercase tracking-wide">
+              Mins
+            </span>
           </div>
-          <div className="text-center bg-black/50 border border-gray-700 p-4 rounded-lg w-20 md:w-24 backdrop-blur-sm">
-            <span className="block text-3xl font-bold text-white font-tech">
+          <div className="text-center border border-gray-700 p-6 rounded-lg w-24 md:w-28">
+            <span className="block text-4xl font-bold text-white font-tech">
               {timeLeft.seconds.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs text-gray-400 uppercase">Secs</span>
+            <span className="text-xs text-gray-500 uppercase tracking-wide">
+              Secs
+            </span>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
           <Link
             href="#events"
-            className="bg-green-500 text-black px-8 py-4 rounded-full font-bold font-tech hover:bg-green-400 transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(57,255,20,0.5)]"
+            className="border border-white text-white px-10 py-4 rounded-full font-medium font-tech hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wide"
           >
-            EXPLORE EVENTS
+            Explore Events
           </Link>
           <Link
             href="#sim-racing"
-            className="border border-white text-white px-8 py-4 rounded-full font-bold font-tech hover:bg-white hover:text-black transition-all"
+            className="border border-gray-600 text-gray-400 px-10 py-4 rounded-full font-medium font-tech hover:border-white hover:text-white transition-all duration-300 uppercase tracking-wide"
           >
-            SIM RACING
+            Sim Racing
           </Link>
         </div>
       </div>
