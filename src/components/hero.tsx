@@ -12,7 +12,7 @@ export default function Hero() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("Jan 7, 2026 00:00:00").getTime();
+    const targetDate = new Date("Jan 8, 2026 10:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -66,7 +66,6 @@ export default function Hero() {
         className="absolute bottom-20 right-1/3 w-0.5 h-32 bg-gradient-to-b from-transparent to-yellow-400/60 animate-slide-in"
         style={{ animationDelay: "2.5s" }}
       ></div>
-      {/* College branding removed - now in footer */}
 
       <div className="text-center z-10 px-4 max-w-4xl mx-auto pt-16 md:pt-20">
         {/* College Name */}
@@ -79,7 +78,7 @@ export default function Hero() {
         {/* Event Dates */}
         <div className="mb-8">
           <span className="text-white font-medium px-6 py-2 border border-white/20 rounded-full text-lg tracking-wide">
-            JANUARY 7 & 8
+            JANUARY 8
           </span>
         </div>
 

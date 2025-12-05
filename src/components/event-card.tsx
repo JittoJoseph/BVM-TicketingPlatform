@@ -56,16 +56,9 @@ export default function EventCard({ event }: EventCardProps) {
               Entry Fee
             </span>
           </div>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              window.open(event.makemypassUrl, "_blank");
-            }}
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white hover:text-black rounded-lg border border-white/20 hover:border-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/20 min-h-[44px]"
-          >
+          <div className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white hover:text-black rounded-lg border border-white/20 hover:border-white transition-all duration-200 min-h-[44px]">
             Register
-          </button>
+          </div>
         </div>
       </div>
 
@@ -115,16 +108,9 @@ export default function EventCard({ event }: EventCardProps) {
                 Entry Fee
               </span>
             </div>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                window.open(event.makemypassUrl, "_blank");
-              }}
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white hover:text-black rounded-lg border border-white/20 hover:border-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/20 min-h-[44px]"
-            >
+            <div className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white hover:text-black rounded-lg border border-white/20 hover:border-white transition-all duration-200 min-h-[44px]">
               Register
-            </button>
+            </div>
           </div>
         </div>
       </div>
