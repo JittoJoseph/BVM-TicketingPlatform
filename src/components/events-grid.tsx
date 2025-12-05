@@ -2,14 +2,6 @@ import { EVENTS } from "@/lib/events";
 import EventCard from "./event-card";
 
 export default function EventsGrid() {
-  // Sort events by category, then by name
-  const sortedEvents = [...EVENTS].sort((a, b) => {
-    if (a.category !== b.category) {
-      return a.category.localeCompare(b.category);
-    }
-    return a.name.localeCompare(b.name);
-  });
-
   return (
     <section
       id="events"
@@ -35,7 +27,7 @@ export default function EventsGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-          {sortedEvents.map((event) => (
+          {EVENTS.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
         </div>

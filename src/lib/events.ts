@@ -17,32 +17,89 @@ export type Event = {
 
 export const EVENTS: Event[] = [
   {
-    id: "coding-challenge",
-    name: "Coding Challenge",
-    category: "Technical",
+    id: "valorant",
+    name: "Valorant Gaming",
+    category: "Esports",
     date: "2026-01-07",
-    startTime: "10:45",
-    endTime: "12:00",
+    startTime: "14:00",
+    endTime: "15:00",
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/coding.jpg",
-    description: "Solve complex algorithmic problems within the time limit.",
+    image: "/valo.jpg",
+    description: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
     venue: "MAIN STAGE",
-    tag: "SOLO/TEAM",
+    tag: "PC LAN",
     markdownContent: `
-# Coding Challenge
+# Valorant Gaming
 
 ## About
-Test your algorithmic thinking and coding skills in this intense competition.
+5v5 tactical shooter. Strategy meets skill.
 
 ## Rules
-- Participants can compete solo or in teams of 2.
-- Languages allowed: C++, Java, Python.
-- No internet access allowed during the contest.
+- Map pool: Ascent, Bind, Haven.
+- Standard competitive rules.
 
 ## Requirements
-- Laptop with compiler installed.
+- Peripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.
+`
+  },
+  {
+    id: "efootball",
+    name: "eFootball Championship",
+    category: "Esports",
+    date: "2026-01-08",
+    startTime: "14:00",
+    endTime: "15:30",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "/pess.jpg",
+    description: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
+    venue: "MAIN STAGE",
+    tag: "CONSOLE",
+    markdownContent: `
+# eFootball Championship
+
+## About
+Virtual football on the big screen.
+
+## Rules
+- 1v1 matches.
+- 10 minutes match duration.
+- Controller settings: Standard.
+
+## Requirements
+- Controllers provided.
+`
+  },
+    {
+    id: "ui-ux",
+    name: "UI/UX Designing",
+    category: "Technical",
+    date: "2026-01-08",
+    startTime: "10:15",
+    endTime: "12:30",
+    pricing: "₹60",
+    prizePool: "₹10,000",
+    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    image: "/ui-ux-design.jpg",
+    description: "Design the future. Create intuitive and beautiful user interfaces.",
+    venue: "MAIN STAGE",
+    tag: "SOLO",
+    markdownContent: `
+# UI/UX Designing
+
+## About
+Showcase your creativity and design skills.
+
+## Rules
+- Theme will be given on the spot.
+- Tools: Figma, Adobe XD.
+- Time limit: 2 hours.
+
+## Requirements
+- Laptop with design software installed.
 `
   },
   {
@@ -75,62 +132,6 @@ Relive the nostalgia with the classic 2D multiplayer shooter.
 `
   },
   {
-    id: "valorant",
-    name: "Valorant Gaming",
-    category: "Esports",
-    date: "2026-01-07",
-    startTime: "14:00",
-    endTime: "15:00",
-    pricing: "₹60",
-    prizePool: "₹10,000",
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/valo.jpg",
-    description: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
-    venue: "MAIN STAGE",
-    tag: "PC LAN",
-    markdownContent: `
-# Valorant Gaming
-
-## About
-5v5 tactical shooter. Strategy meets skill.
-
-## Rules
-- Map pool: Ascent, Bind, Haven.
-- Standard competitive rules.
-
-## Requirements
-- Peripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.
-`
-  },
-  {
-    id: "free-fire",
-    name: "Free Fire Tournament",
-    category: "Esports",
-    date: "2026-01-07",
-    startTime: "14:00",
-    endTime: "15:30",
-    pricing: "₹60",
-    prizePool: "₹10,000",
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/freefire.jpg",
-    description: "Solo/Squad Firefight Tournament. Survive till the end.",
-    venue: "MAIN STAGE",
-    tag: "MOBILE",
-    markdownContent: `
-# Free Fire Tournament
-
-## About
-Battle Royale survival. Be the last one standing.
-
-## Rules
-- Map: Bermuda.
-- Points system based on kills and placement.
-
-## Requirements
-- Mobile phone with internet connection.
-`
-  },
-  {
     id: "bgmi",
     name: "BGMI",
     category: "Esports",
@@ -159,61 +160,32 @@ India's favorite Battle Royale. Squad up and dominate.
 `
   },
   {
-    id: "5s-football",
-    name: "5's Football",
-    category: "Physical Sports",
-    date: "2026-01-08",
-    startTime: "10:00",
-    endTime: null,
-    pricing: "₹60",
-    prizePool: "₹10,000",
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/5s-football.jpg",
-    description: "High intensity 5-a-side football tournament.",
-    venue: "MAIN STAGE",
-    tag: "TEAM",
-    markdownContent: `
-# 5's Football
-
-## About
-Fast-paced 5-a-side football action.
-
-## Rules
-- 5 players + 2 subs.
-- 10 minutes per half.
-- Rolling substitutions.
-
-## Requirements
-- Sports attire and football boots/shoes.
-`
-  },
-  {
-    id: "ui-ux",
-    name: "UI/UX Designing",
+    id: "coding-challenge",
+    name: "Coding Challenge",
     category: "Technical",
-    date: "2026-01-08",
-    startTime: "10:15",
-    endTime: "12:30",
+    date: "2026-01-07",
+    startTime: "10:45",
+    endTime: "12:00",
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/ui-ux-design.jpg",
-    description: "Design the future. Create intuitive and beautiful user interfaces.",
+    image: "/coding.jpg",
+    description: "Solve complex algorithmic problems within the time limit.",
     venue: "MAIN STAGE",
-    tag: "SOLO",
+    tag: "SOLO/TEAM",
     markdownContent: `
-# UI/UX Designing
+# Coding Challenge
 
 ## About
-Showcase your creativity and design skills.
+Test your algorithmic thinking and coding skills in this intense competition.
 
 ## Rules
-- Theme will be given on the spot.
-- Tools: Figma, Adobe XD.
-- Time limit: 2 hours.
+- Participants can compete solo or in teams of 2.
+- Languages allowed: C++, Java, Python.
+- No internet access allowed during the contest.
 
 ## Requirements
-- Laptop with design software installed.
+- Laptop with compiler installed.
 `
   },
   {
@@ -245,62 +217,34 @@ How fast can you type? Test your WPM.
 `
   },
   {
-    id: "efootball",
-    name: "eFootball Championship",
-    category: "Esports",
+    id: "5s-football",
+    name: "5's Football",
+    category: "Physical Sports",
     date: "2026-01-08",
-    startTime: "14:00",
-    endTime: "15:30",
+    startTime: "10:00",
+    endTime: null,
     pricing: "₹60",
     prizePool: "₹10,000",
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/pess.jpg",
-    description: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
+    image: "/5s-football.jpg",
+    description: "High intensity 5-a-side football tournament.",
     venue: "MAIN STAGE",
-    tag: "CONSOLE",
+    tag: "TEAM",
     markdownContent: `
-# eFootball Championship
+# 5's Football
 
 ## About
-Virtual football on the big screen.
+Fast-paced 5-a-side football action.
 
 ## Rules
-- 1v1 matches.
-- 10 minutes match duration.
-- Controller settings: Standard.
+- 5 players + 2 subs.
+- 10 minutes per half.
+- Rolling substitutions.
 
 ## Requirements
-- Controllers provided.
+- Sports attire and football boots/shoes.
 `
   },
-  {
-    id: "music-concert",
-    name: "Music Concert",
-    category: "Experience Zone",
-    date: "2026-01-08",
-    startTime: "17:30",
-    endTime: "19:00",
-    pricing: "₹60",
-    prizePool: "N/A",
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
-    image: "/neon.jpg",
-    description: "Live music concert to end the fest with a bang.",
-    venue: "MAIN STAGE",
-    tag: "LIVE",
-    markdownContent: `
-# Music Concert
-
-## About
-Enjoy the grand finale with live music performances.
-
-## Rules
-- Entry with valid pass only.
-- No outside food or drinks.
-
-## Requirements
-- Just bring your vibe!
-`
-  }
 ];
 
 export function getEventsByCategory(category: string) {
