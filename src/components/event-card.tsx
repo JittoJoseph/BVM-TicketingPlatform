@@ -40,7 +40,7 @@ export default function EventCard({ event }: EventCardProps) {
             <div className="flex items-center gap-3 text-xs text-white/60 mb-2">
               <span>{event.date}</span>
               <span>•</span>
-              <span>{event.prizePool}</span>
+              <span>Prize Pool: {event.prizePool}</span>
             </div>
             <p className="text-white/70 text-sm line-clamp-2 leading-relaxed">
               {event.description}
@@ -91,7 +91,7 @@ export default function EventCard({ event }: EventCardProps) {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <span>{event.prizePool}</span>
+              <span>Prize Pool: {event.prizePool}</span>
             </div>
           </div>
 
