@@ -62,7 +62,7 @@ export const EVENTS: Event[] = [
       second: "₹2,000",
       third: "₹1,000"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/e-football-tournament",
     image: "/pess.jpg",
     shortDescription: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
     longDescription: "Virtual football on the big screen.\n\n1v1 matches. 10 minutes match duration. Controller settings: Standard.\n\nControllers provided.",
@@ -86,7 +86,7 @@ export const EVENTS: Event[] = [
       second: "₹3,000",
       third: "₹1,500"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/ui-ux-challenge",
     image: "/ui-ux-design.jpg",
     shortDescription: "Design the future. Create intuitive and beautiful user interfaces.",
     longDescription: "Showcase your creativity and design skills.\n\nTheme will be given on the spot. Tools: Figma, Adobe XD. Time limit: 2 hours.\n\nLaptop with design software installed.",
@@ -111,7 +111,7 @@ export const EVENTS: Event[] = [
       second: "₹2,000",
       third: "₹1,000"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/mini-militia-tournament-1",
     image: "/minimiltia.jpg",
     shortDescription: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
     longDescription: "Relive the nostalgia with the classic 2D multiplayer shooter.\n\nMap: Outpost. Time limit: 10 minutes. No hacked versions allowed.\n\nMobile phone with the game installed.",
@@ -135,7 +135,7 @@ export const EVENTS: Event[] = [
       second: "₹2,000",
       third: "₹1,000"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/bgmi-tournament-1",
     image: "/bgmi.jpg",
     shortDescription: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
     longDescription: "India's favorite Battle Royale. Squad up and dominate.\n\nMap: Erangel. Standard competitive settings.\n\nMobile phone with internet connection.",
@@ -159,7 +159,7 @@ export const EVENTS: Event[] = [
       second: "₹2,000",
       third: "₹1,000"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/coding-challenge",
     image: "/coding.jpg",
     shortDescription: "Solve complex algorithmic problems within the time limit.",
     longDescription: "Test your algorithmic thinking and coding skills in this intense competition.\n\nParticipants can compete solo or in teams of 2. Languages allowed: C++, Java, Python. No internet access allowed during the contest.\n\nLaptop with compiler installed.",
@@ -184,7 +184,7 @@ export const EVENTS: Event[] = [
       second: "₹2,000",
       third: "₹1,000"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/speed-typing",
     image: "/speed-typing.jpg",
     shortDescription: "Test your typing speed and accuracy in this fast-paced competition.",
     longDescription: "How fast can you type? Test your WPM.\n\nText will be provided. Accuracy matters as much as speed.\n\nKeyboard provided.",
@@ -208,7 +208,7 @@ export const EVENTS: Event[] = [
       second: "₹2,500",
       third: "₹1,500"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/3s-football-championship",
     image: "/3s-football.jpg",
     shortDescription: "High intensity 3-a-side football tournament.",
     longDescription: "Fast-paced 5-a-side football action.\n\n5 players + 2 subs. 10 minutes per half. Rolling substitutions.\n\nSports attire and football boots/shoes.",
