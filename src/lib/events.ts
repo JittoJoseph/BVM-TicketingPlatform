@@ -6,7 +6,12 @@ export type Event = {
   startTime?: string;
   endTime?: string | null;
   pricing: string;
-  prizePool: string;
+  prizes?: {
+    total: string;
+    first?: string;
+    second?: string;
+    third?: string;
+  };
   makemypassUrl: string;
   image: string;
   shortDescription: string;
@@ -27,7 +32,12 @@ export const EVENTS: Event[] = [
     startTime: "12:00",
     endTime: "13:00",
     pricing: "₹100",
-    prizePool: "₹6,000",
+    prizes: {
+      total: "₹8,500",
+      first: "₹4,000",
+      second: "₹3,000",
+      third: "₹1,500"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/valo.jpg",
     shortDescription: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
@@ -46,7 +56,9 @@ export const EVENTS: Event[] = [
     startTime: "14:30",
     endTime: "15:30",
     pricing: "₹100",
-    prizePool: "₹6,000",
+    prizes: {
+      total: "₹6,000"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/pess.jpg",
     shortDescription: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
@@ -64,8 +76,13 @@ export const EVENTS: Event[] = [
     dates: ["2026-01-08"],
     startTime: "09:30",
     endTime: "11:30",
-    pricing: "₹300",
-    prizePool: "₹6,000",
+    pricing: "₹200",
+    prizes: {
+      total: "₹8,500",
+      first: "₹4,000",
+      second: "₹3,000",
+      third: "₹1,500"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/ui-ux-design.jpg",
     shortDescription: "Design the future. Create intuitive and beautiful user interfaces.",
@@ -85,7 +102,9 @@ export const EVENTS: Event[] = [
     startTime: "12:30",
     endTime: "13:30",
     pricing: "₹100",
-    prizePool: "₹6,000",
+    prizes: {
+      total: "₹6,000"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/minimiltia.jpg",
     shortDescription: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
@@ -104,7 +123,9 @@ export const EVENTS: Event[] = [
     startTime: "11:30",
     endTime: "12:30",
     pricing: "₹100",
-    prizePool: "₹6,000",
+    prizes: {
+      total: "₹6,000"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/bgmi.jpg",
     shortDescription: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
@@ -123,7 +144,9 @@ export const EVENTS: Event[] = [
     startTime: "14:00",
     endTime: "16:00",
     pricing: "₹100",
-    prizePool: "₹6,000",
+    prizes: {
+      total: "₹6,000"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/coding.jpg",
     shortDescription: "Solve complex algorithmic problems within the time limit.",
@@ -143,7 +166,9 @@ export const EVENTS: Event[] = [
     startTime: "11:00",
     endTime: "12:00",
     pricing: "₹100",
-    prizePool: "₹6,000",
+    prizes: {
+      total: "₹6,000"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/speed-typing.jpg",
     shortDescription: "Test your typing speed and accuracy in this fast-paced competition.",
@@ -161,8 +186,10 @@ export const EVENTS: Event[] = [
     dates: ["2026-01-07"],
     startTime: "14:00",
     endTime: "16:00",
-    pricing: "₹100",
-    prizePool: "₹6,000",
+    pricing: "₹550",
+    prizes: {
+      total: "₹6,000"
+    },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/3s-football.jpg",
     shortDescription: "High intensity 3-a-side football tournament.",
@@ -179,7 +206,6 @@ export const EVENTS: Event[] = [
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
     pricing: "Free",
-    prizePool: "N/A",
     makemypassUrl: "",
     image: "/exhibition.jpg",
     shortDescription: "Explore the latest in tech and innovation.",
@@ -195,7 +221,6 @@ export const EVENTS: Event[] = [
     startTime: "18:00",
     endTime: "20:00",
     pricing: "Free",
-    prizePool: "N/A",
     makemypassUrl: "",
     image: "/cultural.jpg",
     shortDescription: "Enjoy cultural performances and entertainment.",
@@ -209,7 +234,6 @@ export const EVENTS: Event[] = [
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
     pricing: "Free",
-    prizePool: "N/A",
     makemypassUrl: "",
     image: "/vr.jpg",
     shortDescription: "Immerse yourself in virtual reality experiences.",

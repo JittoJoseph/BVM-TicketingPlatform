@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Trophy } from "lucide-react";
 import type { Event } from "@/lib/events";
 
 interface EventInfoCardProps {
@@ -76,6 +77,62 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
             </div>
           ))}
         </div>
+
+        {event.prizes && (
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-2">
+                  <Trophy className="h-4 w-4 text-white/80" />
+                </div>
+                <div>
+                  <p className="text-xs text-white/40 uppercase tracking-wider font-medium">
+                    Prize Pool
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-white">
+                    {event.prizes.total}
+                  </p>
+                </div>
+              </div>
+              {(event.prizes.first ||
+                event.prizes.second ||
+                event.prizes.third) && (
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  {event.prizes.first && (
+                    <div>
+                      <div className="text-xs text-white/60 uppercase tracking-wider">
+                        1st
+                      </div>
+                      <div className="text-sm font-semibold text-white">
+                        {event.prizes.first}
+                      </div>
+                    </div>
+                  )}
+                  {event.prizes.second && (
+                    <div>
+                      <div className="text-xs text-white/60 uppercase tracking-wider">
+                        2nd
+                      </div>
+                      <div className="text-sm font-semibold text-white">
+                        {event.prizes.second}
+                      </div>
+                    </div>
+                  )}
+                  {event.prizes.third && (
+                    <div>
+                      <div className="text-xs text-white/60 uppercase tracking-wider">
+                        3rd
+                      </div>
+                      <div className="text-sm font-semibold text-white">
+                        {event.prizes.third}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className="mt-6 pt-5 border-t border-white/10">
           {event.requiresRegistration !== false ? (
