@@ -43,7 +43,7 @@ export default function EventCard({ event }: EventCardProps) {
               <span>Prize Pool: {event.prizePool}</span>
             </div>
             <p className="text-white/70 text-sm line-clamp-2 leading-relaxed">
-              {event.description}
+              {event.details.about}
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function EventCard({ event }: EventCardProps) {
           </div>
 
           <p className="text-white/70 text-sm line-clamp-3 mb-4 leading-relaxed">
-            {event.description}
+            {event.details.about}
           </p>
 
           <div className="flex items-center justify-between pt-4 border-t border-white/[0.05]">

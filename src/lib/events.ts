@@ -10,9 +10,12 @@ export type Event = {
   makemypassUrl: string;
   image: string;
   description: string;
-  venue: string;
   tag?: string; // e.g., "PC LAN", "MOBILE", "TEAM"
-  markdownContent: string;
+  details: {
+    about: string;
+    rules: string[];
+    requirements: string[];
+  };
 };
 
 export const EVENTS: Event[] = [
@@ -28,21 +31,14 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/valo.jpg",
     description: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
-    venue: "MAIN STAGE",
     tag: "PC LAN",
-    markdownContent: `
-# Valorant Gaming
-
-## About
-5v5 tactical shooter. Strategy meets skill.
-
-## Rules
-- Map pool: Ascent, Bind, Haven.
-- Standard competitive rules.
-
-## Requirements
-- Peripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.
-`
+    details: {
+      about: "5v5 tactical shooter. Strategy meets skill.",
+      rules: ["Map pool: Ascent, Bind, Haven.", "Standard competitive rules."],
+      requirements: [
+        "Peripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.",
+      ],
+    },
   },
   {
     id: "efootball",
@@ -56,24 +52,18 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/pess.jpg",
     description: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
-    venue: "MAIN STAGE",
     tag: "CONSOLE",
-    markdownContent: `
-# eFootball Championship
-
-## About
-Virtual football on the big screen.
-
-## Rules
-- 1v1 matches.
-- 10 minutes match duration.
-- Controller settings: Standard.
-
-## Requirements
-- Controllers provided.
-`
+    details: {
+      about: "Virtual football on the big screen.",
+      rules: [
+        "1v1 matches.",
+        "10 minutes match duration.",
+        "Controller settings: Standard.",
+      ],
+      requirements: ["Controllers provided."],
+    },
   },
-    {
+  {
     id: "ui-ux",
     name: "UI/UX Designing",
     category: "Technical",
@@ -85,22 +75,16 @@ Virtual football on the big screen.
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/ui-ux-design.jpg",
     description: "Design the future. Create intuitive and beautiful user interfaces.",
-    venue: "MAIN STAGE",
     tag: "SOLO",
-    markdownContent: `
-# UI/UX Designing
-
-## About
-Showcase your creativity and design skills.
-
-## Rules
-- Theme will be given on the spot.
-- Tools: Figma, Adobe XD.
-- Time limit: 2 hours.
-
-## Requirements
-- Laptop with design software installed.
-`
+    details: {
+      about: "Showcase your creativity and design skills.",
+      rules: [
+        "Theme will be given on the spot.",
+        "Tools: Figma, Adobe XD.",
+        "Time limit: 2 hours.",
+      ],
+      requirements: ["Laptop with design software installed."],
+    },
   },
   {
     id: "mini-militia",
@@ -114,22 +98,16 @@ Showcase your creativity and design skills.
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/minimiltia.jpg",
     description: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
-    venue: "MAIN STAGE",
     tag: "MOBILE",
-    markdownContent: `
-# Mini Militia Classic
-
-## About
-Relive the nostalgia with the classic 2D multiplayer shooter.
-
-## Rules
-- Map: Outpost.
-- Time limit: 10 minutes.
-- No hacked versions allowed.
-
-## Requirements
-- Mobile phone with the game installed.
-`
+    details: {
+      about: "Relive the nostalgia with the classic 2D multiplayer shooter.",
+      rules: [
+        "Map: Outpost.",
+        "Time limit: 10 minutes.",
+        "No hacked versions allowed.",
+      ],
+      requirements: ["Mobile phone with the game installed."],
+    },
   },
   {
     id: "bgmi",
@@ -143,21 +121,12 @@ Relive the nostalgia with the classic 2D multiplayer shooter.
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/bgmi.jpg",
     description: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
-    venue: "MAIN STAGE",
     tag: "MOBILE",
-    markdownContent: `
-# BGMI
-
-## About
-India's favorite Battle Royale. Squad up and dominate.
-
-## Rules
-- Map: Erangel.
-- Standard competitive settings.
-
-## Requirements
-- Mobile phone with internet connection.
-`
+    details: {
+      about: "India's favorite Battle Royale. Squad up and dominate.",
+      rules: ["Map: Erangel.", "Standard competitive settings."],
+      requirements: ["Mobile phone with internet connection."],
+    },
   },
   {
     id: "coding-challenge",
@@ -171,22 +140,17 @@ India's favorite Battle Royale. Squad up and dominate.
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/coding.jpg",
     description: "Solve complex algorithmic problems within the time limit.",
-    venue: "MAIN STAGE",
     tag: "SOLO/TEAM",
-    markdownContent: `
-# Coding Challenge
-
-## About
-Test your algorithmic thinking and coding skills in this intense competition.
-
-## Rules
-- Participants can compete solo or in teams of 2.
-- Languages allowed: C++, Java, Python.
-- No internet access allowed during the contest.
-
-## Requirements
-- Laptop with compiler installed.
-`
+    details: {
+      about:
+        "Test your algorithmic thinking and coding skills in this intense competition.",
+      rules: [
+        "Participants can compete solo or in teams of 2.",
+        "Languages allowed: C++, Java, Python.",
+        "No internet access allowed during the contest.",
+      ],
+      requirements: ["Laptop with compiler installed."],
+    },
   },
   {
     id: "speed-typing",
@@ -200,21 +164,12 @@ Test your algorithmic thinking and coding skills in this intense competition.
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/speed-typing.jpg",
     description: "Test your typing speed and accuracy in this fast-paced competition.",
-    venue: "MAIN STAGE",
     tag: "SOLO",
-    markdownContent: `
-# Speed Typing
-
-## About
-How fast can you type? Test your WPM.
-
-## Rules
-- Text will be provided.
-- Accuracy matters as much as speed.
-
-## Requirements
-- Keyboard provided.
-`
+    details: {
+      about: "How fast can you type? Test your WPM.",
+      rules: ["Text will be provided.", "Accuracy matters as much as speed."],
+      requirements: ["Keyboard provided."],
+    },
   },
   {
     id: "5s-football",
@@ -228,22 +183,12 @@ How fast can you type? Test your WPM.
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/5s-football.jpg",
     description: "High intensity 5-a-side football tournament.",
-    venue: "MAIN STAGE",
     tag: "TEAM",
-    markdownContent: `
-# 5's Football
-
-## About
-Fast-paced 5-a-side football action.
-
-## Rules
-- 5 players + 2 subs.
-- 10 minutes per half.
-- Rolling substitutions.
-
-## Requirements
-- Sports attire and football boots/shoes.
-`
+    details: {
+      about: "Fast-paced 5-a-side football action.",
+      rules: ["5 players + 2 subs.", "10 minutes per half.", "Rolling substitutions."],
+      requirements: ["Sports attire and football boots/shoes."],
+    },
   },
 ];
 
