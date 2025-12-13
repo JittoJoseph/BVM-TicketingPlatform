@@ -58,7 +58,7 @@ export const EVENTS: Event[] = [
     ]
   },
   {
-    id: "ui-ux",
+    id: "ui-ux-competition",
     name: "UI/UX Designing",
     category: "Technical",
     dates: ["2026-01-08"],
