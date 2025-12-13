@@ -44,7 +44,7 @@ export default function GrandFinale() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-sm font-medium">4:30 PM Onwards</span>
+              <span className="text-sm font-medium">5:00 PM Onwards</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/20"></div>
             <div className="flex items-center gap-2 text-white/60">
@@ -55,7 +55,7 @@ export default function GrandFinale() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-sm font-medium">Main Auditorium</span>
+              <span className="text-sm font-medium">Outdoor Stage</span>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function GrandFinale() {
         </div>
 
         <div className="text-center">
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-all duration-300 hover:scale-105">
+          <div className="inline-flex items-center cursor-pointer gap-3 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-all duration-300 hover:scale-105">
             <span>Get Your Tickets</span>
             <svg
               className="w-5 h-5"

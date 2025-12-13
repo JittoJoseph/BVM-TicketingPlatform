@@ -31,14 +31,14 @@ export const EVENTS: Event[] = [
     dates: ["2026-01-07"],
     startTime: "12:00",
     endTime: "13:00",
-    pricing: "₹100",
+    pricing: "₹250",
     prizes: {
       total: "₹8,500",
       first: "₹4,000",
       second: "₹3,000",
       third: "₹1,500"
     },
-    makemypassUrl: "https://app.makemypass.com/org/corex-2026",
+    makemypassUrl: "https://makemypass.com/event/valorant-challenge",
     image: "/valo.jpg",
     shortDescription: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
     longDescription: "5v5 tactical shooter. Strategy meets skill.\n\nMap pool: Ascent, Bind, Haven. Standard competitive rules.\n\nPeripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.",
@@ -57,7 +57,10 @@ export const EVENTS: Event[] = [
     endTime: "15:30",
     pricing: "₹100",
     prizes: {
-      total: "₹6,000"
+      total: "₹6,000",
+      first: "₹3,000",
+      second: "₹2,000",
+      third: "₹1,000"
     },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/pess.jpg",
@@ -101,9 +104,12 @@ export const EVENTS: Event[] = [
     dates: ["2026-01-08"],
     startTime: "12:30",
     endTime: "13:30",
-    pricing: "₹100",
+    pricing: "₹60",
     prizes: {
-      total: "₹6,000"
+      total: "₹6,000",
+      first: "₹3,000",
+      second: "₹2,000",
+      third: "₹1,000"
     },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/minimiltia.jpg",
@@ -124,7 +130,10 @@ export const EVENTS: Event[] = [
     endTime: "12:30",
     pricing: "₹100",
     prizes: {
-      total: "₹6,000"
+      total: "₹6,000",
+      first: "₹3,000",
+      second: "₹2,000",
+      third: "₹1,000"
     },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/bgmi.jpg",
@@ -145,7 +154,10 @@ export const EVENTS: Event[] = [
     endTime: "16:00",
     pricing: "₹100",
     prizes: {
-      total: "₹6,000"
+      total: "₹6,000",
+      first: "₹3,000",
+      second: "₹2,000",
+      third: "₹1,000"
     },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/coding.jpg",
@@ -167,7 +179,10 @@ export const EVENTS: Event[] = [
     endTime: "12:00",
     pricing: "₹100",
     prizes: {
-      total: "₹6,000"
+      total: "₹6,000",
+      first: "₹3,000",
+      second: "₹2,000",
+      third: "₹1,000"
     },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/speed-typing.jpg",
@@ -188,7 +203,10 @@ export const EVENTS: Event[] = [
     endTime: "16:00",
     pricing: "₹550",
     prizes: {
-      total: "₹6,000"
+      total: "₹6,000",
+      first: "₹4,000",
+      second: "₹2,500",
+      third: "₹1,500"
     },
     makemypassUrl: "https://app.makemypass.com/org/corex-2026",
     image: "/3s-football.jpg",
