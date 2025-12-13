@@ -12,7 +12,7 @@ export type Event = {
   shortDescription: string;
   longDescription: string;
   tag?: string; // e.g., "PC LAN", "MOBILE", "TEAM"
-  allowCollegeStudents?: boolean; // default true
+  bvmAllowed?: boolean; // default true
   requiresRegistration?: boolean; // default true
   duration?: string;
   coordinators?: { name: string; phone: string }[];
@@ -71,7 +71,7 @@ export const EVENTS: Event[] = [
     shortDescription: "Design the future. Create intuitive and beautiful user interfaces.",
     longDescription: "Showcase your creativity and design skills.\n\nTheme will be given on the spot. Tools: Figma, Adobe XD. Time limit: 2 hours.\n\nLaptop with design software installed.",
     tag: "TEAM",
-    allowCollegeStudents: false,
+    bvmAllowed: false,
     coordinators: [
       { name: "Ajil Saji", phone: "+91 90728 05856" },
       { name: "Steve Suresh George", phone: "+91 90613 02064" }
@@ -93,7 +93,7 @@ export const EVENTS: Event[] = [
     tag: "MOBILE",
     coordinators: [
       { name: "Abhith K.R", phone: "+91 79075 59016" },
-      { name: "Arun c vasanthkumar", phone: "+91 90617 91360" }
+      { name: "Arun C Vasanthkumar", phone: "+91 90617 91360" }
     ]
   },
   {
@@ -129,7 +129,7 @@ export const EVENTS: Event[] = [
     shortDescription: "Solve complex algorithmic problems within the time limit.",
     longDescription: "Test your algorithmic thinking and coding skills in this intense competition.\n\nParticipants can compete solo or in teams of 2. Languages allowed: C++, Java, Python. No internet access allowed during the contest.\n\nLaptop with compiler installed.",
     tag: "SOLO",
-    allowCollegeStudents: false,
+    bvmAllowed: false,
     coordinators: [
       { name: "Deon Jose", phone: "+91 6282 242 610" },
       { name: "Sneha Saju", phone: "+91 95441 65049" }
@@ -168,7 +168,6 @@ export const EVENTS: Event[] = [
     shortDescription: "High intensity 3-a-side football tournament.",
     longDescription: "Fast-paced 5-a-side football action.\n\n5 players + 2 subs. 10 minutes per half. Rolling substitutions.\n\nSports attire and football boots/shoes.",
     tag: "TEAM",
-    allowCollegeStudents: false,
     coordinators: [
       { name: "Adarsh T.R", phone: "+91 95671 97741" },
       { name: "Vishnu Venu", phone: "+91 85939 81725" }

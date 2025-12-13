@@ -79,7 +79,7 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
 
         <div className="mt-6 pt-5 border-t border-white/10">
           {event.requiresRegistration !== false ? (
-            event.allowCollegeStudents === false ? (
+            event.bvmAllowed === false ? (
               <button
                 onClick={() => setShowModal(true)}
                 className="block w-full py-3.5 bg-white cursor-pointer text-black font-semibold text-center rounded-xl hover:bg-white/90 transition-colors"
