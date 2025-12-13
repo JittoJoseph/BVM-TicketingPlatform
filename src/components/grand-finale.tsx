@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function GrandFinale() {
   return (
     <section className="relative py-8 md:py-12 bg-black overflow-hidden">
@@ -111,22 +113,24 @@ export default function GrandFinale() {
         </div>
 
         <div className="text-center">
-          <div className="inline-flex items-center cursor-pointer gap-3 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-all duration-300 hover:scale-105">
-            <span>Get Your Tickets</span>
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
-          </div>
+          <Link href="https://makemypass.com/event/music-concert">
+            <div className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-all duration-300 hover:scale-105">
+              <span>Get Your Tickets</span>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
