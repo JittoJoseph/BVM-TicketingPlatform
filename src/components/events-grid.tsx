@@ -21,8 +21,8 @@ export default function EventsGrid() {
             COMPETITION ARENA
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg px-4">
-            Battle it out in the digital realm or showcase your coding prowess.
-            Huge cash prizes await the champions.
+            Compete in thrilling challenges, showcase your skills, or explore
+            cutting-edge experiences. Join us for an unforgettable tech fest!
           </p>
         </div>
 

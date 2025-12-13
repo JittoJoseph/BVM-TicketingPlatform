@@ -9,6 +9,26 @@ interface EventCardProps {
 }
 
 export default function EventCard({ event }: EventCardProps) {
+  const formatDate = (dateString: string): string => {
+    const date = new Date(`${dateString}T00:00:00`);
+    if (Number.isNaN(date.getTime())) return dateString;
+    return new Intl.DateTimeFormat("en-IN", {
+      month: "short",
+      day: "numeric",
+    }).format(date);
+  };
+
+  const formatDates = (dates: string[]): string => {
+    if (dates.length === 1) {
+      return formatDate(dates[0]);
+    }
+    const formatted = dates.map((d) => formatDate(d));
+    return formatted.join(" & ");
+  };
+
+  const formattedDates = formatDates(event.dates);
+  const buttonText =
+    event.requiresRegistration !== false ? "Register" : "Experience";
   return (
     <Link
       href={`/events/${event.id}`}
@@ -38,26 +58,32 @@ export default function EventCard({ event }: EventCardProps) {
               </span>
             </div>
             <div className="flex items-center gap-3 text-xs text-white/60 mb-2">
-              <span>{event.date}</span>
-              <span>•</span>
-              <span>Prize Pool: {event.prizePool}</span>
+              <span>{formattedDates}</span>
+              {event.duration && (
+                <>
+                  <span>•</span>
+                  <span>{event.duration}</span>
+                </>
+              )}
             </div>
             <p className="text-white/70 text-sm line-clamp-2 leading-relaxed">
-              {event.details.about}
+              {event.shortDescription}
             </p>
           </div>
         </div>
         <div className="p-4 pt-0 flex items-center justify-between border-t border-white/[0.05]">
-          <div className="flex flex-col">
-            <span className="text-base font-semibold text-white">
-              {event.pricing}
-            </span>
-            <span className="text-xs text-white/50 uppercase tracking-wide">
-              Entry Fee
-            </span>
-          </div>
+          {event.requiresRegistration !== false && (
+            <div className="flex flex-col">
+              <span className="text-base font-semibold text-white">
+                {event.pricing}
+              </span>
+              <span className="text-xs text-white/50 uppercase tracking-wide">
+                Entry Fee
+              </span>
+            </div>
+          )}
           <div className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white hover:text-black rounded-lg border border-white/20 hover:border-white transition-all duration-200 min-h-[44px]">
-            Register
+            {buttonText}
           </div>
         </div>
       </div>
@@ -79,7 +105,7 @@ export default function EventCard({ event }: EventCardProps) {
           </div>
         </div>
 
-        <div className="p-5 lg:p-6">
+        <div className="p-5 lg:p-6 flex flex-col h-full">
           <h3 className="text-xl font-semibold text-white group-hover:text-white/80 transition-colors line-clamp-2 mb-2 leading-tight">
             {event.name}
           </h3>
@@ -87,29 +113,33 @@ export default function EventCard({ event }: EventCardProps) {
           <div className="flex flex-col gap-1.5 text-sm text-white/60 mb-4">
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <span>{event.date}</span>
+              <span>{formattedDates}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <span>Prize Pool: {event.prizePool}</span>
-            </div>
+            {event.duration && (
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                <span>{event.duration}</span>
+              </div>
+            )}
           </div>
 
-          <p className="text-white/70 text-sm line-clamp-3 mb-4 leading-relaxed">
-            {event.details.about}
+          <p className="text-white/70 text-sm line-clamp-3 mb-4 leading-relaxed flex-1">
+            {event.shortDescription}
           </p>
 
-          <div className="flex items-center justify-between pt-4 border-t border-white/[0.05]">
-            <div className="flex flex-col">
-              <span className="text-lg font-semibold text-white">
-                {event.pricing}
-              </span>
-              <span className="text-xs text-white/50 uppercase tracking-wide">
-                Entry Fee
-              </span>
-            </div>
+          <div className="flex items-center justify-between pt-4 border-t border-white/[0.05] mt-auto">
+            {event.requiresRegistration !== false && (
+              <div className="flex flex-col">
+                <span className="text-lg font-semibold text-white">
+                  {event.pricing}
+                </span>
+                <span className="text-xs text-white/50 uppercase tracking-wide">
+                  Entry Fee
+                </span>
+              </div>
+            )}
             <div className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white hover:text-black rounded-lg border border-white/20 hover:border-white transition-all duration-200 min-h-[44px]">
-              Register
+              {buttonText}
             </div>
           </div>
         </div>

@@ -78,7 +78,7 @@ export default function Hero() {
         {/* Event Dates */}
         <div className="mb-8">
           <span className="text-white font-medium px-6 py-2 border border-white/20 rounded-full text-lg tracking-wide">
-            JANUARY 8
+            JANUARY 7 & 8
           </span>
         </div>
 
