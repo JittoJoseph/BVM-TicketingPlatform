@@ -18,8 +18,7 @@ This document lists the competitive and technical events with updated fields.
 | Mini Militia     | Jan 8 | 03:30 PM   | 1 HOURS  | ₹2,000     | 1000,600,400   | 60   |
 | E-Football       | Jan 8 | 01:30 PM   | 2 HOURS  | ₹3,500     | 2000,1000,500  | 100  |
 
-**Total Prize Pool:** ₹38,000  
-**Total Fees:** ₹2,240
+**Total Prize Pool:** ₹38,000
 
 ## Non-Competitive Events
 
@@ -29,5 +28,3 @@ This document lists the competitive and technical events with updated fields.
 | Cultural Show | Jan 7     | 4:00 PM    | 2 HOURS  |
 | VR Experience | BOTH DAYS | -          | FULL DAY |
 | Gaming Arena  | BOTH DAYS | -          | FULL DAY |
-
-reporting time 7.30
