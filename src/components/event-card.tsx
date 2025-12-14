@@ -59,13 +59,12 @@ export default function EventCard({ event }: EventCardProps) {
             </div>
             <div className="flex items-center gap-3 text-xs text-white/60 mb-2">
               <span>{formattedDates}</span>
-              {event.duration && (
-                <>
-                  <span>•</span>
-                  <span>{event.duration}</span>
-                </>
-              )}
             </div>
+            {event.type && (
+              <div className="flex items-center gap-3 text-xs text-white/60 mb-2">
+                <span>{event.type}</span>
+              </div>
+            )}
             <p className="text-white/70 text-sm line-clamp-2 leading-relaxed">
               {event.shortDescription}
             </p>
@@ -115,10 +114,10 @@ export default function EventCard({ event }: EventCardProps) {
               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
               <span>{formattedDates}</span>
             </div>
-            {event.duration && (
+            {event.type && (
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-                <span>{event.duration}</span>
+                <span>{event.type}</span>
               </div>
             )}
           </div>

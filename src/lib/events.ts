@@ -14,7 +14,7 @@ export type Event = {
   image: string;
   shortDescription: string;
   longDescription: string;
-  tag?: string; // e.g., "PC LAN", "MOBILE", "TEAM"
+  type?: "SOLO" | "TEAM" | "SOLO/TEAM" | null;
   bvmAllowed?: boolean; // default true
   requiresRegistration?: boolean; // default true
   duration?: string;
@@ -38,7 +38,7 @@ export const EVENTS: Event[] = [
     image: "/valo.jpg",
     shortDescription: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
     longDescription: "5v5 tactical shooter. Strategy meets skill.\n\nMap pool: Ascent, Bind, Haven. Standard competitive rules.\n\nPeripherals (Mouse, Keyboard, Headset) provided, but you can bring your own.",
-    tag: "PC LAN",
+    type: "TEAM",
     duration: "HALF DAY",
     coordinators: [
       { name: "Arjun K.S", phone: "+91 94977 38996" },
@@ -61,7 +61,7 @@ export const EVENTS: Event[] = [
     image: "/pess.jpg",
     shortDescription: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
     longDescription: "Virtual football on the big screen.\n\n1v1 matches. 10 minutes match duration. Controller settings: Standard.\n\nControllers provided.",
-    tag: "CONSOLE",
+    type: "SOLO",
     duration: "2 HOURS",
     coordinators: [
       { name: "Sandeep Santhosh", phone: "+91 8078 861 848" },
@@ -84,7 +84,7 @@ export const EVENTS: Event[] = [
     image: "/ui-ux-design.jpg",
     shortDescription: "Design the future. Create intuitive and beautiful user interfaces.",
     longDescription: "Showcase your creativity and design skills.\n\nTheme will be given on the spot. Tools: Figma, Adobe XD. Time limit: 2 hours.\n\nLaptop with design software installed.",
-    tag: "TEAM",
+    type: "TEAM",
     bvmAllowed: false,
     duration: "HALF DAY",
     coordinators: [
@@ -108,7 +108,7 @@ export const EVENTS: Event[] = [
     image: "/minimiltia.jpg",
     shortDescription: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
     longDescription: "Relive the nostalgia with the classic 2D multiplayer shooter.\n\nMap: Outpost. Time limit: 10 minutes. No hacked versions allowed.\n\nMobile phone with the game installed.",
-    tag: "MOBILE",
+    type: "SOLO",
     duration: "1 HOURS",
     coordinators: [
       { name: "Abhith K.R", phone: "+91 79075 59016" },
@@ -131,7 +131,7 @@ export const EVENTS: Event[] = [
     image: "/bgmi.jpg",
     shortDescription: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
     longDescription: "India's favorite Battle Royale. Squad up and dominate.\n\nMap: Erangel. Standard competitive settings.\n\nMobile phone with internet connection.",
-    tag: "MOBILE",
+    type: "SOLO",
     duration: "HALF DAY",
     coordinators: [
       { name: "Sakhi Shine", phone: "+91 94475 53774" },
@@ -154,7 +154,7 @@ export const EVENTS: Event[] = [
     image: "/coding.jpg",
     shortDescription: "Solve complex algorithmic problems within the time limit.",
     longDescription: "Test your algorithmic thinking and coding skills in this intense competition.\n\nParticipants can compete solo or in teams of 2. Languages allowed: C++, Java, Python. No internet access allowed during the contest.\n\nLaptop with compiler installed.",
-    tag: "SOLO",
+    type: "SOLO",
     bvmAllowed: false,
     duration: "1 HOURS",
     coordinators: [
@@ -178,7 +178,7 @@ export const EVENTS: Event[] = [
     image: "/speed-typing.jpg",
     shortDescription: "Test your typing speed and accuracy in this fast-paced competition.",
     longDescription: "How fast can you type? Test your WPM.\n\nText will be provided. Accuracy matters as much as speed.\n\nKeyboard provided.",
-    tag: "SOLO",
+    type: "SOLO",
     duration: "1 HOUR",
     coordinators: [
       { name: "Nandana Shaiby", phone: "+91 8078 459 413" },
@@ -200,7 +200,7 @@ export const EVENTS: Event[] = [
     image: "/3s-football.jpg",
     shortDescription: "High intensity 3-a-side football tournament.",
     longDescription: "Fast-paced 5-a-side football action.\n\n5 players + 2 subs. 10 minutes per half. Rolling substitutions.\n\nSports attire and football boots/shoes.",
-    tag: "TEAM",
+    type: "TEAM",
     duration: "HALF DAY",
     coordinators: [
       { name: "Adarsh T.R", phone: "+91 95671 97741" },

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Trophy } from "lucide-react";
 import type { Event } from "@/lib/events";
+import { getPrizePool } from "@/lib/events";
 
 interface EventInfoCardProps {
   event: Event;
@@ -33,29 +34,13 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
 
   const formattedDates = formatDates(event.dates);
 
-  const formatTimeToAmPm = (time24: string): string => {
-    const [hh, mm] = time24.split(":");
-    const hours = Number(hh);
-    const minutes = Number(mm);
-    const period = hours >= 12 ? "PM" : "AM";
-    const hour12 = ((hours + 11) % 12) + 1;
-    return `${hour12}:${minutes.toString().padStart(2, "0")} ${period}`;
-  };
-
-  const formattedTime =
-    event.startTime && event.endTime
-      ? `${formatTimeToAmPm(event.startTime)} – ${formatTimeToAmPm(
-          event.endTime
-        )}`
-      : event.startTime
-      ? formatTimeToAmPm(event.startTime)
-      : null;
+  const formattedTime = event.startTime ? event.startTime : null;
 
   const infoItems = [
     { label: "Date", value: formattedDates },
     ...(formattedTime ? [{ label: "Time", value: formattedTime }] : []),
     ...(event.duration ? [{ label: "Duration", value: event.duration }] : []),
-    ...(event.tag ? [{ label: "Type", value: event.tag }] : []),
+    ...(event.type ? [{ label: "Type", value: event.type }] : []),
     { label: "Reg Fees", value: event.pricing },
   ];
 
@@ -91,7 +76,7 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
                     Prize Pool
                   </p>
                   <p className="mt-1 text-lg font-semibold text-white">
-                    {event.prizes.total}
+                    {getPrizePool(event)}
                   </p>
                 </div>
               </div>
