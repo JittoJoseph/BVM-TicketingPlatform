@@ -67,9 +67,9 @@ export default async function EventPage({ params }: PageProps) {
                 <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/90 bg-white/10 rounded-full border border-white/10">
                   {event.category}
                 </span>
-                {event.tag && (
+                {event?.type && (
                   <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/60 border border-white/10 rounded-full">
-                    {event.tag}
+                    {event?.type}
                   </span>
                 )}
               </div>

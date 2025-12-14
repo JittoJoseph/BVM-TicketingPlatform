@@ -48,7 +48,7 @@ export default function EventCard({ event }: EventCardProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20" />
           </div>
-          <div className="flex-1 p-4 flex flex-col justify-center">
+          <div className="flex-1 p-4 flex flex-col">
             <div className="flex items-start justify-between mb-2">
               <h3 className="text-base font-semibold text-white group-hover:text-white/80 transition-colors line-clamp-2 leading-tight flex-1 mr-2">
                 {event.name}
@@ -59,18 +59,25 @@ export default function EventCard({ event }: EventCardProps) {
             </div>
             <div className="flex items-center gap-3 text-xs text-white/60 mb-2">
               <span>{formattedDates}</span>
+              {event.type && (
+                <>
+                  <span>•</span>
+                  <span>{event.type}</span>
+                </>
+              )}
             </div>
-            {event.type && (
-              <div className="flex items-center gap-3 text-xs text-white/60 mb-2">
-                <span>{event.type}</span>
-              </div>
-            )}
-            <p className="text-white/70 text-sm line-clamp-2 leading-relaxed">
+            <p className="text-white/70 text-sm line-clamp-2 leading-relaxed mb-4 flex-1">
               {event.shortDescription}
             </p>
           </div>
         </div>
-        <div className="p-4 pt-0 flex items-center justify-between border-t border-white/[0.05]">
+        <div
+          className={`p-4 flex items-center ${
+            event.requiresRegistration !== false
+              ? "justify-between"
+              : "justify-end"
+          } border-t border-white/[0.05] min-h-[80px]`}
+        >
           {event.requiresRegistration !== false && (
             <div className="flex flex-col">
               <span className="text-base font-semibold text-white">
@@ -126,7 +133,13 @@ export default function EventCard({ event }: EventCardProps) {
             {event.shortDescription}
           </p>
 
-          <div className="flex items-center justify-between pt-4 border-t border-white/[0.05] mt-auto">
+          <div
+            className={`flex items-center ${
+              event.requiresRegistration !== false
+                ? "justify-between"
+                : "justify-end"
+            } pt-4 border-t border-white/[0.05] mt-auto`}
+          >
             {event.requiresRegistration !== false && (
               <div className="flex flex-col">
                 <span className="text-lg font-semibold text-white">

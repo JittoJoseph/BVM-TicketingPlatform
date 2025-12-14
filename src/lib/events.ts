@@ -109,7 +109,7 @@ export const EVENTS: Event[] = [
     shortDescription: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
     longDescription: "Relive the nostalgia with the classic 2D multiplayer shooter.\n\nMap: Outpost. Time limit: 10 minutes. No hacked versions allowed.\n\nMobile phone with the game installed.",
     type: "SOLO",
-    duration: "1 HOURS",
+    duration: "1 HOUR",
     coordinators: [
       { name: "Abhith K.R", phone: "+91 79075 59016" },
       { name: "Arun C Vasanthkumar", phone: "+91 90617 91360" }
@@ -156,7 +156,7 @@ export const EVENTS: Event[] = [
     longDescription: "Test your algorithmic thinking and coding skills in this intense competition.\n\nParticipants can compete solo or in teams of 2. Languages allowed: C++, Java, Python. No internet access allowed during the contest.\n\nLaptop with compiler installed.",
     type: "SOLO",
     bvmAllowed: false,
-    duration: "1 HOURS",
+    duration: "1 HOUR",
     coordinators: [
       { name: "Deon Jose", phone: "+91 6282 242 610" },
       { name: "Sneha Saju", phone: "+91 95441 65049" }
