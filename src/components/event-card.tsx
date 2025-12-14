@@ -29,6 +29,9 @@ export default function EventCard({ event }: EventCardProps) {
   const formattedDates = formatDates(event.dates);
   const buttonText =
     event.requiresRegistration !== false ? "Register" : "Experience";
+
+  const displayPrice =
+    event.type === "TEAM" ? `${event.pricing}/Team` : event.pricing;
   return (
     <Link
       href={`/events/${event.id}`}
@@ -87,7 +90,7 @@ export default function EventCard({ event }: EventCardProps) {
           {event.requiresRegistration !== false && (
             <div className="flex flex-col">
               <span className="text-base font-semibold text-white">
-                {event.pricing}
+                {displayPrice}
               </span>
               <span className="text-xs text-white/50 uppercase tracking-wide">
                 Entry Fee
@@ -155,7 +158,7 @@ export default function EventCard({ event }: EventCardProps) {
             {event.requiresRegistration !== false && (
               <div className="flex flex-col">
                 <span className="text-lg font-semibold text-white">
-                  {event.pricing}
+                  {displayPrice}
                 </span>
                 <span className="text-xs text-white/50 uppercase tracking-wide">
                   Entry Fee

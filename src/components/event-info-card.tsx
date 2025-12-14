@@ -41,7 +41,10 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
     ...(formattedTime ? [{ label: "Time", value: formattedTime }] : []),
     ...(event.duration ? [{ label: "Duration", value: event.duration }] : []),
     ...(event.type ? [{ label: "Type", value: event.type }] : []),
-    { label: "Reg Fees", value: event.pricing },
+    {
+      label: "Reg Fees",
+      value: event.type === "TEAM" ? `${event.pricing}/Team` : event.pricing,
+    },
   ];
 
   return (
