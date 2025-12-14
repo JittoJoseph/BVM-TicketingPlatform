@@ -208,6 +208,24 @@ export const EVENTS: Event[] = [
     ]
   },
   {
+    id: "neon-football",
+    name: "Neon Football",
+    category: "Physical Sports",
+    dates: ["2026-01-08"],
+    startTime: "02:30 PM",
+    pricing: "₹350",
+    prizes: {
+      first: "₹2,500",
+      second: "₹1,500"
+    },
+    makemypassUrl: "https://makemypass.com/event/neon-football-championship",
+    image: "/neon-football.jpg",
+    shortDescription: "High intensity Neon Football tournament under lights.",
+    longDescription: "Fast-paced 5-a-side football action under neon lights.\n\n5 players + 2 subs. 10 minutes per half. Rolling substitutions.\n\nSports attire and football boots/shoes.",
+    type: "TEAM",
+    duration: "HALF DAY",
+  },
+  {
     id: "exhibition",
     name: "Exhibition",
     category: "Experience Zone",
