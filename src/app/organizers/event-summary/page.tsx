@@ -9,6 +9,32 @@ export default function EventSummaryPage() {
     null
   );
 
+  const convertToMinutes = (timeStr: string): number => {
+    const [time, period] = timeStr.split(" ");
+    let [hours, minutes] = time.split(":").map(Number);
+    if (period === "PM" && hours !== 12) hours += 12;
+    if (period === "AM" && hours === 12) hours = 0;
+    return hours * 60 + minutes;
+  };
+
+  const sortedEvents = [...EVENTS].sort((a, b) => {
+    const isMultiA = a.dates.length > 1;
+    const isMultiB = b.dates.length > 1;
+    if (isMultiA && !isMultiB) return 1; // multi-day after single-day
+    if (!isMultiA && isMultiB) return -1; // single-day before multi-day
+    // Both same type, sort by date and time
+    const dateA = new Date(a.dates[0]);
+    const dateB = new Date(b.dates[0]);
+    if (dateA < dateB) return -1;
+    if (dateA > dateB) return 1;
+    // Same date, compare startTime
+    if (!a.startTime) return 1;
+    if (!b.startTime) return -1;
+    const timeA = convertToMinutes(a.startTime);
+    const timeB = convertToMinutes(b.startTime);
+    return timeA - timeB;
+  });
+
   return (
     <div className="min-h-screen bg-black py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +80,7 @@ export default function EventSummaryPage() {
                 </tr>
               </thead>
               <tbody className="bg-black/50 divide-y divide-white/[0.03]">
-                {EVENTS.map((event, index) => (
+                {sortedEvents.map((event, index) => (
                   <tr
                     key={event.id}
                     onClick={() => setSelectedEvent(event)}
