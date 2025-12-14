@@ -65,6 +65,12 @@ export default function EventCard({ event }: EventCardProps) {
                   <span>{event.type}</span>
                 </>
               )}
+              {event.requiresRegistration === false && event.duration && (
+                <>
+                  <span>•</span>
+                  <span>{event.duration}</span>
+                </>
+              )}
             </div>
             <p className="text-white/70 text-sm line-clamp-2 leading-relaxed mb-4 flex-1">
               {event.shortDescription}
@@ -125,6 +131,12 @@ export default function EventCard({ event }: EventCardProps) {
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-white/40 rounded-full"></div>
                 <span>{event.type}</span>
+              </div>
+            )}
+            {event.requiresRegistration === false && event.duration && (
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+                <span>{event.duration}</span>
               </div>
             )}
           </div>
