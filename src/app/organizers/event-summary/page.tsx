@@ -7,7 +7,9 @@ export default function EventSummaryPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Event Summary</h1>
-          <p className="text-white/60 text-lg">Comprehensive overview of all events</p>
+          <p className="text-white/60 text-lg">
+            Comprehensive overview of all events
+          </p>
         </div>
 
         <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm">
@@ -46,7 +48,10 @@ export default function EventSummaryPage() {
               </thead>
               <tbody className="bg-black/50 divide-y divide-white/[0.03]">
                 {EVENTS.map((event, index) => (
-                  <tr key={event.id} className="hover:bg-white/[0.02] transition-colors duration-200">
+                  <tr
+                    key={event.id}
+                    className="hover:bg-white/[0.02] transition-colors duration-200"
+                  >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <Link
                         href={`/events/${event.id}`}
