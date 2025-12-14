@@ -11,7 +11,9 @@ export default function EventSummaryPage() {
 
   const convertToMinutes = (timeStr: string): number => {
     const [time, period] = timeStr.split(" ");
-    let [hours, minutes] = time.split(":").map(Number);
+    const [hoursStr, minutesStr] = time.split(":");
+    let hours = Number(hoursStr);
+    const minutes = Number(minutesStr);
     if (period === "PM" && hours !== 12) hours += 12;
     if (period === "AM" && hours === 12) hours = 0;
     return hours * 60 + minutes;
@@ -80,7 +82,7 @@ export default function EventSummaryPage() {
                 </tr>
               </thead>
               <tbody className="bg-black/50 divide-y divide-white/[0.03]">
-                {sortedEvents.map((event, index) => (
+                {sortedEvents.map((event) => (
                   <tr
                     key={event.id}
                     onClick={() => setSelectedEvent(event)}
