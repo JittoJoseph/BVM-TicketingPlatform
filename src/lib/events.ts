@@ -24,7 +24,7 @@ export type Event = {
 export const EVENTS: Event[] = [
   {
     id: "valorant",
-    name: "Valorant Gaming",
+    name: "VALORANT",
     category: "Esports",
     dates: ["2026-01-07"],
     startTime: "12:00 PM",
@@ -47,7 +47,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "efootball",
-    name: "eFootball Championship",
+    name: "E-STRIKE",
     category: "Esports",
     dates: ["2026-01-08"],
     startTime: "01:30 PM",
@@ -70,7 +70,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "ui-ux-competition",
-    name: "UI/UX Designing",
+    name: "PIXELCRAFT",
     category: "Technical",
     dates: ["2026-01-08"],
     startTime: "10:00 AM",
@@ -94,7 +94,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "mini-militia",
-    name: "Mini Militia Classic",
+    name: "WAR ZONE",
     category: "Esports",
     dates: ["2026-01-08"],
     startTime: "03:30 PM",
@@ -117,7 +117,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "bgmi",
-    name: "BGMI",
+    name: "BATTLE ZONE",
     category: "Esports",
     dates: ["2026-01-08"],
     startTime: "10:00 AM",
@@ -140,7 +140,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "coding-challenge",
-    name: "Coding Challenge",
+    name: "CODECLASH",
     category: "Technical",
     dates: ["2026-01-07"],
     startTime: "02:00 PM",
@@ -164,7 +164,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "speed-typing",
-    name: "Speed Typing",
+    name: "FLASHTYPE",
     category: "Technical",
     dates: ["2026-01-07"],
     startTime: "11:00 AM",
@@ -187,7 +187,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "3s-football",
-    name: "3's Football",
+    name: "TRIKICK",
     category: "Physical Sports",
     dates: ["2026-01-07"],
     startTime: "07:30 AM",
@@ -209,7 +209,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "neon-football",
-    name: "Neon Football",
+    name: "NEONCLASH",
     category: "Physical Sports",
     dates: ["2026-01-08"],
     startTime: "02:30 PM",
@@ -231,7 +231,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "exhibition",
-    name: "Exhibition",
+    name: "EXIBIT X",
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
     pricing: "Free",
@@ -244,7 +244,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "cultural-show",
-    name: "Cultural Show",
+    name: "RHYTHMIX",
     category: "Experience Zone",
     dates: ["2026-01-07"],
     startTime: "4:00 PM",
@@ -261,7 +261,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "vr-experience",
-    name: "VR Experience",
+    name: "VIRTUAX",
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
     pricing: "₹40",
@@ -274,7 +274,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "gaming-arena",
-    name: "Gaming Arena",
+    name: "PLAYZONE",
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
     pricing: "₹40",
