@@ -89,8 +89,8 @@ export default function EventSummaryPage() {
                     className="hover:bg-white/[0.1] transition-colors duration-200 cursor-pointer"
                   >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium border-r border-white/[0.05]">
-                      <span className="text-white hover:text-white/80 transition-colors decoration-white/20 hover:decoration-white/40">
-                        {event.name}
+                      <span className="text-white/90 hover:text-white/80 transition-colors decoration-white/20 hover:decoration-white/40">
+                        {event.id}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
@@ -152,9 +152,14 @@ export default function EventSummaryPage() {
             <div className="p-6">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex-1">
-                  <h2 className="text-3xl font-bold text-white mb-2 leading-tight">
+                  <h2 className="text-3xl font-bold text-white mb-1 leading-tight">
                     {selectedEvent.name}
                   </h2>
+                  <div className="mb-2">
+                    <span className="text-white/60 text-lg">
+                      ({selectedEvent.id})
+                    </span>
+                  </div>
                   <div className="flex items-center gap-2">
                     <span className="inline-flex items-center px-3 py-1 text-xs font-medium text-white/90 bg-white/10 rounded-full border border-white/20">
                       {selectedEvent.category}
