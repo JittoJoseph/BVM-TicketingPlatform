@@ -22,9 +22,11 @@ This document lists the competitive and technical events with updated fields.
 
 ## Non-Competitive Events
 
-| Event Name    | Date      | Start Time | Duration |
-| ------------- | --------- | ---------- | -------- |
-| Exhibition    | BOTH DAYS | -          | FULL DAY |
-| Cultural Show | Jan 7     | 4:00 PM    | 2 HOURS  |
-| VR Experience | BOTH DAYS | -          | FULL DAY |
-| Gaming Arena  | BOTH DAYS | -          | FULL DAY |
+## Non-Competitive Events
+
+| Event Name    | Date      | Start Time | Duration | Fees |
+| ------------- | --------- | ---------- | -------- | ---- |
+| Exhibition    | BOTH DAYS | -          | FULL DAY | Free |
+| Cultural Show | Jan 7     | 4:00 PM    | 2 HOURS  | Free |
+| VR Experience | BOTH DAYS | -          | FULL DAY | ₹40  |
+| Gaming Arena  | BOTH DAYS | -          | FULL DAY | ₹40  |

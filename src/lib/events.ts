@@ -264,7 +264,7 @@ export const EVENTS: Event[] = [
     name: "VR Experience",
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
-    pricing: "Free",
+    pricing: "₹40",
     makemypassUrl: "",
     image: "/vr.jpg",
     shortDescription: "Immerse yourself in virtual reality experiences.",
@@ -277,7 +277,7 @@ export const EVENTS: Event[] = [
     name: "Gaming Arena",
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
-    pricing: "Free",
+    pricing: "₹40",
     makemypassUrl: "",
     image: "/gaming-arena.jpg",
     shortDescription: "Dive into the ultimate gaming experience.",
@@ -294,6 +294,18 @@ export function getPrizePool(event: Event): string {
   if (prizes.first) total += parseInt(prizes.first.replace('₹', '').replace(',', ''));
   if (prizes.second) total += parseInt(prizes.second.replace('₹', '').replace(',', ''));
   if (prizes.third) total += parseInt(prizes.third.replace('₹', '').replace(',', ''));
+  return `₹${total.toLocaleString()}`;
+}
+
+// Returns the total prize pool across all events as a formatted string (e.g. "₹10,000")
+export function getTotalPrizePool(): string {
+  let total = 0;
+  for (const event of EVENTS) {
+    if (!event.prizes) continue;
+    if (event.prizes.first) total += parseInt(event.prizes.first.replace('₹', '').replace(',', ''));
+    if (event.prizes.second) total += parseInt(event.prizes.second.replace('₹', '').replace(',', ''));
+    if (event.prizes.third) total += parseInt(event.prizes.third.replace('₹', '').replace(',', ''));
+  }
   return `₹${total.toLocaleString()}`;
 }
 

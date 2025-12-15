@@ -1,6 +1,6 @@
 "use client";
 
-import { EVENTS, getPrizePool } from "@/lib/events";
+import { EVENTS, getPrizePool, getTotalPrizePool } from "@/lib/events";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -134,6 +134,14 @@ export default function EventSummaryPage() {
               </tbody>
             </table>
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+          <p className="text-white/60 text-sm text-right">
+            Total Prize Pool:{" "}
+            <span className="text-white font-semibold">
+              {getTotalPrizePool()}
+            </span>
+          </p>
         </div>
       </div>
 
