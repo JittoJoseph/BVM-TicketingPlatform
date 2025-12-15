@@ -76,8 +76,8 @@ export const EVENTS: Event[] = [
     startTime: "10:00 AM",
     pricing: "₹260",
     prizes: {
-      first: "₹2,500",
-      second: "₹1,500",
+      first: "₹3,000",
+      second: "₹2,000",
       third: "₹1,000"
     },
     makemypassUrl: "https://makemypass.com/event/ui-ux-challenge",
