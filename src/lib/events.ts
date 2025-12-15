@@ -255,6 +255,9 @@ export const EVENTS: Event[] = [
     longDescription: "Cultural performances showcasing talent from various disciplines. Enjoy music, dance, and other artistic expressions in a vibrant atmosphere.",
     requiresRegistration: false,
     duration: "2 HOURS",
+    coordinators: [
+      { name: "Arun Kurian", phone: "+91 90720 51790" }
+    ]
   },
   {
     id: "vr-experience",
