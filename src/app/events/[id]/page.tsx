@@ -105,11 +105,66 @@ export default async function EventPage({ params }: PageProps) {
 
               <div className="mt-10 space-y-6">
                 <DetailSection title="Description">
-                  {event.longDescription.split("\n").map((para, i) => (
-                    <p key={i} className={i > 0 ? "mt-4" : ""}>
-                      {para}
-                    </p>
-                  ))}
+                  {event.longDescription.split("\n\n").map((block, i) => {
+                    const lines = block
+                      .split("\n")
+                      .map((l) => l.trim())
+                      .filter(Boolean);
+
+                    // Case: a heading followed by bullet lines (e.g. "Rules:" then bullets)
+                    if (
+                      lines.length > 1 &&
+                      lines[0].endsWith(":") &&
+                      lines
+                        .slice(1)
+                        .every((l) => l.startsWith("•") || l.startsWith("- "))
+                    ) {
+                      const heading = lines[0].replace(/:$/, "");
+                      const items = lines
+                        .slice(1)
+                        .map((l) => l.replace(/^•\s?|^-\s?/, ""));
+                      return (
+                        <div key={i} className={i > 0 ? "mt-4" : ""}>
+                          <p className="font-semibold">{heading}</p>
+                          <ul className="list-disc list-inside mt-2 space-y-1">
+                            {items.map((it, idx) => (
+                              <li key={idx}>{it}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    }
+
+                    // Case: a block that's purely a list
+                    if (
+                      lines.length > 0 &&
+                      lines.every(
+                        (l) => l.startsWith("•") || l.startsWith("- ")
+                      )
+                    ) {
+                      return (
+                        <ul
+                          key={i}
+                          className={
+                            i > 0
+                              ? "mt-4 list-disc list-inside space-y-1"
+                              : "list-disc list-inside space-y-1"
+                          }
+                        >
+                          {lines.map((l, idx) => (
+                            <li key={idx}>{l.replace(/^•\s?|^-\s?/, "")}</li>
+                          ))}
+                        </ul>
+                      );
+                    }
+
+                    // Default: render as paragraph
+                    return (
+                      <p key={i} className={i > 0 ? "mt-4" : ""}>
+                        {block}
+                      </p>
+                    );
+                  })}
                 </DetailSection>
 
                 {event.coordinators && event.coordinators.length > 0 && (
