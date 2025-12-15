@@ -224,6 +224,10 @@ export const EVENTS: Event[] = [
     longDescription: "Fast-paced 5-a-side football action under neon lights.\n\n5 players + 2 subs. 10 minutes per half. Rolling substitutions.\n\nSports attire and football boots/shoes.",
     type: "TEAM",
     duration: "HALF DAY",
+    coordinators: [
+      { name: "Adhityan MS", phone: "+91 77362 01310" },
+      { name: "Abhimanue Umesh", phone: "+91 73568 97351" }
+    ]
   },
   {
     id: "exhibition",
