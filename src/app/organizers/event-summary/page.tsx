@@ -147,8 +147,8 @@ export default function EventSummaryPage() {
 
       {/* Modal */}
       {selectedEvent && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-black border border-white/[0.08] rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 sm:p-4">
+          <div className="bg-black border border-white/[0.08] rounded-none sm:rounded-3xl shadow-2xl w-full max-w-full h-full sm:max-w-4xl sm:max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex-1">
