@@ -100,9 +100,9 @@ export const EVENTS: Event[] = [
     startTime: "03:30 PM",
     pricing: "₹60",
     prizes: {
-      first: "₹1,000",
-      second: "₹600",
-      third: "₹400"
+      first: "₹1,500",
+      second: "₹1000",
+      third: "₹500"
     },
     makemypassUrl: "https://makemypass.com/event/mini-militia-tournament-1",
     image: "/minimiltia.jpg",
@@ -121,7 +121,7 @@ export const EVENTS: Event[] = [
     category: "Esports",
     dates: ["2026-01-08"],
     startTime: "10:00 AM",
-    pricing: "₹400",
+    pricing: "₹240",
     prizes: {
       first: "₹2,500",
       second: "₹1,600",
