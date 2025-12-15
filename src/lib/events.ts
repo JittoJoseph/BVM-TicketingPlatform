@@ -191,10 +191,10 @@ export const EVENTS: Event[] = [
     category: "Physical Sports",
     dates: ["2026-01-07"],
     startTime: "07:30 AM",
-    pricing: "₹350",
+    pricing: "₹450",
     prizes: {
-      first: "₹2,000",
-      second: "₹1,500"
+      first: "₹3,000",
+      second: "₹2,000"
     },
     makemypassUrl: "https://makemypass.com/event/3s-football-championship",
     image: "/3s-football.jpg",
