@@ -22,8 +22,6 @@ This document lists the competitive and technical events with updated fields.
 
 ## Non-Competitive Events
 
-## Non-Competitive Events
-
 | Event Name    | Date      | Start Time | Duration | Fees |
 | ------------- | --------- | ---------- | -------- | ---- |
 | Exhibition    | BOTH DAYS | -          | FULL DAY | Free |
