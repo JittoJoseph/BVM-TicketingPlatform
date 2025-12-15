@@ -86,7 +86,7 @@ export default function EventSummaryPage() {
                   <tr
                     key={event.id}
                     onClick={() => setSelectedEvent(event)}
-                    className="hover:bg-white/[0.05] transition-colors duration-200 cursor-pointer"
+                    className="hover:bg-white/[0.1] transition-colors duration-200 cursor-pointer"
                   >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium border-r border-white/[0.05]">
                       <span className="text-white hover:text-white/80 transition-colors decoration-white/20 hover:decoration-white/40">
