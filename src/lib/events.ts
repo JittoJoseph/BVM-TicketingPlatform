@@ -60,7 +60,7 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://makemypass.com/event/e-football-tournament",
     image: "/pess.jpg",
     shortDescription: "1v1 Console-Style Football. Show your skills on the virtual pitch.",
-    longDescription: "Virtual football on the big screen.\n\n1v1 matches. 10 minutes match duration. Controller settings: Standard.\n\nControllers provided.",
+      longDescription: "E-STRIKE is a 1v1 eFootball competition played on mobile devices. Expect quick, tactical matches where precision and timing matter.\n\nRules:\n• Match Time: 6 minutes\n• Player Form: Normal\n• Smart Assist: Off\n• Extra Time & Penalty: Off\n• Back-pass spamming is not allowed\n\nConnection loss rules:\n• If the match ends before half-time, replay the match and continue using the same aggregate score.\n• If the match ends between 45–80 minutes, play a 6-minute match until half-time, then add the score to the aggregate.\n• If the match ends after 80 minutes and the leading player is shown “You Won”, no replay is required.\n• If the player who was drawn or losing is shown “You Won”, play one half of a 6-minute match.\n\nRequirements:\n• Ensure eFootball is installed and up-to-date on your mobile device.\n• Participants must have sufficient mobile data for internet access; offline play is not supported for the tournament.\n• Bring your own mobile device and any chargers or adapters.\n• Controller or additional accessories are allowed if supported by the device and game settings.",
     type: "SOLO",
     duration: "2 HOURS",
     coordinators: [
@@ -83,7 +83,7 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://makemypass.com/event/ui-ux-challenge",
     image: "/ui-ux-design.jpg",
     shortDescription: "Design the future. Create intuitive and beautiful user interfaces.",
-    longDescription: "Showcase your creativity and design skills.\n\nTheme will be given on the spot. Tools: Figma, Adobe XD. Time limit: 2 hours.\n\nLaptop with design software installed.",
+    longDescription: "PIXELCRAFT is a fast-paced UI/UX design challenge where teams transform ideas into interactive designs under time pressure, balancing creativity and usability.\n\nRules:\n• Team: 1–4 members.\n• Time limit: 3 hours (strict).\n• Bring your own laptops.\n• Technology: any frontend framework and AI tools allowed (e.g., React, Next.js, GitHub Copilot).\n• Theme & details provided at start; submissions must be original and significantly customized.\n• Deliverables: at least 3 designed screens and a live deployed landing page (Vercel/Netlify/GitHub Pages) plus the GitHub repo link.\n• Presentation: 3-minute demo + 2-minute Q&A.\n• Scoring: judged on creativity, usability, implementation, and presentation.\n• Disqualification: plagiarism, offensive content, or rule violations.\n\nNote:\n• Remember to carry your college ID.",
     type: "TEAM",
     bvmAllowed: false,
     duration: "HALF DAY",
