@@ -107,7 +107,7 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://makemypass.com/event/mini-militia-tournament-1",
     image: "/minimiltia.jpg",
     shortDescription: "Nostalgic 2D Multiplayer Chaos. Battle it out in the classic arena.",
-    longDescription: "Relive the nostalgia with the classic 2D multiplayer shooter.\n\nRules:\n• Match time: 10 minutes.\n• No hacked versions, mods, cheats, or third-party unfair tools — violation will result in immediate disqualification.\n• Map: Outpost. Standard match settings.\n\nInstallation & requirements:\n• Install Mini Militia Classic from the Google Play Store; installation will be checked before matches.\n• Bring your own mobile phone with the game installed and charged.\n• Bring chargers and any required accessories.",
+    longDescription: "MATCH FORMAT:\n• Match Type: Solo\n• Map: Outpost\n• Time Limit: 10 minutes per round\n• Players per Match: 11 players plus 1 organiser spectator/referee\n\nWINNING CRITERIA:\n• The player with the highest number of kills wins the round.\n• Based on the lobby size, the top two finishers advance to the next round.\n• Ties are broken by the player with fewer deaths.\n\nGENERAL RULES:\n• Teaming in a solo match is strictly prohibited.\n• Glitches, exploits, unfair tactics, phone switching, or external assistance will result in disqualification.\n• Leaving intentionally or failing to report on time leads to disqualification without refund.\n\nRe-Match & Disputes:\n• Organiser-side interruptions will trigger a re-match; player-side issues will not.",
     type: "SOLO",
     duration: "1 HOUR",
     coordinators: [
