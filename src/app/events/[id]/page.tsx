@@ -2,7 +2,6 @@ import { EVENTS } from "@/lib/events";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
 import { ArrowLeft } from "lucide-react";
 import type { ReactNode } from "react";
 import FAQAccordion from "@/components/faq-accordion";
@@ -47,18 +46,23 @@ export default async function EventPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white/20">
-      <Navbar />
-
-      <main className="px-4 sm:px-6 pt-24 pb-20">
+      <main className="px-4 sm:px-6 pt-8 sm:pt-12 pb-20">
         <div className="mx-auto max-w-5xl">
-          {/* Back Link */}
-          <Link
-            href="/#events"
-            className="inline-flex items-center text-white/60 hover:text-white transition-colors mb-8 group"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-            Back to Events
-          </Link>
+          <div className="flex items-center justify-between mb-8">
+            <Link
+              href="/#events"
+              className="inline-flex items-center text-white/60 hover:text-white transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+              Back to Events
+            </Link>
+            <Link
+              href="/"
+              className="flex items-center font-tech text-lg font-bold tracking-wide text-white hover:text-white/80 transition-opacity"
+            >
+              COREX26
+            </Link>
+          </div>
 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_360px]">
             {/* Main */}
