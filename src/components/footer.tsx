@@ -85,7 +85,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-gray-300 transition-colors"
             >
-              BVM Holy Cross College
+              Bishop Vayalil Memorial Holy Cross College
             </Link>
           </p>
         </div>
