@@ -121,7 +121,7 @@ export const EVENTS: Event[] = [
     category: "Esports",
     dates: ["2026-01-08"],
     startTime: "10:00 AM",
-    pricing: "₹100",
+    pricing: "₹260",
     prizes: {
       first: "₹2,500",
       second: "₹1,600",
@@ -130,8 +130,8 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://makemypass.com/event/bgmi-tournament-1",
     image: "/bgmi.jpg",
     shortDescription: "Battle Royale Squad Championship. Winner Winner Chicken Dinner.",
-    longDescription: "BATTLE ZONE is a solo Battle Royale championship where individual skill and survival strategy win the day. Matches are fast-paced and require map knowledge, looting strategy, and smart positioning.\n\nRules:\n• Mode: Solo\n• Map: Erangel\n• Settings: Standard competitive settings\n• Match format: as announced at registration\n• No cheats, hacks, or third-party unfair tools — violation will result in immediate disqualification.\n\nRequirements:\n• Bring your own mobile phone with BGMI installed and updated.\n• Ensure a stable internet connection (mobile data or Wi-Fi).\n• Bring chargers and any required accessories.",
-    type: "SOLO",
+    longDescription: "BATTLE ZONE is a team-based Battle Royale championship where squad coordination, communication, and survival strategy win the day. Matches are fast-paced and require map knowledge, looting strategy, and smart positioning.\n\nRules:\n• Mode: Squad (Battle Royale)\n• Team Size: 3-4 members per squad\n• Map: Erangel\n• Settings: Standard competitive settings\n• Match format: as announced at registration\n• No cheats, hacks, or third-party unfair tools — violation will result in immediate disqualification.\n\nRequirements:\n• Bring your own mobile phone with BGMI installed and updated.\n• Ensure a stable internet connection (mobile data or Wi-Fi).\n• All team members must register together.",
+    type: "TEAM",
     duration: "HALF DAY",
     coordinators: [
       { name: "Sakhi Shine", phone: "+91 94475 53774" },
@@ -231,7 +231,7 @@ export const EVENTS: Event[] = [
   },
   {
     id: "exhibition",
-    name: "EXIBIT",
+    name: "TECHEXPLORE",
     category: "Experience Zone",
     dates: ["2026-01-07", "2026-01-08"],
     pricing: "Free",
