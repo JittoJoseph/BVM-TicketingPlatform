@@ -121,7 +121,7 @@ export const EVENTS: Event[] = [
     category: "Esports",
     dates: ["2026-01-08"],
     startTime: "10:00 AM",
-    pricing: "₹260",
+    pricing: "₹240",
     prizes: {
       first: "₹2,500",
       second: "₹1,600",
