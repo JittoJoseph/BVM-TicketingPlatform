@@ -221,7 +221,7 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://makemypass.com/event/neon-football-competition",
     image: "/neon-football.jpg",
     shortDescription: "High intensity Neon Football tournament under lights.",
-    longDescription: "Fast-paced 5-a-side football action under neon lights.\n\n5 players + 2 subs. 10 minutes per half. Rolling substitutions.\n\nSports attire and football boots/shoes.",
+    longDescription: "NEONCLASH is a fast-paced 3-a-side football tournament that rewards quick passing, sharp positioning, and teamwork in short, high-energy matches under neon lights.\n\nFormat & Rules:\n• Match length: 10 minutes per half; rolling substitutions allowed.\n• Fair play: standard fouls and referee decisions apply.\n• Age restriction: Under 21 only — participants must be under 21 on the event date.\n• Referee's decision is final.\n\nRequirements:\n• Bring original photo ID proof (college ID or government-issued ID) for verification.\n• Sports attire and football boots/shoes are mandatory.\n• Please arrive 30 minutes before kickoff for registration and player check-in.",
     type: "TEAM",
     duration: "HALF DAY",
     coordinators: [

@@ -62,16 +62,10 @@ export default function EventSummaryPage() {
                     Time
                   </th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
-                    Duration
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
                     Type
                   </th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/8 border-r border-white/[0.05]">
                     Prize Pool
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/6 border-r border-white/[0.05]">
-                    Prize Tiers
                   </th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
                     Reg Fees
@@ -102,24 +96,10 @@ export default function EventSummaryPage() {
                       {event.startTime || "N/A"}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
-                      {event.duration || "N/A"}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
                       {event.type || "N/A"}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white border-r border-white/[0.05]">
                       {getPrizePool(event)}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-white/70 max-w-xs truncate border-r border-white/[0.05]">
-                      {event.prizes
-                        ? [
-                            event.prizes.first,
-                            event.prizes.second,
-                            event.prizes.third,
-                          ]
-                            .filter(Boolean)
-                            .join(", ")
-                        : "N/A"}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
                       {event.pricing}
