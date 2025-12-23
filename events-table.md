@@ -12,6 +12,6 @@
 | TRIKICK (3s-football)          | 2026-01-07             | 07:30 AM | Adarsh T.R: +91 95671 97741, Vishnu Venu: +91 85939 81725                               |
 | NEONCLASH (neon-football)      | 2026-01-08             | 02:30 PM | Adhityan MS: +91 77362 01310, Abhimanue Umesh: +91 73568 97351                          |
 | TECHEXPLORE (exhibition)       | 2026-01-07, 2026-01-08 | ALL DAY  | Harinarayanan P S: +91 85903 16244, Bincy: +91 70340 88165                              |
-| RHYTHMIX (cultural-show)       | 2026-01-07             | 4:00 PM  | Arun Kurian: +91 90720 51790                                                            |
+| RHYTHMIX (cultural-show)       | 2026-01-07             | 4:00 PM  | Arun Kurian: +91 90720 51790, Alen Thomas: +91 90746 36833                              |
 | VIRTUAX (vr-experience)        | 2026-01-07, 2026-01-08 | ALL DAY  | Abel Roshan: +91 73566 10881, Ajith Madhu: +91 75103 93780, Alan Johns: +91 97442 50330 |
 | PLAYZONE (gaming-arena)        | 2026-01-07, 2026-01-08 | ALL DAY  | Amal Benny: +91 80788 36887, Deon Binoj: +91 91881 40210                                |

@@ -260,7 +260,8 @@ export const EVENTS: Event[] = [
     requiresRegistration: false,
     duration: "2 HOURS",
     coordinators: [
-      { name: "Arun Kurian", phone: "+91 90720 51790" }
+      { name: "Arun Kurian", phone: "+91 90720 51790" },
+      { name: "Alen Thomas", phone: "+91 90746 36833" }
     ]
   },
   {
