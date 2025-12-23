@@ -241,6 +241,10 @@ export const EVENTS: Event[] = [
     longDescription: "Explore the future of technology at EXIBIT — a hands-on exhibition focused on Internet of Things (IoT), e-waste and sustainability, maker projects, and early-stage prototypes. Discover practical demos, learn about responsible electronics recycling, and connect with student teams and startups.\n\nHighlights:\n• IoT & Embedded Systems: live demos of sensors, smart-home and low-power prototypes.\n• E-waste & Sustainability: responsible recycling, upcycling projects, and repair/repurpose showcases.\n• Maker & Robotics: interactive builds, drones, and hands-on demos.\n• Workshops & Talks: short sessions on circular electronics, low-power design, and product development.\n• Student Projects & Startups: see prototypes, ask questions, and network with creators.\n\nOpen to all; no registration required. Visit during exhibition hours to explore demos and attend short sessions.",
     requiresRegistration: false,
     duration: "FULL DAY",
+    coordinators: [
+      { name: "Harinarayanan P S", phone: "+91 85903 16244" },
+      { name: "Bincy", phone: "+91 70340 88165" }
+    ],
   },
   {
     id: "cultural-show",
@@ -271,6 +275,11 @@ export const EVENTS: Event[] = [
     longDescription: "VIRTUAX is a hands-on VR station where attendees can wear a headset and try short, guided immersive experiences.\n\nSessions are walk-in and queue-based; follow on-site instructions.",
     requiresRegistration: false,
     duration: "FULL DAY",
+    coordinators: [
+      { name: "Abel Roshan", phone: "+91 73566 10881" },
+      { name: "Ajith Madhu", phone: "+91 75103 93780" },
+      { name: "Alan Johns", phone: "+91 97442 50330" }
+    ],
   },
   {
     id: "gaming-arena",
@@ -284,6 +293,10 @@ export const EVENTS: Event[] = [
     longDescription: "PLAYZONE features PlayStation 5 stations where attendees can pick up a controller and jump into a rotating selection of popular games. Sessions are casual and walk-in — controllers and consoles are provided on-site.\n\nGames (examples):\n• GTA5\n• FIFA series\n• NBA 2K\n• Rocket League\n• Call of Duty and other popular titles",
     requiresRegistration: false,
     duration: "FULL DAY",
+    coordinators: [
+      { name: "Amal Benny", phone: "+91 80788 36887" },
+      { name: "Deon Binoj", phone: "+91 91881 40210" }
+    ],
   },
 ];
 
