@@ -307,8 +307,8 @@ export const EVENTS: Event[] = [
     pricing: "₹40",
     makemypassUrl: "",
     image: "/sim-racing.jpg",
-    shortDescription: "Experience high-speed sim racing on professional setups.",
-    longDescription: "Dive into the world of sim racing with professional simulators. Feel the thrill of high-speed racing on virtual tracks.\n\nSessions are walk-in and queue-based; follow on-site instructions.",
+    shortDescription: "Feel the adrenaline of sim racing on virtual circuits.",
+    longDescription: "TURBOZONE brings the excitement of motorsport to life with immersive sim racing experiences. Hop into a simulator and navigate challenging tracks, compete in time trials, or just enjoy the thrill of speed.\n\nSessions are walk-in and queue-based; follow on-site instructions.",
     requiresRegistration: false,
     duration: "FULL DAY",
     coordinators: [
