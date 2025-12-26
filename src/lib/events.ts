@@ -299,6 +299,22 @@ export const EVENTS: Event[] = [
       { name: "Deon Binoj", phone: "+91 91881 40210" }
     ],
   },
+  {
+    id: "sim-racing",
+    name: "TURBOZONE",
+    category: "Experience Zone",
+    dates: ["2026-01-07", "2026-01-08"],
+    pricing: "₹40",
+    makemypassUrl: "",
+    image: "/sim-racing.jpg",
+    shortDescription: "Experience high-speed sim racing on professional setups.",
+    longDescription: "Dive into the world of sim racing with professional simulators. Feel the thrill of high-speed racing on virtual tracks.\n\nSessions are walk-in and queue-based; follow on-site instructions.",
+    requiresRegistration: false,
+    duration: "FULL DAY",
+    coordinators: [
+      { name: "Abhishek K Sasi", phone: "+91 95393 55691" }
+    ],
+  },
 ];
 
 export function getPrizePool(event: Event): string {
