@@ -149,10 +149,10 @@ export default function Hero() {
             Explore Events
           </Link>
           <Link
-            href="#sim-racing"
+            href="#music-night"
             className="border border-gray-600 text-gray-400 px-10 py-4 rounded-full font-medium font-tech hover:border-white hover:text-white transition-all duration-300 uppercase tracking-wide"
           >
-            Sim Racing
+            Music Night
           </Link>
         </div>
       </div>

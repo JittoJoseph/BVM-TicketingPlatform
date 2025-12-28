@@ -32,10 +32,10 @@ export default function Navbar() {
                 HOME
               </Link>
               <Link
-                href="/#contact"
+                href="/#music-night"
                 className="hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-colors text-gray-400"
               >
-                CONTACT
+                MUSIC NIGHT
               </Link>
               <Link
                 href="/#events"
@@ -90,11 +90,11 @@ export default function Navbar() {
                 HOME
               </Link>
               <Link
-                href="/#contact"
+                href="/#music-night"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                CONTACT
+                MUSIC NIGHT
               </Link>
               <Link
                 href="/#events"

@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "COREX 2026 | BVM Holy Cross College",
+  title: "COREX 2026",
   description:
     "Register for COREX 2026 - The Ultimate Tech Fest at BVM Holy Cross College. Esports, Coding, Workshops, and more.",
   openGraph: {

@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
-import SimRacing from "@/components/sim-racing";
+import ExperienceZone from "@/components/experience-zone";
 import EventsGrid from "@/components/events-grid";
 import GrandFinale from "@/components/grand-finale";
 import Footer from "@/components/footer";
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <EventsGrid />
       <GrandFinale />
-      {/* <SimRacing /> */}
+      <ExperienceZone />
       <Footer />
     </main>
   );

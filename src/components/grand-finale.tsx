@@ -1,6 +1,7 @@
 export default function GrandFinale() {
   return (
     <section
+      id="music-night"
       className="relative py-16 md:py-32 bg-black overflow-hidden"
       style={{
         backgroundImage:
