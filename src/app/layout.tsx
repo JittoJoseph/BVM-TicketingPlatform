@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
+import { Bebas_Neue, Montserrat } from "next/font/google";
 import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas-neue",
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
 export const metadata: Metadata = {
   title: "COREX 2026 | BVM Holy Cross College",
@@ -34,7 +45,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`scroll-smooth ${bebasNeue.variable} ${montserrat.variable}`}
+    >
       <body className="antialiased">{children}</body>
     </html>
   );

@@ -23,26 +23,31 @@ export default function GrandFinale() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-12 mt-12 md:mt-24">
           <div className="mb-6">
-            <span className="inline-flex items-center px-6 py-2 bg-white/[0.1] backdrop-blur-sm rounded-full border border-white/[0.2] text-white/90 text-sm font-medium tracking-wide">
-              <div className="w-2 h-2 bg-white/50 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-white font-medium px-6 py-2 border border-white/20 rounded-full text-lg tracking-wide">
               GRAND FINALE • DAY 2 EVENING
             </span>
           </div>
 
           <h2
-            className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 md:mb-8 leading-tight"
-            style={{ fontFamily: "Audiowide, sans-serif" }}
+            className="text-8xl md:text-9xl lg:text-10xl font-black text-white mb-6 md:mb-8 leading-none tracking-wider"
+            style={{
+              fontFamily: "var(--font-bebas-neue)",
+            }}
           >
             MUSIC NIGHT
-            <span className="block text-2xl md:text-4xl lg:text-5xl font-light text-white/80 mt-4">
+            <span
+              className="block text-3xl md:text-5xl lg:text-6xl font-light text-gray-400 mt-6 tracking-wide uppercase"
+              style={{
+                fontFamily: "var(--font-montserrat)",
+              }}
+            >
               FEATURING CHARMINAR
             </span>
           </h2>
 
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Get ready to party all night with CHARMINAR&apos;s electrifying
-            performance! Experience an epic DJ set, wild foam party, and
-            non-stop music that will keep the energy high till dawn.
+          <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide mb-8 uppercase">
+            Experience the ultimate fusion of beats, bubbles, and live energy
+            under the stars.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
@@ -69,62 +74,15 @@ export default function GrandFinale() {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            <div className="flex flex-col items-center gap-3 hover:scale-105 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
-                <svg
-                  className="w-8 h-8 text-purple-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-                </svg>
-              </div>
-              <span className="text-white/90 text-base font-semibold">
-                DJ Set
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-3 hover:scale-105 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
-                <svg
-                  className="w-8 h-8 text-blue-400"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="12" cy="12" r="3" />
-                  <circle cx="8" cy="8" r="2" />
-                  <circle cx="16" cy="8" r="2" />
-                  <circle cx="8" cy="16" r="2" />
-                  <circle cx="16" cy="16" r="2" />
-                </svg>
-              </div>
-              <span className="text-white/90 text-base font-semibold">
-                Foam Party
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-3 hover:scale-105 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-yellow-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
-                <svg
-                  className="w-8 h-8 text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-                </svg>
-              </div>
-              <span className="text-white/90 text-base font-semibold">
-                Music Show
-              </span>
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-3 text-white/85 font-semibold tracking-wide">
+            <span className="text-base md:text-lg text-white">DJ Beats</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-base md:text-lg text-white">Foam Party</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-base md:text-lg text-white">Music Show</span>
           </div>
 
-          <div className="mt-12">
-            <p className="text-xl md:text-2xl font-bold text-white/90 italic">
-              "The night that turns memories into legends"
-            </p>
-          </div>
+          <div className="mt-12"></div>
         </div>
       </div>
     </section>
