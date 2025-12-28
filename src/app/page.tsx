@@ -11,7 +11,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <EventsGrid />
-      <SimRacing />
+      <GrandFinale />
+      {/* <SimRacing /> */}
       <Footer />
     </main>
   );
