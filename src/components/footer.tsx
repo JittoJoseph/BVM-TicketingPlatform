@@ -1,63 +1,47 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const coordinators = [
+    { name: "Devnarayan V", phone: "+91 94000 39066" },
+    { name: "Vishnu AnilKumar", phone: "+91 82818 70842" },
+    { name: "Ali Hussain", phone: "+91 85905 72041" },
+  ];
+
   return (
     <section
       id="contact"
-      className="bg-black/95 backdrop-blur-sm border-t border-gray-800/50 py-8"
+      className="bg-black/95 backdrop-blur-sm border-t border-gray-800/50 py-4"
     >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-6">
-          <h2 className="font-tech text-xl font-bold text-white mb-2">
+        <div className="text-center mb-4">
+          <h2 className="font-tech text-xl font-bold text-white mb-1">
             GET IN TOUCH
           </h2>
           <p className="text-gray-400 text-sm">Student Coordinators</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-6">
-          <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-gray-600/70 transition-colors">
-            <p className="text-gray-400 text-xs uppercase font-medium mb-2 tracking-wide">
-              Coordinator
-            </p>
-            <p className="text-white font-medium text-sm mb-1">Devnarayan V</p>
-            <Link
-              href="tel:+919400039066"
-              className="text-gray-300 text-sm hover:text-white transition-colors"
-            >
-              +91 94000 39066
-            </Link>
-          </div>
-
-          <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-gray-600/70 transition-colors">
-            <p className="text-gray-400 text-xs uppercase font-medium mb-2 tracking-wide">
-              Coordinator
-            </p>
-            <p className="text-white font-medium text-sm mb-1">
-              Vishnu AnilKumar
-            </p>
-            <Link
-              href="tel:+918281870842"
-              className="text-gray-300 text-sm hover:text-white transition-colors"
-            >
-              +91 82818 70842
-            </Link>
-          </div>
-
-          <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-gray-600/70 transition-colors">
-            <p className="text-gray-400 text-xs uppercase font-medium mb-2 tracking-wide">
-              Coordinator
-            </p>
-            <p className="text-white font-medium text-sm mb-1">Ali Hussain</p>
-            <Link
-              href="tel:+918590572041"
-              className="text-gray-300 text-sm hover:text-white transition-colors"
-            >
-              +91 85905 72041
-            </Link>
+        <div className="max-w-md mx-auto mb-4">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-white/60 mb-3">
+              Event Coordinators
+            </h3>
+            <div className="space-y-2">
+              {coordinators.map((coord, i) => (
+                <div key={i} className="flex justify-between items-center">
+                  <span className="text-white/75">{coord.name}</span>
+                  <a
+                    href={`tel:${coord.phone}`}
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    {coord.phone}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="flex justify-center space-x-6 mb-4">
+        <div className="flex justify-center space-x-6 mb-2">
           <Link
             href="https://www.instagram.com/https.corex"
             target="_blank"
