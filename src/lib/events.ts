@@ -19,6 +19,8 @@ export type Event = {
   requiresRegistration?: boolean; // default true
   duration?: string;
   coordinators?: { name: string; phone: string }[];
+  venue: string;
+  staffCoordinator?: string;
 };
 
 export const EVENTS: Event[] = [
@@ -43,7 +45,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Arjun K.S", phone: "+91 94977 38996" },
       { name: "Arun Vijay", phone: "+91 85905 80928" }
-    ]
+    ],
+    venue: "B-HUB Main Hall",
+    staffCoordinator: "Anjala Michael"
   },
   {
     id: "efootball",
@@ -64,9 +68,11 @@ export const EVENTS: Event[] = [
     type: "SOLO",
     duration: "2 HOURS",
     coordinators: [
-      { name: "Sandeep Santhosh", phone: "+91 8078 861 848" },
+      { name: "Sandeep Santhosh", phone: "+91 80788 61848" },
       { name: "Savio Saji", phone: "+91 98477 21549" }
-    ]
+    ],
+    venue: "Rooftop",
+    staffCoordinator: "Anjala Michael"
   },
   {
     id: "ui-ux-competition",
@@ -90,7 +96,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Ajil Saji", phone: "+91 90728 05856" },
       { name: "Steve Suresh George", phone: "+91 90613 02064" }
-    ]
+    ],
+    venue: "B-HUB Main Hall",
+    staffCoordinator: "Nova Emmanuel"
   },
   {
     id: "mini-militia",
@@ -113,7 +121,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Abhith K.R", phone: "+91 79075 59016" },
       { name: "Arun C Vasanthkumar", phone: "+91 90617 91360" }
-    ]
+    ],
+    venue: "Rooftop",
+    staffCoordinator: "Amalda Patrick"
   },
   {
     id: "bgmi",
@@ -136,7 +146,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Sakhi Shine", phone: "+91 94475 53774" },
       { name: "Jacob George", phone: "+91 81388 62703" }
-    ]
+    ],
+    venue: "Rooftop",
+    staffCoordinator: "Anju Johney"
   },
   {
     id: "coding-challenge",
@@ -158,9 +170,11 @@ export const EVENTS: Event[] = [
     bvmAllowed: false,
     duration: "1 HOUR",
     coordinators: [
-      { name: "Deon Jose", phone: "+91 6282 242 610" },
+      { name: "Deon Jose", phone: "+91 62822 42610" },
       { name: "Sneha Saju", phone: "+91 95441 65049" }
-    ]
+    ],
+    venue: "Linus Torvalds Lab – B6",
+    staffCoordinator: "Amalda Patrick"
   },
   {
     id: "speed-typing",
@@ -181,9 +195,11 @@ export const EVENTS: Event[] = [
     type: "SOLO",
     duration: "1 HOUR",
     coordinators: [
-      { name: "Nandana Shaiby", phone: "+91 8078 459 413" },
+      { name: "Nandana Shaiby", phone: "+91 80784 59413" },
       { name: "Niranjana Babu", phone: "+91 85909 70369" }
-    ]
+    ],
+    venue: "Alan Turing Lab – B5",
+    staffCoordinator: "Nova Emmanuel"
   },
   {
     id: "3s-football",
@@ -205,7 +221,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Adarsh T.R", phone: "+91 95671 97741" },
       { name: "Vishnu Venu", phone: "+91 85939 81725" }
-    ]
+    ],
+    venue: "Main Ground",
+    staffCoordinator: "Seena S Nair"
   },
   {
     id: "neon-football",
@@ -227,7 +245,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Adhityan MS", phone: "+91 77362 01310" },
       { name: "Abhimanue Umesh", phone: "+91 73568 97351" }
-    ]
+    ],
+    venue: "A11 – St. Ignatius Seminar Hall",
+    staffCoordinator: "Seena S Nair"
   },
   {
     id: "exhibition",
@@ -245,6 +265,8 @@ export const EVENTS: Event[] = [
       { name: "Harinarayanan P S", phone: "+91 85903 16244" },
       { name: "Bincy", phone: "+91 70340 88165" }
     ],
+    venue: "A2, A3",
+    staffCoordinator: "Brigit Thomas"
   },
   {
     id: "cultural-show",
@@ -262,7 +284,9 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Arun Kurian", phone: "+91 90720 51790" },
       { name: "Alen Thomas", phone: "+91 90746 36833" }
-    ]
+    ],
+    venue: "Basketball Court",
+    staffCoordinator: "Jaise Jose"
   },
   {
     id: "vr-experience",
@@ -281,6 +305,7 @@ export const EVENTS: Event[] = [
       { name: "Ajith Madhu", phone: "+91 75103 93780" },
       { name: "Alan Johns", phone: "+91 97442 50330" }
     ],
+    venue: "A17"
   },
   {
     id: "gaming-arena",
@@ -298,6 +323,8 @@ export const EVENTS: Event[] = [
       { name: "Amal Benny", phone: "+91 80788 36887" },
       { name: "Deon Binoj", phone: "+91 91881 40210" }
     ],
+    venue: "A16",
+    staffCoordinator: "Anju Johney",
   },
   {
     id: "sim-racing",
@@ -314,6 +341,7 @@ export const EVENTS: Event[] = [
     coordinators: [
       { name: "Abhishek K Sasi", phone: "+91 95393 55691" }
     ],
+    venue: "A17",
   },
 ];
 

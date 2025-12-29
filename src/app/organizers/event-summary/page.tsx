@@ -19,22 +19,20 @@ export default function EventSummaryPage() {
     return hours * 60 + minutes;
   };
 
-  const sortedEvents = [...EVENTS].sort((a, b) => {
-    const isMultiA = a.dates.length > 1;
-    const isMultiB = b.dates.length > 1;
-    if (isMultiA && !isMultiB) return 1; // multi-day after single-day
-    if (!isMultiA && isMultiB) return -1; // single-day before multi-day
-    // Both same type, sort by date and time
-    const dateA = new Date(a.dates[0]);
-    const dateB = new Date(b.dates[0]);
-    if (dateA < dateB) return -1;
-    if (dateA > dateB) return 1;
-    // Same date, compare startTime
+  const events7th = EVENTS.filter((event) =>
+    event.dates.includes("2026-01-07")
+  ).sort((a, b) => {
     if (!a.startTime) return 1;
     if (!b.startTime) return -1;
-    const timeA = convertToMinutes(a.startTime);
-    const timeB = convertToMinutes(b.startTime);
-    return timeA - timeB;
+    return convertToMinutes(a.startTime) - convertToMinutes(b.startTime);
+  });
+
+  const events8th = EVENTS.filter((event) =>
+    event.dates.includes("2026-01-08")
+  ).sort((a, b) => {
+    if (!a.startTime) return 1;
+    if (!b.startTime) return -1;
+    return convertToMinutes(a.startTime) - convertToMinutes(b.startTime);
   });
 
   return (
@@ -47,36 +45,33 @@ export default function EventSummaryPage() {
           </p>
         </div>
 
-        <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          7th January, 2026
+        </h2>
+        <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm mb-8">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-white/[0.05]">
               <thead className="bg-gradient-to-r from-white/[0.05] to-white/[0.02]">
                 <tr>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/6 border-r border-white/[0.05]">
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
                     Event Name
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
-                    Date
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
                     Time
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
-                    Type
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
+                    Venue
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/8 border-r border-white/[0.05]">
-                    Prize Pool
-                  </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/12 border-r border-white/[0.05]">
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
                     Reg Fees
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider w-1/6">
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider">
                     Coordinators
                   </th>
                 </tr>
               </thead>
               <tbody className="bg-black/50 divide-y divide-white/[0.03]">
-                {sortedEvents.map((event) => (
+                {events7th.map((event) => (
                   <tr
                     key={event.id}
                     onClick={() => setSelectedEvent(event)}
@@ -84,22 +79,72 @@ export default function EventSummaryPage() {
                   >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium border-r border-white/[0.05]">
                       <span className="text-white/90 hover:text-white/80 transition-colors decoration-white/20 hover:decoration-white/40">
-                        {event.id}
+                        {event.name}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
-                      {event.dates.length > 1
-                        ? "Both Days"
-                        : new Date(event.dates[0]).toLocaleDateString()}
+                      {event.startTime || "All Day"}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
-                      {event.startTime || "N/A"}
+                      {event.venue}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
-                      {event.type || "N/A"}
+                      {event.pricing}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white border-r border-white/[0.05]">
-                      {getPrizePool(event)}
+                    <td className="px-6 py-4 text-sm text-white/70 max-w-xs truncate">
+                      {event.coordinators
+                        ? event.coordinators.map((c) => c.name).join(", ")
+                        : "N/A"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold text-white mb-4">
+          8th January, 2026
+        </h2>
+        <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-white/[0.05]">
+              <thead className="bg-gradient-to-r from-white/[0.05] to-white/[0.02]">
+                <tr>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
+                    Event Name
+                  </th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
+                    Time
+                  </th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
+                    Venue
+                  </th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider border-r border-white/[0.05]">
+                    Reg Fees
+                  </th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-white/80 uppercase tracking-wider">
+                    Coordinators
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-black/50 divide-y divide-white/[0.03]">
+                {events8th.map((event) => (
+                  <tr
+                    key={event.id}
+                    onClick={() => setSelectedEvent(event)}
+                    className="hover:bg-white/[0.1] transition-colors duration-200 cursor-pointer"
+                  >
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium border-r border-white/[0.05]">
+                      <span className="text-white/90 hover:text-white/80 transition-colors decoration-white/20 hover:decoration-white/40">
+                        {event.name}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
+                      {event.startTime || "All Day"}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
+                      {event.venue}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-white/70 border-r border-white/[0.05]">
                       {event.pricing}
@@ -130,7 +175,7 @@ export default function EventSummaryPage() {
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 sm:p-4">
           <div className="bg-black border border-white/[0.08] rounded-none sm:rounded-3xl shadow-2xl w-full max-w-full h-full sm:max-w-4xl sm:max-h-[90vh] overflow-y-auto">
             <div className="p-6">
-              <div className="flex items-start justify-between mb-6">
+              <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold text-white mb-1 leading-tight">
                     {selectedEvent.name}
@@ -171,7 +216,7 @@ export default function EventSummaryPage() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                 <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
                   <h3 className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">
                     Date
@@ -180,6 +225,14 @@ export default function EventSummaryPage() {
                     {selectedEvent.dates.length > 1
                       ? "Both Days"
                       : new Date(selectedEvent.dates[0]).toLocaleDateString()}
+                  </p>
+                </div>
+                <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
+                  <h3 className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">
+                    Venue
+                  </h3>
+                  <p className="text-white text-lg font-medium">
+                    {selectedEvent.venue}
                   </p>
                 </div>
                 <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
@@ -198,81 +251,77 @@ export default function EventSummaryPage() {
                     {selectedEvent.duration || "N/A"}
                   </p>
                 </div>
-                <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
-                  <h3 className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-1">
-                    Prize Pool
+              </div>
+
+              <div className="mb-4 hidden sm:block">
+                <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-2">
+                  Description
+                </h3>
+                <p className="text-white/90 text-base leading-relaxed bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
+                  {selectedEvent.shortDescription}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-2">
+                    Registration Fee
                   </h3>
-                  <p className="text-white text-lg font-medium">
+                  <p className="text-white text-xl font-bold bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
+                    {selectedEvent.pricing}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-2">
+                    Total Prize Pool
+                  </h3>
+                  <p className="text-white text-xl font-bold bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
                     {getPrizePool(selectedEvent)}
                   </p>
                 </div>
               </div>
 
-              <div className="mb-6 hidden sm:block">
-                <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
-                  Description
-                </h3>
-                <p className="text-white/90 text-base leading-relaxed bg-white/[0.02] border border-white/[0.05] rounded-xl p-4">
-                  {selectedEvent.shortDescription}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div>
-                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
-                    Registration Fee
+              {selectedEvent.prizes && (
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-2">
+                    Prizes
                   </h3>
-                  <p className="text-white text-xl font-bold bg-white/[0.02] border border-white/[0.05] rounded-xl p-4">
-                    {selectedEvent.pricing}
+                  <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
+                    <p className="text-white text-base">
+                      {selectedEvent.prizes.first &&
+                        `1st: ${selectedEvent.prizes.first}`}
+                      {selectedEvent.prizes.first &&
+                        selectedEvent.prizes.second &&
+                        ", "}
+                      {selectedEvent.prizes.second &&
+                        `2nd: ${selectedEvent.prizes.second}`}
+                      {selectedEvent.prizes.second &&
+                        selectedEvent.prizes.third &&
+                        ", "}
+                      {selectedEvent.prizes.third &&
+                        `3rd: ${selectedEvent.prizes.third}`}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {selectedEvent.staffCoordinator && (
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-2">
+                    Staff Coordinator
+                  </h3>
+                  <p className="text-white text-base font-medium bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
+                    {selectedEvent.staffCoordinator}
                   </p>
                 </div>
-                {selectedEvent.prizes && (
-                  <div>
-                    <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
-                      Prizes
-                    </h3>
-                    <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-4 space-y-2">
-                      {selectedEvent.prizes.first && (
-                        <div className="flex justify-between items-center">
-                          <span className="text-white/70 text-sm">
-                            1st Place
-                          </span>
-                          <span className="text-white text-base font-medium">
-                            {selectedEvent.prizes.first}
-                          </span>
-                        </div>
-                      )}
-                      {selectedEvent.prizes.second && (
-                        <div className="flex justify-between items-center">
-                          <span className="text-white/70 text-sm">
-                            2nd Place
-                          </span>
-                          <span className="text-white text-base font-medium">
-                            {selectedEvent.prizes.second}
-                          </span>
-                        </div>
-                      )}
-                      {selectedEvent.prizes.third && (
-                        <div className="flex justify-between items-center">
-                          <span className="text-white/70 text-sm">
-                            3rd Place
-                          </span>
-                          <span className="text-white text-base font-medium">
-                            {selectedEvent.prizes.third}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
+              )}
 
               {selectedEvent.coordinators && (
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-2">
                     Coordinators
                   </h3>
-                  <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-4">
+                  <div className="bg-white/[0.02] border border-white/[0.05] rounded-xl p-3">
                     <div className="space-y-3">
                       {selectedEvent.coordinators.map((coordinator, idx) => {
                         const telFriendly = coordinator.phone.replace(
