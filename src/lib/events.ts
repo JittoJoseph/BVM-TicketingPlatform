@@ -288,25 +288,25 @@ export const EVENTS: Event[] = [
     venue: "Basketball Court",
     staffCoordinator: "Jaise Jose"
   },
-  {
-    id: "vr-experience",
-    name: "VIRTUAX",
-    category: "Experience Zone",
-    dates: ["2026-01-07", "2026-01-08"],
-    pricing: "₹40",
-    makemypassUrl: "",
-    image: "/vr.jpg",
-    shortDescription: "Immerse yourself in virtual reality experiences.",
-    longDescription: "VIRTUAX is a hands-on VR station where attendees can wear a headset and try short, guided immersive experiences.\n\nSessions are walk-in and queue-based; follow on-site instructions.",
-    requiresRegistration: false,
-    duration: "FULL DAY",
-    coordinators: [
-      { name: "Abel Roshan", phone: "+91 73566 10881" },
-      { name: "Ajith Madhu", phone: "+91 75103 93780" },
-      { name: "Alan Johns", phone: "+91 97442 50330" }
-    ],
-    venue: "A17"
-  },
+  // {
+  //   id: "vr-experience",
+  //   name: "VIRTUAX",
+  //   category: "Experience Zone",
+  //   dates: ["2026-01-07", "2026-01-08"],
+  //   pricing: "₹40",
+  //   makemypassUrl: "",
+  //   image: "/vr.jpg",
+  //   shortDescription: "Immerse yourself in virtual reality experiences.",
+  //   longDescription: "VIRTUAX is a hands-on VR station where attendees can wear a headset and try short, guided immersive experiences.\n\nSessions are walk-in and queue-based; follow on-site instructions.",
+  //   requiresRegistration: false,
+  //   duration: "FULL DAY",
+  //   coordinators: [
+  //     { name: "Abel Roshan", phone: "+91 73566 10881" },
+  //     { name: "Ajith Madhu", phone: "+91 75103 93780" },
+  //     { name: "Alan Johns", phone: "+91 97442 50330" }
+  //   ],
+  //   venue: "A17"
+  // },
   {
     id: "gaming-arena",
     name: "PLAYZONE",
