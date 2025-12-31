@@ -43,8 +43,8 @@ export const EVENTS: Event[] = [
     type: "TEAM",
     duration: "HALF DAY",
     coordinators: [
-      { name: "Arjun K.S", phone: "+91 94977 38996" },
-      { name: "Arun Vijay", phone: "+91 85905 80928" }
+      { name: "Adhithyan Baiju", phone: "+91 90744 09006" },
+      { name: "Madhav g", phone: "+91 89215 23530" }
     ],
     venue: "B-HUB Main Hall",
     staffCoordinator: "Anjala Michael"
