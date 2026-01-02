@@ -39,7 +39,7 @@ export const EVENTS: Event[] = [
     makemypassUrl: "https://makemypass.com/event/valorant-challenge",
     image: "/valo.jpg",
     shortDescription: "5v5 Tactical Shooter Competition. Plant the spike or defuse it.",
-    longDescription: "VALORANT is a competitive 5v5 tactical shooter that rewards teamwork, communication, and smart decision-making. Expect fast-paced rounds where strategy and coordination determine the outcome.\n\n\nRules:\n• Standard 5v5 competitive rules apply.\n• Matches will follow the tournament format announced at registration.\n• Cheating, hacking, or use of unauthorized software is strictly prohibited and will result in disqualification.\n• Map pool: Ascent, Bind, Haven.\n\n\nRequirements:\n• Teams of 5 players.\n• Bring your own laptop (BYOL).\n• Bring all required peripherals: mouse, keyboard, headset, and any adapters.\n• Internet access will be provided at the venue.\n• Ensure your device is charged and bring power adapters.",
+    longDescription: "Important: At least one team member must be present at the venue to play. Teams playing entirely online will be disqualified.\n\nVALORANT is a competitive 5v5 tactical shooter emphasizing teamwork and strategy in fast-paced matches.\n\nRules:\n• Standard 5v5 rules apply; tournament format announced at registration.\n• Cheating or unauthorized software leads to disqualification.\n• Map pool: Ascent, Bind, Haven.\n\nRequirements:\n• Teams of 5 players.\n• Bring your own laptop and peripherals (mouse, keyboard, headset).\n• Internet provided at venue; ensure devices are charged.",
     type: "TEAM",
     duration: "HALF DAY",
     coordinators: [
