@@ -15,7 +15,7 @@ function FAQAccordion() {
     {
       question: "How do I register for an event as a team?",
       answer:
-        "For team registration, visit MakeMyPass and start filling the form. Before paying, click 'Add Team Member' to include your teammates. After payment, tickets for everyone will be emailed.",
+        "For team registration, visit MakeMyPass and start filling the form. After payment, you will receive a team registration URL in your email, which you can use to add team members. Each team member will receive their ticket in the mail upon being added.",
     },
   ];
 

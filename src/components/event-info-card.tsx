@@ -12,7 +12,8 @@ interface EventInfoCardProps {
 }
 
 function EventInfoCard({ event, variant }: EventInfoCardProps) {
-  const [showModal, setShowModal] = useState(false);
+  const [showBvmModal, setShowBvmModal] = useState(false);
+  const [showTeamModal, setShowTeamModal] = useState(false);
 
   const formatDate = (dateString: string): string => {
     const date = new Date(`${dateString}T00:00:00`);
@@ -125,9 +126,16 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
 
         <div className="mt-6 pt-5 border-t border-white/10">
           {event.requiresRegistration !== false ? (
-            event.bvmAllowed === false ? (
+            event.type === "TEAM" ? (
               <button
-                onClick={() => setShowModal(true)}
+                onClick={() => setShowTeamModal(true)}
+                className="block w-full py-3.5 bg-white cursor-pointer text-black font-semibold text-center rounded-xl hover:bg-white/90 transition-colors"
+              >
+                Register
+              </button>
+            ) : event.bvmAllowed === false ? (
+              <button
+                onClick={() => setShowBvmModal(true)}
                 className="block w-full py-3.5 bg-white cursor-pointer text-black font-semibold text-center rounded-xl hover:bg-white/90 transition-colors"
               >
                 Register
@@ -157,7 +165,7 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
         </div>
       </div>
 
-      {showModal && (
+      {showBvmModal && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
           <div className="bg-black/90 border border-white/10 rounded-2xl p-6 max-w-md mx-4">
             <h3 className="text-lg font-semibold mb-4 text-white">
@@ -169,15 +177,47 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
             </p>
             <div className="flex flex-col lg:flex-row gap-4">
               <button
-                onClick={() => setShowModal(false)}
+                onClick={() => setShowBvmModal(false)}
                 className="flex-1 py-2 bg-white/10 text-white rounded-xl hover:bg-white/20 transition-colors cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={() => {
-                  setShowModal(false);
-                  window.location.href = event.makemypassUrl;
+                  setShowBvmModal(false);
+                  window.open(event.makemypassUrl, "_blank");
+                }}
+                className="flex-1 lg:flex-[1.5] py-2 bg-white text-black rounded-xl hover:bg-white/90 transition-colors cursor-pointer"
+              >
+                Continue to register
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showTeamModal && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+          <div className="bg-black/90 border border-white/10 rounded-2xl p-6 max-w-md mx-4">
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Team Registration
+            </h3>
+            <p className="mb-6 text-white/75">
+              After payment, you'll receive a team registration URL in your
+              email to add members. Each member gets their ticket via email when
+              added.
+            </p>
+            <div className="flex flex-col lg:flex-row gap-4">
+              <button
+                onClick={() => setShowTeamModal(false)}
+                className="flex-1 py-2 bg-white/10 text-white rounded-xl hover:bg-white/20 transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => {
+                  setShowTeamModal(false);
+                  window.open(event.makemypassUrl, "_blank");
                 }}
                 className="flex-1 lg:flex-[1.5] py-2 bg-white text-black rounded-xl hover:bg-white/90 transition-colors cursor-pointer"
               >
