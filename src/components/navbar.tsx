@@ -12,14 +12,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="flex-shrink-0 flex flex-col items-center gap-0 hover:opacity-80 transition-opacity"
+            className="flex-shrink-0 hover:opacity-80 transition-opacity"
           >
-            <span className="font-tech text-lg md:text-xl font-bold text-white tracking-wide">
-              COREX<span className="text-white">26</span>
-            </span>
-            <span className="text-xs text-gray-400 tracking-wide uppercase hidden sm:block">
-              BVM Holy Cross College
-            </span>
+            <img
+              src="/corex-logo-light.svg"
+              alt="COREX Logo"
+              className="h-6 md:h-8"
+            />
           </Link>
 
           {/* Desktop Menu */}
