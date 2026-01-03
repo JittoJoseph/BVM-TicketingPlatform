@@ -203,7 +203,7 @@ function EventInfoCard({ event, variant }: EventInfoCardProps) {
               Team Registration
             </h3>
             <p className="mb-6 text-white/75">
-              After payment, you'll receive a team registration URL in your
+              After payment, you&apos;ll receive a team registration URL in your
               email to add members. Each member gets their ticket via email when
               added.
             </p>
