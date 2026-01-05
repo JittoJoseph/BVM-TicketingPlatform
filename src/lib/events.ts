@@ -71,7 +71,7 @@ export const EVENTS: Event[] = [
       { name: "Sandeep Santhosh", phone: "+91 80788 61848" },
       { name: "Savio Saji", phone: "+91 98477 21549" }
     ],
-    venue: "Rooftop",
+    venue: "BHUB Main Hall",
     staffCoordinator: "Anjala Michael"
   },
   {
