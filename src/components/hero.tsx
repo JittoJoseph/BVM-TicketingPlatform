@@ -90,7 +90,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide mb-12 uppercase">
-          Tech • Gaming • Music
+          That's a Wrap for COREX 2026 - Thank You All!
         </p>
 
         {/* Countdown Timer */}
