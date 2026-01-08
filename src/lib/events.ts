@@ -71,7 +71,7 @@ export const EVENTS: Event[] = [
       { name: "Sandeep Santhosh", phone: "+91 80788 61848" },
       { name: "Savio Saji", phone: "+91 98477 21549" }
     ],
-    venue: "Rooftop",
+    venue: "BHUB Main Hall",
     staffCoordinator: "Anjala Michael"
   },
   {
@@ -91,7 +91,7 @@ export const EVENTS: Event[] = [
     shortDescription: "Design the future. Create intuitive and beautiful user interfaces.",
     longDescription: "PIXELCRAFT is a fast-paced UI/UX design challenge where teams of 1-4 create intuitive designs under a 3-hour time limit.\n\nKey Rules:\n• Bring your own laptop.\n• Use any frontend framework and AI tools (e.g., React, Next.js, GitHub Copilot) — AI tools are allowed and encouraged.\n• Theme revealed at start; ensure original, customized work.\n• Deliverables: 3+ designed screens, live landing page (deployed on Vercel/Netlify/GitHub Pages), and GitHub repo link.\n• Presentation: 3-min demo + 2-min Q&A.\n• Scoring: Creativity, usability, implementation, presentation.\n• Disqualification for plagiarism, offensive content, or violations.\n\nNote: Bring your college ID.",
     type: "TEAM",
-    bvmAllowed: false,
+    bvmAllowed: true,
     duration: "HALF DAY",
     coordinators: [
       { name: "Ajil Saji", phone: "+91 90728 05856" },
@@ -167,7 +167,7 @@ export const EVENTS: Event[] = [
     shortDescription: "Solo C++ coding challenge — problem released at start.",
     longDescription: "Test your algorithmic thinking and coding skills in this intense solo competition.\n\nFormat:\n• Language: C++ (only).\n• Problem statement will be released at the start of the event.\n• No internet access allowed during the contest. A PC with the required C++ toolchain and compiler will be provided on-site.\n\nThis is a solo event; participants compete individually.",
     type: "SOLO",
-    bvmAllowed: false,
+    bvmAllowed: true,
     duration: "1 HOUR",
     coordinators: [
       { name: "Deon Jose", phone: "+91 62822 42610" },
@@ -231,7 +231,7 @@ export const EVENTS: Event[] = [
     category: "Physical Sports",
     dates: ["2026-01-08"],
     startTime: "02:30 PM",
-    pricing: "₹350",
+    pricing: "₹150",
     prizes: {
       first: "₹2,500",
       second: "₹1,500"
