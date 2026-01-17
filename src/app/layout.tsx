@@ -13,17 +13,43 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "COREX 2026",
+  title: "COREX - The Ultimate Tech Fest | BVM Holy Cross College",
   description:
-    "Register for COREX 2026 - The Ultimate Tech Fest at BVM Holy Cross College. Esports, Coding, Workshops, and more.",
+    "Register for COREX - The Ultimate Tech Fest at BVM Holy Cross College. Esports, Coding, Workshops, and more. Join the biggest tech event of the year!",
+  keywords: [
+    "COREX",
+    "BVM Holy Cross College",
+    "Tech Fest",
+    "Esports",
+    "Coding Competition",
+    "Workshops",
+    "Gaming",
+    "Technical Events",
+    "College Fest",
+    "Kerala",
+  ],
+  authors: [{ name: "BVM Holy Cross College" }],
+  creator: "BVM Holy Cross College",
+  publisher: "BVM Holy Cross College",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.bvmtechfest.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "COREX 2026 | BVM Holy Cross College",
     description:
       "Register for COREX 2026 - The Ultimate Tech Fest at BVM Holy Cross College. Esports, Coding, Workshops, and more.",
     type: "website",
+    url: "https://www.bvmtechfest.com",
+    siteName: "COREX 2026",
     images: [
       {
-        url: "https://bvm-fest-ticketing.vercel.app/card.jpeg",
+        url: "https://www.bvmtechfest.com/card.jpeg",
         width: 1422,
         height: 800,
         alt: "COREX 2026 - BVM Holy Cross College",
@@ -35,7 +61,18 @@ export const metadata: Metadata = {
     title: "COREX 2026 | BVM Holy Cross College",
     description:
       "Register for COREX 2026 - The Ultimate Tech Fest at BVM Holy Cross College. Esports, Coding, Workshops, and more.",
-    images: ["https://bvm-fest-ticketing.vercel.app/card.jpeg"],
+    images: ["https://www.bvmtechfest.com/card.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
